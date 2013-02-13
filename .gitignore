@@ -1,4 +1,13 @@
 #################
+## This Project Outputs, Inputs and Temporal files.
+#################
+
+#*.jil
+*.csv
+*.xlsx
+*.txt
+
+#################
 ## Eclipse
 #################
 
