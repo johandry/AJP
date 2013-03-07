@@ -3,28 +3,31 @@
 require 'yaml'
 require 'sqlite3'
 require 'csv'
+require 'optparse'
+
+require 'pp'
 
 class Job
 
 	attr_accessor :id, :name, :type, :box_name, :command, :machine, :owner, :permission, :date_condition, :days_of_week, :start_times, :condition, :description, :std_out_file, :std_err_file, :alarm_if_fail
 
-	def initialize (id)
+	def initialize (id, name = '', type = '', box_name = '', command = '', machine = '', owner = '', permission = '', date_condition = 0, days_of_week = '', start_times = '', condition = '', description = '', std_out_file = '', std_err_file = '', alarm_if_fail = 0)
 		@id				= id
-		@name			= ''
-		@type			= ''
-		@box_name		= ''
-		@command		= ''
-		@machine		= ''
-		@owner			= ''
-		@permission		= ''
-		@date_condition	= 0
-		@days_of_week	= ''
-		@start_times	= ''
-		@condition		= ''
-		@description	= ''
-		@std_out_file	= ''
-		@std_err_file	= ''
-		@alarm_if_fail	= 0
+		@name			= name
+		@type			= type
+		@box_name		= box_name
+		@command		= command
+		@machine		= machine
+		@owner			= owner
+		@permission		= permission
+		@date_condition	= date_condition
+		@days_of_week	= days_of_week
+		@start_times	= start_times
+		@condition		= condition
+		@description	= description
+		@std_out_file	= std_out_file
+		@std_err_file	= std_err_file
+		@alarm_if_fail	= alarm_if_fail
 	end
 
 	def to_s
@@ -55,6 +58,9 @@ class Jobs
 		job = Job.new(1)
 		id=2
 		File.open(filename, "r").each_line do |line|
+		
+			line.chomp!
+			
 			if( /insert_job:/.match(line) and job.name != '' ) 
 				@jobs.push(job)
 				job = Job.new(id)
@@ -80,11 +86,45 @@ class Jobs
 		end
 	end
 	
+	def get_jobs_from_db (database)
+		begin
+			db = SQLite3::Database.open database
+			
+			stm = db.prepare "SELECT * FROM Jobs"
+			rs = stm.execute
+			
+			rs.each do |job|
+				@jobs.push(Job.new(job[0], 
+							job[1], 
+							job[2], 
+							job[3], 
+							job[4], 
+							job[5], 
+							job[6], 
+							job[7], 
+							job[8], 
+							job[9], 
+							job[10], 
+							job[11], 
+							job[12], 
+							job[13], 
+							job[14], 
+							job[15]))
+			end
+		rescue SQLite3::Exception => e
+			puts "Exception occured getting the jobs"
+			puts e
+		ensure
+			stm.close if stm
+			db.close if db
+		end
+	end
+	
 	def create_database (database)
 	  begin
 	    db = SQLite3::Database.open database
-	    db.execute "CREATE TABLE IF NOT EXISTS Jobs (Id             INTEGER PRIMARY KEY,
-	                                                Name            CHAR,
+	    db.execute "CREATE TABLE IF NOT EXISTS Jobs (id             INTEGER PRIMARY KEY,
+	                                                name            CHAR,
 	                                                type            CHAR,
 	                                                box_name        CHAR,
 	                                                command         TEXT,
@@ -127,12 +167,19 @@ class Jobs
 	  end
   end
 	
-	def initialize (jil_filename, database)
+	def initialize (refresh, jil_filename, database)
 	  @jil  = jil_filename
 	  @db   = database
-		@jobs = Array.new
+	  @jobs = Array.new
+	  
+	  if(refresh)
 		get_jobs_from_jil(jil_filename)
+		
+		File.delete(database) if File::exists?(database)
 		create_database(database)
+	  else
+		get_jobs_from_db(database)
+	  end
 	end
 
 	def to_yaml
@@ -154,7 +201,7 @@ class Jobs
 	def to_csv
 	  sort = 1
 	  csv_output = CSV.generate do |csv|
-	    csv << ["sort", "box id", "box name", "jobs inside", "job id", "name", "type", "box_name", "command", "machine", "owner", "permission", "date_condition", "days_of_week", "start_times", "condition", "description", "std_out_file", "std_err_file", "alarm_if_fail"].map(&:capitalize)
+	    csv << ["sort", "box id", "box name", "jobs inside", "job id", "job name", "type", "box_name", "command", "machine", "owner", "permission", "date_condition", "days_of_week", "start_times", "condition", "description", "std_out_file", "std_err_file", "alarm_if_fail"].map(&:capitalize)
 	    @jobs.each do |job_box|
 	      if (job_box.type == 'b')
 	        rows = Array.new
@@ -223,10 +270,136 @@ class Jobs
 	  end # of CSV
   end # of def to_csv
   
+  def to_file (format, filename)
+	file = File.new(filename, 'w')
+	file.syswrite(self.send(format))
+	file.close unless file == nil
+  end
+  
+end
+
+class User
+	attr_accessors :id, :name, :email
+	
+	def initialize (id, name, email)
+		@id = id
+		@name = name
+		@email = email
+	end
+end
+
+class Users
+
+	def get_users_from_csv 
+		id=1
+		csv.foreach(@users_filename) do |row|
+			@users.push(User.new(id, row[0], row[1]))
+			id +=1
+		end
+	end
+	
+	def cerate_users_table
+		begin
+			db = SQLite3::Database.open @database
+			db.execute "DROP TABLE Users"
+			db.execute "CREATE TABLE Users (id            INTEGER PRIMARY KEY,
+											name            CHAR,
+											email			CHAR)"
+			@users.each do |user|
+				db.execute "INSERT INTO Users VALUES ( #{user.id}, '#{user.name}', '#{user.email}')" 
+			end
+		rescue SQLite3::Exception => e
+			puts "Exception updating the Database #{@database}"
+			puts e
+		ensure
+			db.close if db
+		end
+			
+	end
+	
+	def get_users_from_db
+		#TODO
+	end
+	
+	def initialize (refresh, users_filename, database)
+		@users_filename = users_filename
+		@database = database
+		@users = Array.new
+		
+		if (refresh)
+			get_users_from_csv
+			create_users_table
+		else
+			get_users_from_db
+		end
+	end
+	
+end
+
+def get_options
+	options = {}
+	OptionParser.new do |opts|
+		opts.banner = "Usage: ajp.rb [options]"
+		
+		options[:verbose] = false
+		opts.on('-v', '--verbose', 'Output more information') do
+			options[:verbose] = true
+		end
+		
+		opts.on('-h', '--help', 'Display this screen') do
+			puts opts
+			exit
+		end
+		
+		options[:jil] = "alljobs.jil"
+		opts.on('-j', '--jil FILE', "Input JIL filename. By default is '#{options[:jil]}'") do |param|
+			options[:jil] = param
+		end
+
+		options[:users] = "people.csv"
+		opts.on('-u', '--users FILE', "Input CSV filename with people contact. By default is '#{options[:users]}'") do |param|
+			options[:users] = param
+		end
+		
+		options[:owners] = "owners.cvs"
+		opts.on('-o', '--owners FILE', "Input CVS filename with all the owners. By default is '#{options[:owners]}'") do |param|
+			options[:owners] = param
+		end
+		
+		options[:db] = "alljobs.sqlite"
+		opts.on('-db', '--database FILE', "Database file. By default is '#{options[:db]}'") do |param|
+			options[:db] = param
+		end
+		
+		options[:refresh] = false
+		opts.on('-r', '--refresh', "Refresh the database file with the JIL file") do |param|
+			options[:refresh] = param
+		end
+		
+		options[:csv] = nil
+		opts.on('-a', '--all FILE', "Create a CSV file with all the jobs information") do |param|
+			options[:csv] = param
+		end
+		
+		options[:s] = nil
+		opts.on('-text', '--text FILE', "Create a human readable file with all the jobs information") do |param|
+			options[:s] = param
+		end
+		
+		options[:yaml] = nil
+		opts.on('-y', '--yaml FILE', "Create a YAML file with all the jobs information") do |param|
+			options[:yaml] = param
+		end
+			
+	end.parse!
+	options
 end
 
 
-jobs = Jobs.new("alljobs.jil", "alljobs.sqlite")
-puts jobs.to_csv
-#puts jobs.to_yaml
-#puts jobs.to_s
+options = get_options
+jobs = Jobs.new(options[:refresh], options[:jil], options[:db])
+jobs.to_file(:to_csv, options[:csv]) unless options[:csv] == nil
+jobs.to_file(:to_s, options[:s]) unless options[:s] == nil
+jobs.to_file(:to_yaml, options[:yaml]) unless options[:yaml] == nil
+
+users = Users.new(options[:refresh], options[:users], options[:db])
