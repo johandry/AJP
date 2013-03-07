@@ -6,7 +6,7 @@
 #Author      : "Johandry Amador" < Johandry.Amador@softtek.com >
 #Version     : 1.00
 #Description : This script will receive a list of Autosys Jobs in JIL format and will create several documents with useful and easy to understand information.
-#Usage       : AJP.pl [--help or -h] [--verbose] [--debug or -d] [--jobs=filename or -j filename] [--output=filename or -o filename] [--general or -g] [--boxes or -b] [--print_jobs or -p] [--query=query or -q query] [--count=query or -c query] [--list_fields or -l] [--sequence or -s]
+#Usage       : AJP.pl [--help or -h] [--verbose] [--debug or -d] [--jobs=filename or -j filename] [--output=filename or -o filename] [--general or -g] [--boxes or -b] [--print_jobs or -p] [--query=query or -q query] [--count=query or -c query] [--list_fields or -l] [--sequence or -s] [--forecast=filename or -f filename]
 
 # Requirements:
 # _REQUIREMENT_ 
@@ -43,6 +43,7 @@ my $query='';
 my $count='';
 my $list_fields='';
 my $sequence='';
+my $forecast='';
 
 
 #Getopt::Long::Configure ("bundling", "ignorecase_always");
@@ -58,7 +59,8 @@ GetOptions(
   'query=s'		=>\$query,
   'count=s'		=>\$count,
   'list_fields'	=>\$list_fields,
-  'sequence'	=> \$sequence
+  'sequence'	=> \$sequence,
+  'forecast=s'	=> \$forecast
 
   ) or pod2usage(2);
   
@@ -409,7 +411,7 @@ ajp.pl - AJP (Autosys Jobs Parser) will receive a list of Autosys Jobs in JIL fo
 
 =head1 SYNOPSIS
 
-ajp.pl [--help or -h] [--verbose] [--debug or -d] [--jobs=filename or -j filename] [--output=filename or -o filename] [--general or -g] [--boxes or -b] [--print_jobs or -p] [--query=query or -q query] [--count=query or -c query] [--list_fields or -l] [--sequence or -s]
+ajp.pl [--help or -h] [--verbose] [--debug or -d] [--jobs=filename or -j filename] [--output=filename or -o filename] [--general or -g] [--boxes or -b] [--print_jobs or -p] [--query=query or -q query] [--count=query or -c query] [--list_fields or -l] [--sequence or -s] [--forecast=filename or -f filename]
 
  Options:
    --help    or -h                         Brief help message. For more information enter: perldoc ajp.pl
@@ -537,6 +539,10 @@ List all the fields of a job. Useful to create a query and to know the fields in
 =item B<--sequence> or B<-s>
 
 Process all the jobs and get the sequences of execution.
+
+=item B<--forecast=filename> or B<-f filename>
+
+Read the forcast file with the execution of jobs in a period of time and create a CSV file them and merge it with the information from the JIL file.
 
 =back
 
