@@ -94,22 +94,8 @@ class Jobs
 			rs = stm.execute
 			
 			rs.each do |job|
-				@jobs.push(Job.new(job[0], 
-							job[1], 
-							job[2], 
-							job[3], 
-							job[4], 
-							job[5], 
-							job[6], 
-							job[7], 
-							job[8], 
-							job[9], 
-							job[10], 
-							job[11], 
-							job[12], 
-							job[13], 
-							job[14], 
-							job[15]))
+				@jobs.push(Job.new(job[0], job[1], job[2], job[3], job[4], job[5], job[6], job[7], job[8], job[9], job[10], 
+							job[11], job[12], job[13], job[14], job[15]))
 			end
 		rescue SQLite3::Exception => e
 			puts "Exception occured getting the jobs"
@@ -318,7 +304,22 @@ class Users
 	end
 	
 	def get_users_from_db
-		#TODO
+		begin
+			db = SQLite3::Database.open @database
+			
+			stm = db.prepare "SELECT * FROM Users"
+			rs = stm.execute
+			
+			rs.each do |user|
+				@users.push(User.new(user[0], user[1], user[2]))
+			end
+		rescue SQLite3::Exception => e
+			puts "Exception occured getting the users"
+			puts e
+		ensure
+			stm.close if stm
+			db.close if db
+		end
 	end
 	
 	def initialize (refresh, users_filename, database)
