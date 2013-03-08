@@ -265,7 +265,7 @@ class Jobs
 end
 
 class User
-	attr_accessors :id, :name, :email
+	attr_accessor :id, :name, :email
 	
 	def initialize (id, name, email)
 		@id = id
@@ -278,17 +278,22 @@ class Users
 
 	def get_users_from_csv 
 		id=1
-		csv.foreach(@users_filename) do |row|
+		header=true
+		CSV.foreach(@users_filename) do |row|
+		  if header
+		    header = false
+		    next
+		  end
 			@users.push(User.new(id, row[0], row[1]))
 			id +=1
 		end
 	end
 	
-	def cerate_users_table
+	def create_users_table
 		begin
 			db = SQLite3::Database.open @database
-			db.execute "DROP TABLE Users"
-			db.execute "CREATE TABLE Users (id            INTEGER PRIMARY KEY,
+			db.execute "DROP TABLE IF EXISTS Users"
+			db.execute "CREATE TABLE IF NOT EXISTS Users (id            INTEGER PRIMARY KEY,
 											name            CHAR,
 											email			CHAR)"
 			@users.each do |user|
