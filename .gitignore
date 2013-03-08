@@ -3,9 +3,11 @@
 #################
 
 #*.jil
-*.csv
+#*.csv
 *.xlsx
 *.txt
+*.sqlite
+*.yaml
 
 #################
 ## Eclipse
