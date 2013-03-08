@@ -1,4 +1,4 @@
-Sort,Box id,Box name,Jobs inside,Job id,Name,Type,Box_name,Command,Machine,Owner,Permission,Date_condition,Days_of_week,Start_times,Condition,Description,Std_out_file,Std_err_file,Alarm_if_fail
+Sort,Box id,Box name,Jobs inside,Job id,Job name,Type,Box_name,Command,Machine,Owner,Permission,Date_condition,Days_of_week,Start_times,Condition,Description,Std_out_file,Std_err_file,Alarm_if_fail
 1,2,BASIS_WEEKLY,5,2,BASIS_WEEKLY,b,"","",bkpcis,bkpbtch@BKGLOBAL,"gx,wx,mx",1,su,18:30,"",BASIS_WEEKLY,"","",0
 2,2,BASIS_WEEKLY,"",3,SAO_SAP_TEMSE_CLEANUP,c,BASIS_WEEKLY,auto_r3v45 -C BKAUTOSYS audit 3 job SAO_SAP_TEMSE_CLEANUP,bkpcis,bkpbtch@BKGLOBAL,"gx,wx,mx",0,"","","",SYSTEM TEMSE PURGE,"","",1
 3,2,BASIS_WEEKLY,"",4,SAO_SAP_TEMSE_CONSISTENCY_CHK,c,BASIS_WEEKLY,auto_r3v45 -C BKAUTOSYS audit 3 job SAO_SAP_TEMSE_CONSISTENCY_CHK,bkpcis,bkpbtch@BKGLOBAL,"gx,wx,mx",0,"","",s(SAO_SAP_TEMSE_CLEANUP),TEMSE OBJECT CONSISTENCY CHECK,"","",1

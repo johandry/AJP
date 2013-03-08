@@ -1,7 +1,8 @@
 #!/usr/bin/env ruby
 
-require 'jobs'
-require 'users'
+require_relative 'jobs'
+require_relative 'users'
+require_relative 'ownerships'
 
 require 'optparse'
 
@@ -9,6 +10,7 @@ require 'pp'
 
 def get_options
 	options = {}
+	def_options = {}
 	OptionParser.new do |opts|
 		script_name = File.basename($PROGRAM_NAME)
 		opts.banner = "Autosys JIL Parser: Receives a JIL file as well as csv files with users and owners to create a DB. Also, export the DB to different formats. 
@@ -53,7 +55,7 @@ Options:
 		
 		options[:db] = "ajp.sqlite"
 		opts.on('-d', '--database FILE', "Database file. By default is '#{options[:db]}'") do |param|
-			options[:db] = param
+			options[:db] = param || options[:db]
 		end
 		
 # Actions
@@ -62,7 +64,7 @@ Options:
 			options[:refresh] = true
 		end
 		
-		formats = { 'csv' => ':to_csv',
+		formats = { 'csv' => 'to_csv',
 					'txt' => 'to_s',
 					'yaml'=> 'to_yaml' }
 					
@@ -72,19 +74,22 @@ Options:
 		end
 		
 # Objects
-		options[:jobs] = "jobs.jil"
-		opts.on('-j', '--jobs [FILE]', "Parse the jobs from a JIL filename with all the jobs to refresh the database. The default is '#{options[:jobs]}'") do |param|
-			options[:jobs] = param
+		options[:jobs] = false
+		def_options[:jobs] = "jobs.jil"
+		opts.on('-j', '--jobs [FILE]', "Export to the file or parse the jobs from a JIL filename with all the jobs to refresh the database. The default is '#{def_options[:jobs]}'") do |param|
+			options[:jobs] = param || default_opt[:jobs]
 		end
 
-		options[:users] = "users.csv"
-		opts.on('-u', '--users [FILE]', "Parse the users from a CSV filename with all users contact to refresh the database. The default is '#{options[:users]}'") do |param|
-			options[:users] = param
+		options[:users] = false
+		def_options[:users] = "users.csv"
+		opts.on('-u', '--users [FILE]', "Export to the file or parse the users from a CSV filename with all users contact to refresh the database. The default is '#{def_options[:users]}'") do |param|
+			options[:users] = param || def_options[:users]
 		end
 		
-		options[:owners] = "owners.cvs"
-		opts.on('-o', '--owners [FILE]', "Parse the owners from a CVS filename with all the owners to refresh the database. The default is '#{options[:owners]}'") do |param|
-			options[:owners] = param
+		options[:ownerships] = false
+		def_options[:ownerships] = "ownerships.csv"
+		opts.on('-o', '--owners [FILE]', "Export to the file or parse the owners from a CSV filename with all the owners to refresh the database. The default is '#{def_options[:ownerships]}'") do |param|
+			options[:ownerships] = param || def_options[:ownerships]
 		end
 
 	end.parse!
@@ -95,14 +100,11 @@ end
 options = get_options
 
 # Populate the objets and refresh the DB's if requested
-jobs 	= Jobs.new(options[:refresh], options[:jobs], options[:db])
-users 	= Users.new(options[:refresh], options[:users], options[:db])
-owners 	= Owners.new(options[:refresh], options[:owners], options[:db])
+jobs 	= Jobs.new(options[:db], options[:refresh], options[:jobs], options[:verbose])
+users 	= Users.new(options[:db], options[:refresh], options[:users], options[:verbose])
+ownerships 	= Ownerships.new(jobs, users, options[:db], options[:refresh], options[:ownerships], options[:verbose])
 
 # Different output options
-if (options[:csv])
-	jobs.to_file(:to_csv, options[:csv])
-	#users.to_file(:to_csv)
-end
-jobs.to_file(:to_s, options[:s]) unless options[:s] == nil
-jobs.to_file(:to_yaml, options[:yaml]) unless options[:yaml] == nil
+jobs.to_file(options[:export].to_sym, options[:jobs]) if options[:export] and options[:jobs]
+users.to_file(options[:export].to_sym, options[:users]) if options[:export] and options[:users]
+ownerships.to_file(options[:export].to_sym, options[:ownerships]) if options[:export] and options[:ownerships]

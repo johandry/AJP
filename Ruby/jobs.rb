@@ -1,4 +1,4 @@
-require 'job'
+require_relative 'job'
 
 require 'yaml'
 require 'sqlite3'
@@ -99,24 +99,91 @@ class Jobs
 	      db.execute insert_command
 	    end
 	  rescue SQLite3::Exception => e
-	    puts "Exception updating the Database #{database}"
+	    puts "Exception creating the table Jobs"
 	    puts e
 	  ensure
 	    db.close if db
 	  end
   end
 	
-	def initialize (refresh, jil_filename, database)
+	def initialize (database, refresh = false, jil_filename = false, verbose = false)
 	  @jil  		= jil_filename
 	  @database   	= database
 	  @jobs 		= Array.new
 	  
-	  if(refresh)
+	  if(refresh and jil_filename)
+		puts "Getting jobs from #{jil_filename} file" if verbose
 		get_jobs_from_jil
+		puts "Creating the jobs table in the #{database} database" if verbose
 		create_jobs_table
 	  else
+		puts "Getting jobs from the #{database} database" if verbose
 		get_jobs_from_db
 	  end
+	end
+	
+	def find_by_name (name)
+		begin
+			db = SQLite3::Database.open @database
+			
+			stm = db.prepare "SELECT id FROM Jobs WHERE name = ?"
+			stm.bind_param 1, name
+			rs = stm.execute
+			row = rs.next
+			return (row != nil)?row[0]:nil
+			
+		rescue SQLite3::Exception => e
+			puts "Exception occured finding the user with name #{name}"
+			puts e
+		ensure
+			stm.close if stm
+			db.close if db
+		end
+	end
+	
+	def get_name_by_id (job_id)
+		begin
+			db = SQLite3::Database.open @database
+			
+			stm = db.prepare "SELECT name FROM Jobs WHERE id = ?"
+			stm.bind_param 1, job_id
+			rs = stm.execute
+			row = rs.next
+			box_name = row[0]
+			
+			return box_name
+			
+		rescue SQLite3::Exception => e
+			puts "Exception occured finding the user with name #{name}"
+			puts e
+		ensure
+			stm.close if stm
+			db.close if db
+		end		
+	end
+	
+	def get_jobs_in_box (box_id)
+		begin
+			db = SQLite3::Database.open @database
+			
+			box_name = self.get_name_by_id(box_id)
+			
+			stm = db.prepare "SELECT id FROM Jobs WHERE box_name = ?"
+			stm.bind_param 1, box_name
+			rs = stm.execute
+			
+			child_jobs = Array.new
+			rs.each { |job_id| child_jobs.push(job_id[0]) }
+			
+			return child_jobs
+			
+		rescue SQLite3::Exception => e
+			puts "Exception occured finding the user with name #{name}"
+			puts e
+		ensure
+			stm.close if stm
+			db.close if db
+		end		
 	end
 
 	def to_yaml
@@ -207,7 +274,8 @@ class Jobs
 	  end # of CSV
   end # of def to_csv
   
-  def to_file (format, filename)
+  def to_file (format, filename, verbose = false)
+	puts "Creating #{filename} file with jobs in #{format} format"
 	file = File.new(filename, 'w')
 	file.syswrite(self.send(format))
 	file.close unless file == nil

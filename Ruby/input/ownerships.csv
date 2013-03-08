@@ -1,0 +1,1455 @@
+Owner,Box Owned,Box Owned2,Last Update,Description
+Aashish Kalra,,,FALSE,
+,BDDL_TRANS_DATA_PC,,2/11/211,From ECC to BW: TRANSACTION DATA LOAD--> DAILYPC
+,BDDTEST1,BDD_TEST1,2/11/211,Test
+,BIDL_IM_BKP_BWP,,2021-08-19,From ECC to BW: Daily load for BW Investment Management
+Abhishek Patnaik,,,FALSE,
+,GWD_ATS,,2021-12-01,Processes ATS Location file for USemployees.
+Ahnaf Ali,,,FALSE,
+,FHWIW,,2002-02-16,Load the IW data into the FLASH SQL7 DB afterweeklyclosing times on BKMPWDA2
+Alexander Midler,,,FALSE,
+,DWRSCORECARD,,2027-06-01,This schedule will load and processSCORECARDdatainto the data warehouse.
+Antoinette Mulai,,,FALSE,
+,DWDINVENT,,2027-09-25,Poplulates Inventory data into DataWarehouse.(Note:These Jobs were part of DWDS
+,HRWEADP,,2028-07-18,Outbound Interface to ADP
+Antonio Lopez,,,FALSE,
+,AMMBR1,,2027-07-25,BRAZIL - Monthend Schedule
+,AMMCAN1,,2027-07-25,CANADA - Monthend Schedule
+,AMMCH1,,2029-01-05,SWITZERLAND - Monthend Schedule
+,AMMCNA1,,2027-07-25,CHINA - Monthend Schedule
+,AMMDE1,,2021-01-12,Germany - Monthend Schedule
+,AMMES1,,2029-01-05,Spain Monthend Schedule
+,AMMGB1,,2029-04-03,UK - Monthend Schedule
+,AMMIT1,,2029-01-05,ITALY - Monthend Schedule
+,AMMMEX1,,2028-03-03,MEXICO - Monthend Schedule
+,AMMMEX1,,2021-06-29,MEXICO - Monthend Schedule
+,AMMNL1,,2021-09-24,NETHERLANDS - Monthend Schedule
+,AMMOGG1,,2027-07-25,Monthend Schedule
+,AMMSG1,,2027-07-25,SINGAPORE - Monthend Schedule
+,AMMTR1,,2029-01-05,Turkey - Assets Monthend Schedule
+,AMRMX1,,2028-04-01,MEXICO - On Request F/A Inflation Schedule
+,AMWKLY1,,2025-03-02,AM - Weekly
+,AMYRGG1,,2023-11-25,Asset Management  - Year End
+,ASDE_RECONNET,,2021-01-27,Extract for ReconNET research tool
+,ASDPWRCT,,2021-01-25,Creates a file for Fran/Rest Information for ePowerCenter: e:\aries\bin\external\a
+,ASME_ATTENTION_LINE,,2021-05-01,Upload restaurant attention line inAries Restaurant
+,ASME_GENESIS,,2021-09-24,Create Nutritional Data extract from Genesis for BK.COM
+,ASME_LU_ALT_HIER,,2021-02-01,Luxembourg Alternate (CEO) Hierarchies for SAP
+,ASME_LU_STD_HIER,,2021-02-01,Luxembourg Standard Hierarchies forSAP
+,ASME_RU_ALT_HIER,,2021-01-12,Russia Alternate Hierarchies for SAP
+,ASME_RU_STD_HIER,,2021-01-12,Russia Standard Hierarchies for SAP
+,ASWEADP,,2021-06-14,File extract from ARIES for ADP (vendor)
+,ASWEFIRSTDATA,,2021-09-24,Give a extract of the fran group information to the vendor for OLB tool
+,BADL_AA_BKP_BWP,,2021-04-02,From ECC to BW: Master full --> Daily Interface (Process Chains)
+,BDDL_ARIES_FGMASTER,,2021-04-02,FG Master data load from Aries
+,BDDL_EIPP_BWP,,2021-04-02,From ECC to BW: Master full and transaction delta-->Daily Interface (Process Cha
+,BDDL_TRANS_DATA_PC,,2021-04-02,From ECC to BW: TRANSACTION DATA LOAD--> DAILYPC
+,BIBD_PSA_DEL_CHAIN,,2021-09-24,Process Chain for deleting PSA data
+,BIDL_IM_BKP_BWP,,2021-04-02,From ECC to BW: Daily load for BW Investment Management
+,BIDL_IM_TRANS_BKP,,2021-04-02,Daily
+,BIWL_IM_TRANS_BKP,,2029-01-03,Weekly
+,BNDBAICA,,2026-01-12,Electronic Bank Statement processing for Canadianbank Toronto Dominion
+,BNDBAICITIAPAC,,2021-01-25,#NAME?
+,BNDBAICITIEMEA,BNDBAICITIEMEA_BOX,2021-06-14,#NAME?
+,BNDBAICITILATAM,,2021-01-25,#NAME?
+,BNDINFOPOOL,,2021-08-02,This schedule contains 3 jobs to process the Infopoolbank statements. The banks c
+,BNRBAIDIP,BNRBAIDIP_SPECIAL,2022-01-31,ON REQUEST - SPECIAL RUN OF CITIBANK - DOUBLEDIPFILE PROCESSING
+,BRM_MONTHLY_SALES_SCORECARD,,2025-01-04,Moves trigger file for MONTHLY_SALES_SCORECARDreportin Business Objects.
+,DBDOSA_DAILY_BUILD_CHECK,DBDOSA_DAILY_BUILD_CHECK_BOX,2025-01-21,Job checks that the daily OSA buildcompletedsuccessfully.
+,DBDUTIL,,2023-08-15,DBA Utility Scripts
+,DBD_ORACLE_DAILY_CHECK,,2025-02-17,Script checks to make sure all Oracle Processes are running and checks the Alert l
+,DBWOPP_EXPRESS_SERVICE,,2022-03-05,This schedule consists of one job which will stopthen start Express Server servic
+,DCM_NOTIFY_FRANCHISEES,,2027-01-04,Reminder - Sending notfication to the Franchiseesabout SOS/Turnover summission
+,DMDABC,,2021-07-12,This is a daily schedule to populate the ABC datainthe IMMART.
+,DMDHRODS,,2022-01-17,Export from SAP and Import to HR ODS
+,DMDHRODS_INFORMATICA,,2023-11-02,This schedule invokes the Informatica sessionfortheHR ODS.
+,DMDHR_INF,,2022-12-03,The DMDHR_INF schedule will kick off the HR Informatica sessions.
+,DMDIMMART_DIM,,2021-07-12,This is a daily schedule that runsat : topopulate the shared dimensions in t
+,DMDINVENTORY,,2021-07-12,This is a daily schedule that runsat :2 and isdependent on successful complet
+,DMDLABOR_AND_WAGE,,2021-07-12,This is a daily schedule to populate the Labor& Wagedata in the IMMART
+,DMDMKTG_DIM,,2022-12-06,Loads the standard dimension information intoMarketingMart
+,DMDPREP_FOR_NIGHTLY_LOAD,DMDPRE_FOR_NIGHTLY_LOAD,2028-06-04,Prepares Data Mart Tables for the nightly fullload.
+,DMD_DTT_REPORT,DMD_DTT_TRIGGER,2022-01-31,Notifies BO to run the daily reports
+,DMD_HRMART,,2023-11-25,Loads HRMart tables from the data warehouse
+,DMD_OPM_SOS,,2023-11-07,Loads speed of service data into OperationsMart
+,DMD_TRAVEL_EXPENSES,,2021-03-12,Populates TRAVEL_EXPENSES (TEMART in Oracle)
+,DMMHRODS_ZPMEXT,,2022-11-01,This schedule exports and imports the ZPMEXT table.
+,DMMHR_WRKR_ALGN,,2024-04-22,This job populates HR mart rest worker align table.
+,DMMOPM_QUICKSHOP,,2022-01-01,Loads QuickShop survey informationinto the operations data mart
+,DMMOPSMART_DIM,,2022-01-01,Loads standard dimension data intoOperationsMart1
+,DMMSP_ARIESMART1,DMM_SP_ARIESMART1,2027-01-11,Run the Stored Procedure in ptcsql9 to populate datafor germany restaurant addre
+,DMM_REST_WRKR_ALGN,,2024-04-22,Populates the REST_WORKER_ALGN_DIM_MONTHLY table in OperationsMart1
+,DMRABC_ON_REQUEST_1,,2021-07-12,This is an on-demand schedule usedto populatetheABC_ETL_JOB_DIM table for ABC.
+,DMRABC_ON_REQUEST_2,DMRABC_ON_REQUEST2,2021-07-12,This is an on-demand schedule usedto populatetheABC_ETL_JOB_DIM table for ABC.
+,DMRIMMART_DIM_ON_DEMAND,,2021-07-12,This is an on-demand schedule to perform the initialload of the shared dimensions
+,DMRSALES_AND_TRAFFIC_INITIAL,,2021-07-12,This is an on-demand schedule usedto performinitialload of the SALES & TRAFFIC
+,DMRSALES_AND_TRAFFIC_ON_DEMAND,,2021-07-12,This is an on-demand schedule usedto populatetheDimension tables for Sales & Tr
+,DMR_MKT_POLLING,,2022-11-01,Loads market poll data into the marketing datamart
+,DMR_SPEEDMARK,,2022-11-01,Loads the Speedmark data into the data mart
+,DMWHRODS_ZEARN,,2022-01-17,This schedule export the ZEARN table and import toHRODS every Tuesday night.
+,DWDARIES_TRANSFER,,2024-11-09,Schedule to transfer data from Aries system ona daily basis
+,DWDDATASYNC,,2021-07-12,The interface generates flat XML files on daily frequency and FTP's them to Data S
+,DWDDT_TIMER,,2025-03-01,Loads drive-thru timer informationinto the data warehouse
+,DWDFRANCHISE_SALES,,2024-11-09,Franchise Data collection
+,DWDHRAIM_DAILY,,2021-04-05,Loads daily changes from SAP into the Authoriasystem
+,DWDKMINDER,,2026-11-07,Jobs to load kitchen minder data into data warehouse.
+,DWDLSS,,2028-09-29,This schedule is for loading LaborSchedulingSystemdata.
+,DWDMI_EXTRACT,,2025-01-21,Creates an extract of menu item data on a daily basis
+,DWDQES_FTP,,2025-02-17,FTP's QES files to ICC-
+,DWD_COFR_QTRLY_TRNOVER,,2023-11-07,Loads the quarterly turnover tablesin the Data Warehouse: QTRLY_TURNOVER_STG and
+,DWD_DTT_RETEN,,2023-07-14,Loads drive thru timer retention data
+,DWD_DT_TIMERS,,2023-11-07,Load drive-thru timer data into thedatawarehouseanddata mart
+,DWD_EMP_TRNOVER,,2021-04-06,Loads the EMPLOYEE_HEADCOUNT_FCT and EMPLOYEE_TERMINATION_FCT tables in the Data W
+,DWD_MONTHLY_OSA,,2024-08-01,Populates Monthly data for access thru OSA
+,DWD_MONTHLY_SOS,,2023-11-07,Loads the monthly speed of servicetables in the datawarehouse
+,DWD_SOS_FILE,,2023-09-02,Runs a UNIX script that checks thedrive_thru_timer.dtt file for data issues
+,DWD_WEEKLY_OSA,,2024-08-01,Process Weekly Data for access thruOSA
+,DWMEXCHANGE_RATES,,2029-06-01,Populates Data Warehouse / SalesMart Tables with Monthly Exchange Rates.
+,DWMFLASHCOMPDATA,,2024-04-29,Generates Prior Year Comparable daySales informationto be sent to the Restaurant
+,DWMLSS_BO_MONTHLY_RPT_TRIGGER,,2027-01-11,This job runs a bat file that places a triggerfile on BO server to run reports Mo
+,DWMOSA_ALIGNMENT,,2024-08-01,Transfer Alginment from Aries for OSA (to Warehouse Schema)
+,DWMQUICKSHOP,,2022-01-01,Loads Quickshop survey data into the datawarehouse
+,DWMSCORE,,2021-09-24,Loads monthly scorecard data into the warehouse and extracts/ftp's that data to Xf
+,DWMWEATHER_INFO,,2029-06-01,Populates Weather Info in Warehouse/ SalesMart
+,DWM_CRT_PROFILE,,2028-09-09,Takes a snapshot of how OTS's are assigned torestaurants
+,DWM_GUESTTRAC,,2028-09-09,Retrieve Monthly GuestTrac File from sftp server &load into Warehouse
+,DWM_MIRUS,,2025-01-04,Creates extract files from the datawarehouseandputs them on the ftp server for
+,DWM_OER,,2028-08-14,Load the OER file in the Warehouse
+,DWM_TRAININGSCORE,,2028-09-09,Loads monthly training scorecard data into thewarehouse and extracts/ftp's that d
+,DWOMKT_POLLING,,2022-11-01,Loads market polling ballot data into the datawarehouse
+,DWO_MARKETPOLLING_S,,2023-06-26,Move Market Polling Lotus Notes DBPoll Data to the Data Warehouse via Informattic
+,DWRADI_CTRY,,2022-11-01,Loads adi and country information from ARIES intothedata warehouse
+,DWRPLAN_SALES,,2025-02-17,Loads plan data into the warehouse
+,DWRSCORECARD,,2027-01-22,This schedule will load and processSCORECARDdatainto the data warehouse.
+,DWR_OFA_JV,,2024-11-09,This schedule contains 2 jobs thatrun perl scripts to replace the Company Code fo
+,DWR_PROMO_CAL,,2028-09-19,Loads in the promotional calendar provided bymarketing
+,DWR_SPDMK_STG,,2022-11-01,Loads data into the staging area ofthe data warehouse
+,DWR_SPEEDMARK,,2022-11-01,Loads Speedmark data into the datawarehouse
+,DWWLSS_BO_WEEKLY_RPT_TRIGGER,,2027-01-11,This job runs a bat file that places a triggerfile on BO server to run reports We
+,EIM_TRANSFERS_DE,,2029-11-06,RDCC-Company Inventory TRANSFERS Postings intoG/Lfor Germany
+,EIM_TRANSFERS_ES,,2029-08-24,RDCC-Company Inventory TRANSFERS Postings intoG/Lfor Spain
+,EIM_TRANSFERS_IT,,2029-01-05,RDCC-Company Inventory TRANSFERS Postings intoG/Lfor Italy
+,EIM_TRANSFERS_NL,,2029-09-17,RDCC-Company Inventory TRANSFERS Postings intoG/Lfor the Netherlands
+,EIM_TRANSFERS_UK,,2029-08-24,RDCC-Company Inventory TRANSFERS Postings intoG/Lfor the UK
+,FDDAILY1,,2029-04-15,Daily A/R jobs for BK ePay/Biller Direct
+,FDMCAINVSPRETRO,,2025-01-04,FOR CANADA - ON REQUEST ---> This schedule will generate retrospective billing tra
+,FDMCAL1,,2023-09-16,Core Aging Report by Region - 1th
+,FDMCAL25,,2023-09-16,Core Aging Report - 2nd Work Night
+,FDMCAREV_CO,,2029-04-15,CANADA Revenue Processing for Advertising andInvestment Spending for Company Rest
+,FDMCAREV_FR,FDMCAREV,2025-05-02,Canada Revenue Schedule for FRANCHISE Restaurants
+,FDMCASTMT,,2025-04-01,A/R: Canada Customer Statement Create
+,FDMNTERCAN1,FDMNTECAN,2025-11-01,#NAME?
+,FDMOBL4,,2021-01-25,Aging File Extract to Doors - Monthend
+,FDMOCA4,,2025-04-01,A/R: Canada Monthend A/R to G/L RECLASS
+,FGQUTLY,,2028-11-05,GL QUARTERLY
+,FHDARIW,,2022-05-29,Load data from the \\Ptcsql2\e$\flash\interface\rest\inbound directory into the B
+,FHDREST,,2022-05-29,Load Restaurant via \\Ptcsql2\flash\bin\ProcessRestData.bat into the SQL 7 FLASH
+,FKDASM1,,2021-11-23,"AP: Daily Reporting on Invoices, Payments andPositive Pay File, Duplicates Paymen"
+,FKDCAN1,,2025-06-21,AP: Canada Positive Pay File - ForEtobicoke B/K
+,FKDCAN1,,2025-06-21,AP: Canada Positive Pay File - ForEtobicoke B/K
+,FKDCANCHKS,,2028-09-19,"Burger King Canada Accounts PayableChecks, Issuanceand Paid file Schedule"
+,FKDCITIAPACACK,,2021-02-01,Process CP2E Acknowledgment File
+,FKDCITIAPACACT,,2021-02-01,Process CP2E Acceptance File
+,FKDCITIAPCRJT,,2021-02-01,Process CP2E Rejects File
+,FKDCITIEASTACK,,2021-02-01,Process CP2E Acknowledgment Files
+,FKDCITIEASTACT,,2021-02-01,Process CP2E Acceptance File
+,FKDCITIEASTRJT,,2021-02-01,Process CP2E Rejects File
+,FKDCITIEMEAACK,,2029-07-15,Process CP2E Acknowledgment Files
+,FKDCITIEMEAACT,,2029-07-15,Process Cp2E Acceptance File
+,FKDCITIEMEARJT,,2029-07-15,Process CP2E Rejects File
+,FKDCITILAACK,,2029-04-15,Process CP2E Acknowledgment Files
+,FKDCITILAACT,,2029-04-15,Process Cp2E Acceptance File
+,FKDCITILARJT,,2029-04-15,Process Rejects File
+,FKDCITINAACK,,2029-07-15,Process CP2E Acknowledgment Files
+,FKDCITINAACT,,2029-07-15,Process Cp2E Acceptance File
+,FKDCITINARJT,,2029-07-15,Process CP2E Rejects File
+,FKDEDICHECK,,2027-03-27,FKDEIDOC_US_PAYMENTS Job will create ACH fileforCITI bank on daily basis. CITI b
+,FKDEDIGB,,2025-07-14,Invoice Interface file from UK forvendor 3663.  Invoices are in IDOC format trans
+,FKDEF11LA,,2029-04-15,Programs to Automatically Run F11Payment Proposalsfor Mexico ACH and Mexico Che
+,FKDEFLWRUS,,2021-07-12,AP: Flowers Baking electronic invoice file.  Validateand create Batch Session on
+,FKDEIDOC1,FKDEIDOCPAYMENTS,2027-11-14,IDOC PAYMENTS AM WIRES
+,FKDEIDOCAPAC,,2021-02-01,APAC Citibank IDoc Outbound
+,FKDEIDOCEAST,,2021-02-01,East Europe (Unicode) Citibank IdocOutbound
+,FKDEIDOCEMEA,,2029-01-05,EMEA Citibank IDoc Outbound
+,FKDEIDOCLA,,2029-07-15,Latin America Citibank IDoc Outbound
+,FKDEIDOCNA,,2029-01-05,North America Citibank IDoc Outbound
+,FKDE_AMEX_US_BIP,FKDE_AMEX_US_BIP_BOX,2021-12-03,Move Amex BIP payment file to PTCFTP1
+,FKDIVBR,,2021-11-23,Vendor Invoice Billing Reconciliation for MBMC(MBM Corporation)
+,FKDMEXEDI1,,2021-07-12,AP: Mexico Invoice EDI ( FTP ) process.
+,FKDPBRS,,2025-07-14,Update ZCOMM - ZSPLY - ZSPLYDC
+,FKDREIN1,,2021-01-25,"AP: Reinhart Fodd Svc's, process daily invoices fromdelivered goods to restaurant"
+,FKDSIM1,,2029-11-06,Daily jobs for SAP Invoice Management
+,FKDUCA1,,2025-07-29,Monthly - Canada B/K Bank Reconciliation
+,FKDUPGB,,2027-07-25,Daily Duplicate Payments
+,FKMBUNTIN,,2021-07-12,This scehdule contains one job thatprocessestheflat file for MAA vendor Buntin
+,FKMCA1,,2023-02-18,Monthly - Canada B/K Bank Reconciliation
+,FKMCONWAY,,2021-01-25,Process flat vile for vendor Conway-22142
+,FKMFRIMATEC,,2021-12-03,This schedule contains one job thatprocess the flatfile for vendor FRIMATEC REFR
+,FKMLAVREP,,2021-08-17,LAVANTE AP Credit Balances
+,FKMOSM1,,2023-11-25,AP:  Monthly Monthend Close
+,FKMOSM3,,2027-09-12,JPM Chase PCard Monthly Vendor andInvoice transaction files for the month's cycle
+,FKMUNIWORLD1,,2026-03-31,"AP: EDI Uni World File interface via FTP, forAccounts Payable invoices."
+,FKMYREDI1,FKMYREDI1_BOX,2023-09-09,AP: MAA Advertiser's Y&R National Production invoices.  To be processed through th
+,FKOEDI1,,2027-01-11,AP EDI Interface File Process
+,FKQLAVREP,,2021-08-17,LAVANTE  Vendor Master  Quarterly extracts
+,FKWAMEX REMIT,FKWAMEXREMIT,2021-12-03,American Express Remittance file ofpayments to beapplied to corporate credit car
+,FKWELH1,,2027-07-25,Accounts Payable Invoice InterfaceFile From LeHigh Shoes
+,FKWEONESOURCE,,2021-07-12,This job will contain one job thatwill produce afile with a listing of the BK pr
+,FKWEPERF,,2021-07-12,Perfection Bakeries (Aunt Millies)
+,FKWE_AMEX_DE_EPA_REMIT,,2021-12-03,Generation and remittance of Amex Germany Credit CardRemittance File. This file c
+,FKWE_AMEX_ES_EPA_REMIT,,#VALUE!,Generation and remittance of AmexSpain Credit CardRemittance File. This file con
+,FKWE_AMEX_GB1_EPA_REMIT,,2021-12-03,Generation and remittance of Amex UK Credit Card Remittance File. This file contai
+,FKWE_AMEX_GB3_EPA_REMIT,,2021-12-03,Generation and remittance of Amex UK GB3 Credit CardRemittance File. This file c
+,FKWE_AMEX_MX_EPA_REMIT,,2021-01-25,Generation of Amex Mexico Credit Card Remittance File. This file contains a breakd
+,FKWKSM1,,2021-08-02,"AP Checks and assorted reports forpaying companies US1, US14, MX3, US32, US6"
+,FKWKSM2,,2029-04-21,"AP: Canadian checks and assorted reports for paying company CA1 - Jobs CA1A, CA1"
+,FKWLEPAGE,,2021-07-12,This schedule contains one job thatprocessestheflat file for vendor Lepage Bake
+,FKWLOADFX,,2025-11-01,This schedule will consist of 4 jobs which will run weekly.
+,FKWLOGICAFEDEX,,2021-01-25,Process flat file for vendor Fedex-6. Thisfile is sent by Logica on beh
+,FKWOEDI4,,2027-11-14,"EDI Invoices for electronic processing from Crispen,Porter and Bogusky for Maa US"
+,FKWR_AMEX_MX,,2021-08-02,Process acknowledment and acceptance file fromAmerican Express Mexico. These file
+,FKWSCHWEBEL,,2021-12-03,This schedule contains one job thatprocessestheflat file for vendor Schwebel Ba
+,FKWSFCUS,,2021-07-12,"AP : Vendor, Shoes For Crews Electronic ( FTP) invoice file process."
+,FKWVENTURE,,2024-04-26,Venture Encoding Processing
+,FSDCAGIFTCARD,,2028-09-19,Process CA giftcard file from DW
+,FSDUSGIFTCARD,,2029-04-15,Process US Giftcard file from DW
+,FSDXFORMAACT,,2021-05-01,P&L file to Xformity server besidesOFA
+,FSM 1 NITE,,2024-08-01,1st Worknight Schedule
+,FSM1NITEBR,,2025-07-29,BRAZIL - Monthly  Run
+,FSM1NITEC,,2025-06-28,CANADA  Depreciation & Gains/Loss Reclass - Monthly Run
+,FSM1NITECH,,2027-07-25,SWITZERLAND - Monthly  Run of FixedAssets reclasses
+,FSM1NITECN,,2025-02-16,CHINA - 1st Worknight Monthly Run
+,FSM1NITEDE,,2025-01-04,GERMANY - Monthly  Run
+,FSM1NITEES,,2025-01-04,SPAIN - Monthly  Run
+,FSM1NITEGB,,2029-04-03,GREAT BRITAIN - Monthly  Run
+,FSM1NITEIT,,2028-09-09,ITALY - Monthly run of Fixed AssetsReclass
+,FSM1NITENL,,2026-07-01,NETHERLANDS - Monthly  Run
+,FSM1NITESE,,2027-05-15,SWEDEN - Monthly  Run of Fixed Assets reclasses
+,FSM1NITESG,,2021-01-25,SG - Monthly  Run of Fixed Assets reclasses
+,FSM1NITETR,,2021-08-17,Turkey Monthly run of Fixed AssetsReclass
+,FSM3RDDAYPOST,,2026-11-28,"Reports GG3, KO1, and KR1 to runon the 3rdbusiness day, on request, after the"
+,FSMADPES,,2021-08-17,Process GL file from ADP
+,FSMADPGB,,2021-05-01,Process GL files from ADP for UK
+,FSMADPNL,,2021-08-17,Process GL file from ADP
+,FSMCAACTUALS,,2029-08-28,Loading of Actuals for Canada
+,FSMCAFIN,,2026-11-28,Call Mindtree on-site coordinator at 336-686-2253forjob failures.     4/8/24
+,FSMCAFIN2,,2026-11-28,Run monthly FOS report for Canada
+,FSMCAPINT,,2028-09-09,Interest Capitalization Job
+,FSMCAPLAN,,2026-11-28,Loading of OFA Plan data to SAP forCanada
+,FSMCLOSE,,2021-07-12,Call Mindtree on-site coordinator at 336-686-2253forjob failures.  5/13/21-
+,FSMGAOSCORP,,2024-03-25,G&A Corporate Operating Statement Reports   2/27/-4Added steps 4 thru 12.
+,FSMLSTFINL,,2026-11-28,GL Last Final
+,FSMMEXICODTPL,,2026-11-28,SAP P&L and Detail P&L report sentto Mexico CompanyRestaurants via Connect Remot
+,FSMMISC,,2021-12-03,Call Mindtree on-site coordinator at 336-686-2253forjob failures.  2/5/7: Cre
+,FSMNITE4-6,,2025-01-04,GL 4-6 Work night  schedule
+,FSMOFAAPACLE1,,2028-07-22,Forecast upload from OFA to SAP - APAC
+,FSMOFAAPACLE2,,2028-07-22,Forecast upload from OFA to SAP - APAC
+,FSMOFAAPACLE3,,2028-07-22,Forecast Uplaod from OFA to SAP - Asia Pacific
+,FSMOFAAPACLE4,,2028-07-22,Forecast upload from OFA to SAP - Asia Pacific
+,FSMOFAAPACPLN,,2028-07-22,Call Mindtree On Call For Job Failures7/1/28 - New job FSMJPPLN
+,FSMOFAEMEALE1,,2029-01-05,Forecast Upload from OFAto SAP - EMEA
+,FSMOFAEMEALE2,,2029-01-05,Forecast upload from OFA to SAP - EMEA
+,FSMOFAEMEALE3,,2029-01-05,Forecast upload from OFA to SAP forEMEA
+,FSMOFAEMEALE4,,2029-01-05,Forecast upload from OFA to SAP - EMEA
+,FSMOFAEMEAPLN,,2029-01-05,Load plan from OFA into SAP
+,FSMOFANALE1,,2028-03-21,Forecast upload from OFA to SAP - NA
+,FSMOFANALE2,,2028-03-21,Forecast upload from OFA to SAP forUS
+,FSMOFANALE3,,2028-03-21,Forecast upload from OFA to SAP - NA
+,FSMOFANALE4,,2028-03-21,forecast upload fro OFA to SAP NA
+,FSMOFANAPLN,,2028-03-05,Load Plan from OFA into SAP
+,FSMPTHRUF,,2029-04-15,Call Mindtree on-site coordinator at 336-686-2253forjob failures.  2/4/29 -
+,FSMPTHRUF_FIELD_DOORS_4_FRAN,,2026-11-28,FRANCHISEE reporting for DOORS
+,FSMRFIN,,2029-04-15,"Posting documents from recurring documents forUS,CAand LA"
+,FSMRTHRUF_FIELD_DOORS_4_COMP,,2026-11-28,THIS SCHEDULE PRODUCES FIELD REPORTING SPECIFIC TOCOMPANY REST
+,FSMWRKNT3C,,2026-11-28,CANADA In-Process (WIP) Reclass & PO Tax Reclass -Monthly Run
+,FSM_GL_2WD_PLV_MONTH_STD,GL_2WD_PLV_MONTH_STD,2029-01-05,"Food over/short by month, Area andRestaurant"
+,FSRCURMOSELACCTCA,,2027-01-24,Canada Current Month Selected Account job
+,FVM_CANADIAN_SPLITTER,,2024-03-25,Creates the Financial reports for Canada
+,FVM_GL31G_SPLITTER,,2022-12-06,Company Income Statement Summary
+,FVM_GL36 AND GL36Y_SPLITTER,,2023-06-26,Create the Product Line Variance MTD and YTD reports
+,FVM_GL38_SPLITTER,,2022-12-06,Create the 6 Month Past Due Receivables reports
+,FVM_GL_JAYWARE_SPLITTER,,2025-03-16,Creates the Financial reports fromSAP
+,FVW_GL_AGED_AR_SPLITTER,,2022-12-06,Create the Detail and Summary AgedAccount Receivablereports
+,GWDARCHIVE_POSXML,,2021-07-12,This archive jobs takes care of archival process of the informatica folders
+,GWDDIMENSIONS_MASTERS,,2029-04-15,This package populates various restaurant masters.
+,GWDEMAIL_PROCEDURE,,2029-04-15,This procedure send notifies rejects through an email.
+,GWDFACTS_DRV,,2029-04-15,Populates the REST_EOD_TOTAL_FCT Table
+,GWDINFA_ARCHIVE,,2021-04-23,This box takes care of archiving files.
+,GWDINFA_JAVA,,2021-07-12,This is Box that runs all JAVA jobsin POS XMLInformatica Set Up project
+,GWDINFA_JAVA_SCHVALD,,2021-07-12,The box runs the java scripts for schema validationson POS XML files
+,GWDINFA_ODSINTG,,2021-07-12,This is the first Informatica job box
+,GWDINFA_POSXML_ARCHIVE,GWDINFA_ARCHIVE_BOX,2021-06-14,This is informatica workflow that runs archivejob.
+,GWDINFA_RODX,,2021-07-12,This box generates RODX files. Thebox shouldrundaily at every 3th minute excep
+,GWDJAVA_SCHVALD,,2021-03-01,This job will perform schema correction on thePOSXML files that failed Informati
+,GWDSIMS_MNLITMUPD,,2021-09-24,The box will be dependent on the intermediatefileload and will run daily
+,GWDSTORED_PROCEDURES,,2029-04-15,This schedule runs the stored procsfor the GDW.
+,GWD_ATS,,2021-12-03,Processes ATS Location file for USemployees.
+,GWD_HRIS_CA_HOURLY,,2021-09-24,Creates HRIS files for Canada Hourly Employees
+,GWD_HRIS_CN_HS,,2021-09-22,Creates HRIS files for China Hourlyand SalaryEmployees.
+,GWD_HRIS_MX_HOURLY,,2021-12-03,Creates HRIS files for Mexico Hourly Employees.
+,GWD_HRIS_MX_SALARY,,2021-12-03,Creates HRIS files for Mexico Salary Employees.
+,GWD_HR_F_US,,2021-12-03,"This schedule will collect/processUS HR xml filesfrom Micros, and send data to S"
+,GWD_HR_RET_CA,,2021-12-03,Collect HR changes from SAP effective that dayandsends to Micros for CA employee
+,GWD_HR_RET_CN,,2021-01-18,Processes HR changes effective today from SAPandsends to Micros for all China em
+,GWD_HR_RET_SG,,2021-01-18,Processes HR data changes effectivetoday fromSAPand sends to Micros for all Sin
+,GWD_HR_RET_US,,2021-12-03,Pulls HR data from SAP effective today and sends to MyLabor for US employees.
+,GWD_PDC_SG,,2021-01-18,Collects and proceses payroll datafrom Microsforall Singapore employees.
+,GWD_TDC_CA,,2021-12-03,Collects and processes time punch data from Microsfor CA employees.
+,GWD_TDC_SG,,2021-01-18,Collects and processes timecard data from Micros forall Singapore employees.
+,GWD_TDC_US,,2021-12-03,Collects and processes detailed labor data intheform  time punch xml files from
+,GWH_HR_RCT_CA,,2021-12-03,Pulls HR data from SAP and sends toMicros forCAemployees.
+,GWH_HR_RCT_CN,,2021-01-18,Processes HR data from SAP and sends to Microsforall China employees.
+,GWH_HR_RCT_SG,,2021-01-18,Processes HR data changes from SAPand sends to MyMicros for all Singapore employe
+,GWH_HR_RCT_US,,2021-12-03,Pulls HR data from SAP and sends toMyLabor for USemployees.
+,GWMMONTHEND_INVENTORY_REPORT,,2029-11-06,This box has to execute for the entire first weekofthe month inorder to send a r
+,GWMSIMS_MSTRITM,,2021-09-24,The box will run 1st of every monthat 9 AM. The boxwill run jobs to maintain the
+,GWMSIMS_XREF,,2021-09-24,The box runs the job which will load monthly RSI cross reference file every 1st da
+,GWRSIMS_OTS,,2021-09-24,The box contains all on demand jobs
+,GWWDIMENSIONS_DRV,,2029-04-15,Loads Dimention data for Data Warehouse
+,GWWFACTS,,2029-04-15,Populates all the fact tables fromODS to Warehouse
+,GWWFACTS_DRV,,2029-04-15,Populates the REST_EOD_TOTAL_FCT Table
+,GWWSTORED_PROCEDURES,,2029-04-15,This schedule runs the stored procsfor the GDW.
+,GWW_PDC_CA,,2021-12-03,Collects and processes weekly payroll data forCAemployees.
+,GWW_PDC_US,,2021-12-03,This schedule runs several jobs that perform datacollection of payroll data from
+,GWW_PFG_US,,2021-12-03,Creates and sends Payroll XMT filesto SAP forUSemployees.
+,HRBNEWHIRE,,2028-01-23,The New Schedule should start from1/15/28EST.
+,HRBTERMREPORT_WED,,2028-08-28,Termination report for Payroll
+,HRB_BIWEEKLY_BENEFITS,,2021-03-12,HR Weekly IDS 41K Deposits and Loans
+,HRDATS,,2029-08-28,Applicant Tracking system OutboundJobs
+,HRDATSLOCA_POSIFTP,,2021-04-06,3/31/21:  This Box will ftp the files forATSLocation Import/Position Key Th
+,HRDATSLOCA_POSIKEY,,2021-04-06,3/31/21:   This box will have 2jobs one for location import and another for Po
+,HRDATSMAINTENANCE_INTERNAL,,2021-01-12,This is the schedule for ATS internal candidates
+,HRDEADPMASTGB,,2027-11-14,Reads and decrypts master data files from ADP.Sendsthe decrypted files to the Gr
+,HRDEADPMASTSP,,2029-04-15,Reads and decrypts master data filefrom ADP.Sends decrypted file to Spain market
+,HRDEADPSSLGB,,2027-11-14,"This job reads, encrypts ans sendsSSL files fromtheRSC in Great Britain to ADP."
+,HRDEADPSSLSP,,2029-04-15,"This job reads, encrypts and sendsSSL file from theRSC Spain ADP Spain"
+,HRDFUNCTION,,2021-08-17,Function Update in SAP. The First Run date is:7/14/21 at 1:PM
+,HRDMERRILL,,2029-01-05,Daily Merrill Lynch Feed
+,HRDMICROS,,2021-12-03,HR MICROS Interface files processing
+,HRDMICROS_MX,,2029-11-06,Backup Micros files for Mexico
+,HRDMICROS_OUT_MX,,2021-01-12,This Box will be end of day jobs for Mexico
+,HRDOM_HR_ALIGNMENT,HRDOM_HR_ ALIGNMENT,2023-05-03,3 step process to determine Org. Unit Alignment basedupon Aries Information
+,HRDTAXUPDATE_CA,,2021-01-12,This is the Box for the beginning of Day for HR Canada
+,HRDTERMREPORT,,2029-04-15,Termination report for Payroll
+,HRDU_LINE_OF_SIGHT,,2025-04-04,"Update Infotype 93 via Org. Managment Relationshipsof object type ""ZL"" to org."
+,HRMAMEXFEED,,2021-07-12,"HR feed to Amex to send email address, The Rundate for this job will be 7/1/21"
+,HRMEADPTIMEGB,,2027-11-14,"Reads, encrypts, merges and transfers Time files fromthe local market in Great Br"
+,HRMEADPTIMESP,,2029-04-15,"Reads, encrypts and transfers Timefile from SpaintoADP Spain."
+,HRMS_TO_AG_MONTHLY,,2029-11-06,Position to Role assignment
+,HRM_HRAWARDS,,2026-11-07,Refreshes and FTP's  HRAWARDS fileto vendor.
+,HRM_MONTHLY_PROCESSING,,2023-11-07,HR Month End Update of 97 Hours
+,HRM_POST_MONTHLY_PROCESSING,,2027-08-16,HR Upload Erisa file from Network
+,HRQ_QUARTERLY_PROCESSING,,2023-05-03,HR Report & Labels for EDP Actives
+,HRWATSMAINTENANCE,,2021-03-12,ATS MAINTENANCE FILE FOR TUESDAY MORNING RUN
+,HRWHRM_TRAVIZON,,2027-07-25,"This schedule FTP to the vendor site, send theReportinformation to Travizon by e"
+,HRWIDSWK_S,,2021-03-12,HR IDS 41K Deposits and Loans
+,HRWREMEDY_UPDATE,,2022-01-11,Update Perot Remedy system with SAPdata
+,HRWTANGOEFEED,HRWTANGOEFEE?D,#VALUE!,Tangoe Feed. The first run for this interfaceison7/23/21 at 1: AM and shou
+,HRWTAXUPDATE_CA,,2021-05-13,This is the Box for the beginning of Day for HR Canada        Please note:    We a
+,HRW_HMO_INTERFACES,HRWHMOINTS,2021-01-12,"HMO interface runs on a weekly basis - Avmed,BC/BS,Vytra"
+,HRW_WEEKLY_BENEFITS_INTERFACES,,2021-03-12,HR First Health File Maintenance
+,IMDCAPEXTOOFA,,2028-07-01,IM Capital Expenditure Extract files to OFA
+,IWDNLOAD,,2021-12-17,Daily Load Schedule This schedule executes inentirety in the AM and then partiall
+,IWRCARROLS,,2023-05-03,Loads the data from Carrols into the OSA cube
+,IWRFINANCE,,2021-11-27,"On Request Schedule for Keyline Item, Gross Profitand Performance Improvement."
+,KCBADPCC,,2027-03-27,Cost Center extract for ADP
+,KCDADPCC,,2027-04-05,Cost Center extract for ADP UK
+,KCM13MONTHHIST,,2026-11-28,13 Month Historical FOS Reports
+,KCMCC1ST,,2021-01-25,1/13/21 - New Job KCMUR1 have bee
+,KCMECAPP,,2024-01-08,Create and FTP the Report files forCANADA DOORS12/17/3 - (dholz) Removed FTP s
+,KCMECAPP2,,2024-01-08,Send YTD FOS file to Canada server
+,LEMSOXFILES,,2026-07-01,Lease Accounting SQL extract filescopied intoUNIX for use by user from within SA
+,LNDSSMSTOPC,,2028-05-16,SSMS to Power Center and TheNetwok(Supplier/Specification MasterData Daily Interf
+,LNDSSMSTOPC,,2021-01-25,SSMS to Power Center and TheNetwok(Supplier/Specification MasterData Daily Interf
+,LSDDIRECT_LABOR,,2026-12-02,Creates direct labor requirements for companyrestaurants based on actual sales an
+,MFDIREST,,2025-06-28,Restaurant Information Update
+,MFD_AR_CUSTOMER,MFD_AR_CUSTOMER_MASTER_UPDATE,2026-09-07,Generation of AR Customer Master Updates
+,MFD_AR_VENDORS,,2025-06-29,Generate AP Vendors from AR Customers (Franchise Groups)
+,MID_POS_NOTIFY_TIER_MISMATCH,,2027-03-27,Send an email to POS if there is amismatch between restaurants associated to tier
+,OBDACCT_EXP_NOTIFIER,,2029-01-05,This job notifies the Reporting Operator (RO)whentheir Franchisee users acounts
+,OBDARIES_TRANSFER,,2028-01-22,THIS SCHEDULE TRANSFERS DATA FROM ARIES DATABASE TO ACTIVE DIRECTORY ALSO FROM SAP
+,OBDEXPANDALLGROUPS,OBDEXPANDALLGROUPS_B,2023-11-25,This job will expand all the dynamic groups inOblixand must run every 12 hours/
+,OBDRESTMGR_TRANSFER,,2021-04-06,This schedule runs jobs that synchronize restaurant manager identity data from SAP
+,OBDSAP_OBLIX_USERS,OBDARIES_TRANSFERS,2025-04-04,Creates SAP Users from Oblix
+,OSMFGP,,2025-03-01,Monthly FGP Processing
+,OSMPLV,,2026-11-28,Food Over/Short (PLV)
+,OSMPLV CANADA,,2026-11-28,FOS for Canada
+,OSWAVGCOST,,2026-11-28,Weekly Average Cost Interface withFCB
+,PABESMS_S,,2021-03-12,ADP OUTBOUND INTERFACE
+,PABEYFEED,,2021-04-06,E&Y Payroll interface
+,PABITCHECK_S,,2023-05-03,Infotype Consistency Check
+,PABPAYRGL,,2025-01-04,Payroll/GL Comparison report
+,PABRPAYRTE1,,2025-01-04,Create the Travel Expense file to Load into SAP and generate report in test mode
+,PABRPAYRTE2,,2025-01-04,Read Travel Expense file TEPAYROL and update SAP'sinfotype 15
+,PADADPDIS,,2027-01-24,Runs Job PADADPDIS which will create the GarnishmentDisbursement file. This file
+,PADADPINT,,2027-01-24,Runs job PADADPINT which read the Interpretation filesent by ADP and create a not
+,PADADPPER1,,2027-01-24,Creates and transfers Tax periodicfiles for eachPayroll area to ADP
+,PADADPPER2,,2027-01-24,Creates and transfers Tax periodicfiles for eachPayroll area to ADP
+,PADADPPQQ,,2027-01-24,Runs Job PADADPPQQ which reads thePQQ files sentbyADP and send an updated PQQ f
+,PADCITITU_ACK,,2028-02-07,This job will run Tuesdays and willprint theacknowledgement report for the issua
+,PADEYFEED,,2021-01-12,E&Y Payroll interface
+,PADNETPAY,,2021-04-06,Run Threshhold report for all payroll areas
+,PADPYRECONCILE,,2024-04-22,This job will process a file from Citibank after thefile arrives on the server. I
+,PAWIDS41_S,,2028-03-21,Payroll All Areas Apply IDS File Maintenance (ReverseFeed)
+,PAWPAYRGL,,2025-07-14,Payroll/GL Comparison report
+,PBDIPBR,ABDIPBR,2021-03-23,PROSOURCE BILLING RECON DAILY INTERFACE
+,PBMPBR,ABMPBR,2021-03-23,PROSOURCE BILLING MONTHLY JOB
+,PBM_SAP_PBMCHECKS,,2021-08-02,Payroll Crew Bi-Weekly GoodMoney Report
+,PBWREC,ABWREC,2021-03-23,Prosource Billing Reconciliation Weekly Schedule
+,PDB_SAP_PD_MDATA_REPORTS,,2024-03-25,Payroll Restaurant Managers Terminated Employees in the Current Period
+,PDB_SAP_PD_PRE_REPORTS,,2024-03-25,Payroll Restaurant Managers GoodMoney Report
+,PEBUPDIT14WT767,,2021-04-16,Update Infotype 14 for WT 767
+,PMBCH,PMB_SAP_PMBCHECKS,2021-09-24,Runs job PMBCH which will create payment advices forPM population
+,PNB_PNBRPTIMESAT_PNBSTARTSAT,,2028-02-07,Payroll Non-Exempt Employees StartRPTIME_SAT
+,PNB_SAP_NOTES_14:,,2025-09-09,Payroll Non-Exempt Employees Collect Lotus Notes Time(FTP BKWINT1 to UNIX)
+,PNWHEADER_S,,2023-06-26,Payroll Non-Exempt Employees SAP Header RecordCreatefor Notes (Notes picks up We
+,PSASAU1,,2029-07-15,MAA Projects process to lock wbs elements
+,PSDAVACTL,PSDAVACTLBX,2028-09-19,Job to turn on Availability controlfor projects in all Controlling areas -Four ti
+,PSMCAN1,,2024-08-01,CANADA - Monthend Schedule
+,PSQTRY1,,2025-06-21,PS:  Quarterly - Monthend Close
+,PWDROSCLRTBL,,2022-06-18,Changed printer for all steps that send report to printer 6S1 to print instead
+,PWDROSMAINT,,2021-03-12,"Changed all output destinations of 6S1 to 5S24,ROS interface  Jobs"
+,PWDROSREJECTS,,2028-02-07,2/7/28:  CHANGED THE JOB TO RUN AT 1:PM. CHANGED FROM 3: PM to 1: PM  C
+,PWDSHOESEXTC,,2021-05-01,Creates a file with for all activecrew employees
+,PWWCITITU_S,,2028-02-07,Payroll Crew Weekly Citibank ChecksIssued File
+,PWWCLEARTIME_S,,2023-06-26,Backup and delete the PYTIME file in preparation forweekly Time Processing
+,PWWRJOBQUAL_S,,2023-05-03,Report Job Qualifications Forms Received XM79's
+,PWW_SAP_PWWCHECKS,,2024-04-22,Payroll Crew Weekly GoodMoney Report
+,PWW_SAP_PWZ5T,PWW_SAP_PW_PRE_REPORTS,2022-06-17,Payroll Crew Weekly Apply AlignmentInformation
+,PWW_SAP_PW_MDATA_REPORTS,,2024-06-24,Change Event Trigger from Core Reports to Master DataReports
+,PWW_SAP_PW_PRE_REPORTS,,2021-09-03,Payroll Crew Weekly GoodMoney Report
+,QIH_GENERATE_FILE_FOR_POWR_CTR,QIH_GENERATE_FILE_FOR_POWR_CTR_BOX,2021-12-03,The QA Incident web application creates a tabdelimited file containing incident d
+,QIH_THENETWORK_FTP,,2021-12-03,Move theNetwork files to ePowerCenter
+,RCDALIGNMENT_UPDATE,,2023-09-02,Auto align REDCAT BK internal contacts with AriesAlignment
+,RCDMP_SALES_UPDATE,,2023-08-15,The job will execute SQL Server Stored Procedure called usp_MarketPlan_updateSales
+,RCH_CORRECT_ARIES_QUEUE,,2028-04-04,This is to correct data discrepancies in REDCAT- ARIES queue
+,REDAALA2,,2024-06-24,US DAILY Property and Lease Archive
+,REDACAARCHIVE,,2025-05-02,Canada REMS Property and Lease Archive
+,REDCAMANRENTAR,,2029-06-01,REMS Canada Manual Rent process forinterfaceto AR
+,REMAV1,,2024-01-08,REMS Asset Valuations
+,REMCABAFK,,2025-04-12,Post the Canada AP Base Rent
+,REMCABRAR,,2029-04-15,REMS Canada Monthly Base Rent for interface into AR
+,REMCAMCA,,2029-04-15,Monthly CAM processing cycle for Canada
+,REMCAMUS,,2024-04-22,US Monthly CAM Processing
+,REMCANADA PCT RENT AR/GL,,2029-06-01,Canada AR/AP/GL Percent Rent Interface
+,REMCAPCNTFK_CO,,2029-06-01,Canada Monthly AP Percent Rent Generation forCompanyrestaurants
+,REMCBD,,2025-04-12,Post the Canada AR Base Rent
+,REMOBN1,,2022-02-01,The Loading of Travel Book information from REMs to Lotus Notes
+,REMUSBASERTAR,,2026-02-02,US REMS Base rent interface to AR
+,REMUSPCNTFD_FR,,2026-02-02,US AR Percent Rent for Franchise Restaurants
+,REMUSPCNTFK_CO,,2026-02-02,Generate Company Percent rent transactions andpost to the General Ledger
+,REMUSPCTNFK_FR,REMUSPCNTFK_FR,2026-02-02,AP Percent rent transaction interface to AP for Franchise Restaurants
+,REOB1,,2025-07-14,Backup and housekeep files
+,REWCAMCA,REWCAMCA_BOX,2021-04-06,CAM CA Weekly
+,REWCAMUS,,2025-06-21,US Weekly CAM processing
+,RIDCA_RS_GET_ORDERS,,2028-04-04,Picks up orders for truck vendors
+,RIDCA_RS_GET_PROLL_CNFM.CMD,RIDCA_RS_GET_PROLL_CNFM_CMD,2028-05-02,Confirm payroll
+,RIDDXMTS,,2021-04-06,RCA Forms XMT transfers
+,RID_CAN_CENTRALIZED_RODX_CR,RID_CAN_CENTRALIZED_RODX_CREATION,2027-09-12,Run Menulink software for creatingCanada RODXFilesevery half hour from 3 -21
+,RID_CA_GET_JOURNAL_FILE,RID_CA_GET_JOURNAL_FILES,2021-04-06,Pulls back the journal files from Canada sites
+,RID_CA_MICROS_CONF_CHECK,,2029-08-28,Micros System Health Check
+,RID_CA_RS_GET_IWX,,2028-09-19,to pick up the dtt files from restand delivertodatawarehouse
+,RID_CA_RS_GET_QES,,2028-09-09,To retrieve QES data files from CARest.
+,RID_CA_RS_MICROS_GET_DCS_REP,,2029-07-15,This job will pull back DCS data from Canada Micros rest
+,RID_CA_RS_MICROS_GET_IWX,,2029-04-15,This Job Will pull back IWX data from Canada Rest
+,RID_CA_RS_MICROS_RIS_DAILY,,2021-07-12,Pulls back CC settlement and backupinfo for Canada sites
+,RID_CA_RS_SEND_EINVOICES,,2028-09-19,to send invoices to canadian rest.
+,RID_CA_RS_SEND_MWSCAN_DAT,,2028-09-09,to send the MWScan.dat file to theCanadian Restaurants Daily
+,RID_CA_RS_SEND_XML_IMPORTS,,2029-04-15,This job will send down the xml imports
+,RID_CN_RS_GET_RODX_FILES_CMD,,2029-04-15,This job will pull back the RODX files from the ChinaRest
+,RID_CN_SEND_INVENTORY_FILE,,2021-02-01,Sends Inventory files to China sites
+,RID_CORP_POLLING_PROCESS,,2027-12-18,Distributes polling files on RIS corp server
+,RID_DECONVERT_TRANSLATION,RID_DECONVERT_TRANSLATION_BOX,2023-11-25,Creates the PLU translation file tobe sent totherestaurants
+,RID_DISCOUNT_DATA,,2022-03-25,Extract the Discount data from therestaurantsandcreate the report.
+,RID_EMEA_RS_GET_RODX_FILE,,2029-07-15,Pulles Back RODX data from rest
+,RID_FAILED_REGEN_PASSTHROUGH,,2028-06-04,Run Rodx Regen and send to corp destination
+,RID_INVENTORY_ITEM_DUMP,,2029-01-09,Create an Inventory Item dump
+,RID_MX_RS_GET_RODX_FILES,,2021-01-12,This Job Will pull back the RODX files from MexicoRest
+,RID_MX_RS_GET_RODX_FILES_RETRY,,2021-01-12,This job will retry the pull back the RODX files fromall Mexico rest
+,RID_MX_RS_SEND_HRIS_FILE,,2029-11-06,Mexico HR integration
+,RID_REGEN_MISSING_RODX,,2028-06-04,Run command to regenerate missing rodx
+,RID_RMS_POLLING_DAILY,,2028-03-21,Run Restaurant Management System Polling workflowtopullback files from US restau
+,RID_RMS_POLLING_DAILY_DESC,,2028-05-22,Run RMS Polling workflow to pullback files from USrest.
+,RID_RODX_DECONVERT,,2021-07-12,Run the RODX Deconvert applicationto providefiles for RDCC jobs to process on se
+,RID_SEND_INVENTORY_FILE,,2021-07-12,Send inventory files to restaurantsspecific to MyInventory
+,RID_SG_RSMICROS_SEND_INVENTORY,,2029-01-05,Sends KM Inventory files for Singapore
+,RID_US_RS_COMP_GET_AMPHIRE_REC,,2029-04-03,This job is going to pull back amphire data from theRest
+,RID_US_RS_EXEC_FORCED_RODX,RID_US_RS_EXEC_FORCED_RODX_PULLBACK,2028-09-29,To preform a  forced RODX pullback
+,RID_US_RS_GET_CCSETTLEMENT,,2029-01-08,to retrieve cc settlement files from the rest.
+,RID_US_RS_GET_DCS_REPORT,,2028-08-05,To pullback the Daily Cash Sales Report from all US Restaurants
+,RID_US_RS_GET_DCS_REPORT_MIC,,2028-01-23,Get DCS Reports from US MICROS Rest
+,RID_US_RS_GET_EM_PACKETS,,2029-01-05,This Job will Pull back the EM confirmation packets from the micros rest
+,RID_US_RS_GET_MICROS_POLLING,,2028-09-29,to pullback QES and IWX files fromupgraded MicrosRestaurants
+,RID_US_RS_GET_POLLING_FILE_AP3,RID_US_RS_GET_POLLING_FILE,2028-11-17,This job will pull back data from the Rest
+,RID_US_RS_GET_QES,,2028-07-02,To get the Quality Evalution Filesfrom the USRestaurants
+,RID_US_RS_GET_QES_APP2,,2029-04-03,This Job will pull back QES data from the US ComprisRest
+,RID_US_RS_GET_XMT_FILES,,2028-08-05,Retrieve XMT files and move them tothe appropriate folder and archive them
+,RID_US_RS_MICROS_AMPHIRE_REC,,2029-07-15,This Job will pull back Amphire data for micros rest
+,RID_US_RS_MICROS_CONFIG_CHECK,,2029-07-29,This Will Run the a config check onall microsrest
+,RID_US_RS_MICROS_MANUAL_EOD,,2029-01-05,This RMS task verifies which sitesfailed to completemanual EOD.
+,RID_US_RS_MICROS_QESFTP_EXE,,2029-07-15,The job updates the micros QESFTP file on thebackoffice and Runs a manual ftp pr
+,RID_US_RS_MICROS_UPDATE_TILL,,2029-01-05,Deletes the 9998 manager cashier and creates new tilltemplates.
+,RID_US_RS_PURGE_FOLDERS,,2029-01-05,Purges the RMS polling folder in ptcfil1 which are older than 18 days
+,RID_US_RS_REGN_PREV_DAYS_RODX,,2028-09-19,to check and get rodx for any missing days intheusgoing back 1 days
+,RID_US_RS_SEND_CMNET_MSG,,2029-01-08,To send CMNET messages to the restaurant servers
+,RID_US_RS_SEND_CORP_REPORT,,2029-04-03,This Job will send down Corp Reports to the USRest
+,RID_US_RS_SEND_CORP_REPORTS,,2028-08-05,Send Corporate Reports to US restaurants
+,RID_US_SEND_MS2_PACKET,,2028-05-22,Send MS2 Packet updates to Restaurants
+,RID_US_SEND_MS2_PACKET_DESC,,2028-05-22,Fail over - Send MS2 Packet changesto Rest. in reverse order
+,RID_XFORMITY_CASHIERDETAIL_FTP,,2025-01-04,FTP's Cashier Performance files toXFormity
+,RID_XFORMITY_FLASH_FTP,RID_XFORMITY_FLASHFTP,#VALUE!,FTP's Flash files to XFormity
+,RID_XRFTP,,2027-08-16,FTPs files sent in bny restaurantsto the SAPserver
+,RIM_BURSTER_FLASH_COMP_DATA,,2024-03-25,This will process the Flash Comparable Data from theData Warehouse to be sent to
+,RIM_BURSTER_INACTIVE_EMP_RPT,,2024-02-24,This schedule will be used to sendthe Inactive Employee Report from SAP Payroll t
+,RIR_BURSTER_CANADA_INCOME,2WD_SEL_ACCTS_REST_PL,2025-01-04,This schedule will be used to create Canada IncomeStatement report.
+,RIR_BURSTER_UK_DETAILPL,,2025-08-08,This schedule will be used to create the UK DetailProfit and Loss Report
+,RIR_BURSTER_UK_INCOME,RIR_BURSTER_UK_INCOMESTATE,2025-08-08,This schedule will be used to create the UK IncomeStatement report
+,RIR_CA_RS_SEND_OCB_IMAGES,,2028-09-19,to send OCB images to the CA rest BOH servers
+,RIR_RODX_DECONVERT,,2024-08-01,This schedule will be used to run the RodX Deconvertapplication on demand.
+,RIR_US_RS_GET_OCB_LOGS,,2028-09-29,to retrieve the OCB logs after OCBimage update isperformed
+,RIR_US_RS_SEND_INVENTORY_FILES,,2028-09-19,to automate updating inventory files on us servers
+,RIR_US_RS_SEND_OCB_IMAGES,,2028-09-19,to send OCB images to US restaurantOCB autoload devices
+,RIW_RODX DECONVERT RSWU2,,2023-11-25,This schedule will run the RODX Deconvert applicationbefore RDCC job RSWU2 runs
+,RIW_US_PAYROLL_REMINDER_FILE,,2021-01-12,Will send a reminder to RGMs to submit payroll
+,RIW_US_RS_GET_PAYROLL,,2028-09-09,Run command for US Payroll Pull Back
+,RIW_US_RS_GET_PAYROLL_DESC,,2028-07-22,To get the payroll and adjustment files from the rest. in desc. order
+,RIW_US_RS_MIC_SEND_RDBANKS_DAT,,2029-07-29,This will send the RDBANK dat file
+,RIW_US_RS_SEND_PAYROLL_CONFIRM,,2021-01-12,Send the payroll confirmation report to the restaurant
+,RIW_US_RS_SEND_RDBANKS_DAT,,2028-09-09,to send the rdbanks.dat file to theus rest.
+,RSD1,,2026-03-07,RDCC Daily Run Sat to Thur.
+,RSD1_CN,,2025-11-01,Daily RDCC for China
+,RSD2,,2024-03-25,POS to RDCC Interface
+,RSD4,,2025-06-28,RDCC : Daily Processing of POS files
+,RSD41,,2026-03-07,RDCC Daily ADj. Posting
+,RSDCCP_AMEX,,2021-08-17,Retrieve Credit Card Processor information from American Express for processing in
+,RSDCCP_FARS,,2028-08-14,Credit Card Information from FirstData - known asFARS and Gift Card information
+,RSDCCP_VLINK_PM,,2026-01-25,Valuelink file retrieval of afternoon files
+,RSDE5_POST_FSC_ADJ,,2026-05-09,"Post daily sales adjustment of franchise salesforInternational markets (GB, ES,"
+,RSDFSCTOIW,RSDE1_FSC_TO_IW,2026-03-07,Daily Interface of Franchise Salesto InformationWarehouse
+,RSDRADJGB,,2025-07-14,RDCC-GB ADJUSTMENTS ON-REQUEST
+,RSDRPOSGB,,2025-07-14,GB - DAILY POS - MWSDATA - ON REQUEST
+,RSDU2_GB,,2025-07-14,RSDU2 CYCLE FOR GB
+,RSDU31_GB,,2025-07-14,GB - ONLINE POSTING AND POSSUM UPDATE
+,RSDU4_GB,,2025-07-14,RDCC-GB RSDU4 CYCLE
+,RSDUADJ1,,2027-09-12,RDCC Adjustments reset count - extract to IW
+,RSDUARADJ,,2021-01-25,RDCC extract of Online Adjustmentsto ReconNET(UAR)regarding Company Sales data
+,RSDUARPOS,,2021-01-25,RDCC extract of POS Polled data toReconNET (UAR)
+,RSDUMENU,,2025-06-28,Updates Menu Item table
+,RSDU_MASTERDATA_LOAD,,2029-11-06,MasterData (Menu Items & Commodity)Load intoSAPforGermany
+,RSDU_REV_POST_UPD,,2025-07-14,Revenue Posting Update of missing document numbers
+,RSDVNDINT,,2021-07-12,Vendor Item Cost Interface to POS
+,RSD_EL_CORTE_INGLES,,2021-07-12,El Corte Ingles - Sales extract
+,RSM4,,2024-09-22,Franchise Sales Monthly Estimation& Reports
+,RSM2,,2028-09-09,Posting of Reported Sales to G/L
+,RSM4,,2029-08-28,RDCC Monthly Job for US
+,RSM5,,2028-05-02,RDCC Monthly Job for US
+,RSMMX,,2025-06-28,POST COMPANY SALES ON REQUEST FOR MEXICO
+,RSM_ESTIMATION_AAFES,,2021-09-24,Estimation Cycle for AAFES Franchise Restaurants (1AG)
+,RSM_ESTIMATION_CA,,2021-01-25,Estimation Cycle for Calculating the missing salesfor Franchise Restaurants in CA
+,RSM_ESTIMATION_CN,,2028-05-02,Estimation Cycle for Calculating the missing salesfor Franchise Restaurants in CH
+,RSM_ESTIMATION_DE,,2026-08-01,Estimation of Franchise Sales for Germany
+,RSM_ESTIMATION_EMEA_AG,,2026-12-02,Estimation of Franchise Sales for EMEA AG (AAFES)restaurants
+,RSM_ESTIMATION_EMEA_RU,,2021-05-01,Estimation of Franchise Sales for EMEA RU restaurants
+,RSM_ESTIMATION_EMEA_SC,,2026-08-01,"Estimation Cycle for Scandi RegionFranchise Restaurants (2SE, 2NO, 2IS & 2DK)"
+,RSM_ESTIMATION_LA,,2026-04-17,"Estimation Cycle for Latin AmericaFranchise Markets(Mexico, Brazil, Puerto Rico"
+,RSM_ESTIMATION_NL,,2026-08-01,Estimation of Franchise Sales for Netherlands
+,RSM_FRAN_POST_REV_CA,,2028-03-21,Franchise Sales Posting and RevenueGenerationforCANADA
+,RSM_FRAN_POST_REV_CN,,2028-05-16,Franchise Sales Posting and RevenueGenerationforCHINA
+,RSM_FRAN_POST_REV_DE,,2026-08-01,Franchise Sales Posting and RevenueGenerationforGERMANY
+,RSM_FRAN_POST_REV_EMEA_AG,,2026-12-02,Franchise Sales posting into GL andRevenue generation cycle for EMEA AG (AAFES)
+,RSM_FRAN_POST_REV_EMEA_RU,,2021-05-01,Franchise Sales posting into GL andRevenue generation cycle for EMEA RU
+,RSM_FRAN_POST_REV_ES,,2026-08-01,Franchise Sales Posting and RevenueGenerationforSPAIN
+,RSM_FRAN_POST_REV_GB,,2021-04-06,Franchise Sales Posting and RevenueGenerationforGREAT BRITAIN
+,RSM_FRAN_POST_REV_LA,,2026-05-09,#NAME?
+,RSM_REVENUE_COMP_CN,,2026-08-01,Revenue Cycle for Company Restaurants in China
+,RSM_REVENUE_COMP_DE,,2026-08-01,Revenue Cycle for Company Restaurants in Germany
+,RSM_REVENUE_COMP_ES,,2026-08-01,Revenue Cycle for Company Restaurants in Spain
+,RSM_REVENUE_COMP_GB,,2026-08-01,Revenue Cycle for Company Restaurants in GreatBritain
+,RSM_REVENUE_COMP_MX,,2026-08-01,Revenue Cycle for Company Restaurants in Mexico
+,RSM_REV_COMP_IT,,2029-04-15,Revenue Cycle for Company Restaurants in Italy
+,RSR_EL_CORTE_INGLES,,2021-07-12,El Corte Ingles - Sales extract
+,RSW1,,2025-06-28,RDCC Weekly Job  Runs only on Friday
+,RSW15,,2025-06-28,RDCC Online Adj. Posting Friday Afternoon Feed
+,RSW_RDBANKS,,2028-08-14,RDCC Weekly Job  Runs only on Friday
+,SAHSYSCHK,,2022-06-27,Hourly SAP Production System Check
+,SAMJOBSTAT,,2022-06-27,Monthly BKP Job Statistics Reorganization
+,SAMSAPROLLBACK,,2025-03-29,MODIFY SAP ROLLBACK SEGMENTS FOR USE DURING MONTH-ENDPROCESSING
+,SAOAFTBAK,,2028-02-07,System Purge/Update Jobs Required for Effiicient Performance and to prevent table
+,SAQ_SAP_UPDATE_ORACLE,,2029-04-15,Update Oracle System Statistics
+,SDD_CHECK_AND_UPDATE,,2026-07-01,This schedule task will check datafrom the Suplier Diversity DB and will update p
+,SLDMISMDP_SALES,,2024-11-09,"Populates MI,HH,DP and SM Sales toSales Mart"
+,SLDSALES_MART,,2023-05-03,This schedule populates datamart with informationfrom data warehouse
+,SLMDAILY_DP_SALES_STEP1_HIST,,2021-03-12,Populates Daypart Sales from Warehouse to SalesMart1in Sqlserver.
+,SLRBO_CANADA_EMAIL,,2024-12-17,BO trigger to run the email for theCanada Daily comptracking report for Matrix B
+,SRM_CHECK_FILES,,2025-11-01,Directory listing of distributor files withinPTCFTP1 server within each distribu
+,SRM_MAINES,,2025-11-01,Syrup Rebate processing of Maines Paper & Foods
+,SSDBWPPROCESS_CHAINS,SSDBWPROCESS_CHAINS,2021-04-02,"From: SSMS, PowerCenter & STR To: BW --> Dailyincremental interface (Process Chai"
+,SSM_SSMS_BW_MONTH_PROG,,2021-04-02,Monthly Rating Program PC
+,SSM_SSMS_BW_RATING_FILES,SSM_SSMS_BW_RATING_FILES_BOX,2021-04-02,Schedule the Rating File dump intoUnix Box
+,SSW_BWP_BROAD_CASTING,,2021-04-02,Broadcasting the error reports
+,SSW_BWP_WEEK_LOAD,,2021-04-02,RSI-BW Weekly Data Load
+,SSW_STR_BROAD_CASTING,,2021-04-02,Broadcasting the STR Rejection Error Records
+,WSM_RESTLOAD,,2025-12-21,Loads the list of open franchisee restaurantsin US from ARIES.
+Apurba Dhar,,,FALSE,
+,Another Schedule with this ID exists.,DWDSALES_GET_FZ,4/24/212,This box brings the franchise rodxfiles frombk &sicom ftp to etl server
+,DWDSALES_EXCLUDE_REST,,9/13/212,Rstricts low sales reporting  restaurants notto be reported at 9: AM ET Scoreca
+,DWDSALES_GET_MERGE_FZ,,4/23/212,This box brings the rodx files intoetl serverandmerge the files for loading
+,GWD_SICOM_RODX,,11/12/212,This box is created for fetching the RODX fileforRT5 and RT15 from Sicom for com
+Athindra Prasad Gundapuneedi,,,FALSE,
+,PWWGLCREW_S,,2021-01-03,GL Crew Labor / FTP GL Crew Labor File to NT/GL CrewRpt to Ashwin /  FTP FLASH G
+Aveek Basu,,,FALSE,
+,QIDPWRCTR1,QIDPWRCTR1_BOX,11/3/211,PowerCenter File Watcher - TheNetwork Interface
+Ayush Kumar,,,FALSE,
+,DWDSIMS,,2021-07-19,This is a daily schedule to populate the SIMSdatatothe data warehouse.
+,DWD_COFR_QTRLY_TRNOVER,,2021-03-09,Loads the quarterly turnover tablesin the Data Warehouse: QTRLY_TURNOVER_STG and
+,DWD_SIMSFTP,,2021-07-19,FTP's the DC Invoice data from ftp1.burgerking.nettoPTCAPP16 for processing
+,DWMLUMBERGHFRST,,2021-07-12,The box executes on every 1st business day ofevery month at 1 AM
+,DWMLUMBERGHSCND,,2021-07-12,The box loads lumbergh database onevery 4th day of every month at 11 AM
+,DWMLUMBERGHTHRD,,2021-07-12,The box loads lumbergh database every 8th workingdayof every month at 1 AM
+,GWDFACTS_DRV,,2021-03-08,Populates the REST_EOD_TOTAL_FCT Table
+,GWDINFA_BATDETAIL,,2021-03-03,This box loads the ETL JOB SESSN table. As there arelittle changes to the existin
+,GWDINFA_EOD,,2021-03-16,This box loads all the tables thatget data from POSXML EOD batch.
+,GWDINFA_INVNTRY,,2021-03-03,This box loads all the inventory tables with the POSXML data.
+,GWDINFA_REPORTS,,2021-03-17,This box runs the reports
+,GWDINFA_RTL,,2021-03-17,This box loads data for Retail tables in Restaurant data warehouse
+,GWDINFA_RTLCONCLD,,2021-03-04,This box processes data for retail
+,GWDINFA_STG,,2021-03-03,This BOX does the file validationson the POSXMLfiles provided by the JAVA Appli
+,GWDINFA_TNDR,,2021-03-16,Thisbox loads all the rtl tables from POS XMLdata.
+,GWDJAVA_HANDSHK,,2021-03-04,The box jobs will move the POS XMLfiles for processing and archiving
+,GWDPOS_XML,,2021-03-03,This project recreates all the GDWjobs in Informatica and JAVA.
+,GWMLOAD_LUMBERGH,,2021-04-14,The job will load the server PTDSQL11 Lumbergh schema for BAT marketing analysis
+BKApplication Processor,,,FALSE,
+,ASWRBTEST1,,3/4/211,Test Schedule
+,DWDGIFTCARD,,1/11/212,Loads Gift Card data into Data Warehouse
+,HRW_ALL_CITIAC_ACKN,,8/21/212,Citi acknowledgement  Job
+,PWWCITIWE_S,,11/14/211,Payroll Crew Weekly Citibank ChecksIssued File
+Bren Nojaim,,,FALSE,
+,REMOOBN1,,1996-01-11,Travel Book Extracts
+Bruce Lucas,,,FALSE,
+,FDMBASRNT,,1996-11-18,Base Rent Interface to AR
+,FDMOBL2,,1996-11-01,On Request - Promo Interface
+,FDQWN4,,1996-12-09,Quarterly (off 2) - 4th worknight
+,FDWKLYFRI,,1996-12-23,Friday Weekly Schedule
+,FSMNEWMTH,,1996-12-02,New Month Activity - 7th Work Night
+Carlos Flores,,,FALSE,
+,SAMINDXR2,,2021-08-01,Monthly rebuild of all indexes fortables COSPandRFBLG in BKP
+Catherine Benway,,,FALSE,
+,DBDVALREPL,,2021-11-02,Daily validation of Replication
+,SADSAPCHK,,2021-04-02,Daily SAPDBA Production System Check
+,SAHCOLPM,,2021-04-09,Hourly Collector for Performance Monitor Data
+,SAMINDXR1,,2021-08-01,Monthly rebuild of PCL2 index in BKP
+Chakri Somisetti,,,FALSE,
+,FDD_KEY_ISSUES,,3/1/213,Schedule for Key Issues Report
+,LERGLI,,11/3/212,Lease Accounting General Ledger Interface
+,PEBDAILY,PEB,2029-12-08,E&Y Payroll Interface feed for theExpat Employees
+,PWWCITITU_S,,11/15/211,Payroll Crew Weekly Citibank ChecksIssued File
+Dan McGillicuddy,,,FALSE,
+,IWDCREDITDEBIT,,2021-01-24,This is the IW protion of the Credit/Debit reportingschedule
+,IWDinvent,,2021-01-07,for Inventory reports
+Daniel Zavalza,,,FALSE,
+,A Schedule with this ID already exist,PSM,2/28/213,x
+,PSMOSM1,,3/5/213,Projects - Monthly Schedule
+,PSMOSM1,,3/5/213,Projects - Monthly Schedule
+,RSM_FRAN_POST_REV_EMEA_AG,,2/28/213,Franchise Sales posting into GL andRevenue generation cycle for EMEA AG (AAFES)
+Darin Lees,,,FALSE,
+,IWMOSAAUDIT,,2021-06-07,Update OSA audit statistics
+,IWROSAPMIX,,2021-07-03,Updates the manual PMIX changes forOSA (MASA.DB)
+,IWWOSAAUDIT,,2002-06-14,Update weekly OSA audit statistics.
+Darin Lees; Mohan Nagaswamy,,,FALSE,
+,IWROSABLD,,2021-05-15,Weekly and Monthly OSA Build
+Donald Holz,,,FALSE,
+,FSMGLGB,FSMGLGB1,2025-09-01,GL Reporting jobs for UK
+Donna M Pezzi,,,FALSE,
+,FSDEGLAC,,1997-12-17,Extract GL accnts for FCB and Revenue
+Ed Kalbfleisch,,,FALSE,
+,FKDCAN2,,2028-07-24,AP: Canada CitiBank Daily Issuance(Positive Pay)File - For Etobicoke B/K
+,FKMOEDI4,FKWOEDI4,2028-06-06,"EDI Invoices for electronic processing from Crispen,Porter and Bogusky for Maa US"
+Eric Fajardo,,,FALSE,
+,RSD3,,2021-04-24,RSDU 21 >> RSDU22
+Francisco Moya,,,FALSE,
+,FDMFLD5,,1998-08-06,Six Month Past Due Rec. report to Report Viewer
+,KZMGLIWHSE,,2021-08-06,Information Warehouse Interface
+Frank Quereau,,,FALSE,
+,DWDETS,,2/3/211,Batch Files for Executive ScorecardGeneration
+Gary Voyles,,,FALSE,
+,FHWIW,,2002-02-16,Load the IW data into the FLASH SQL7 DB afterweeklyclosing times on BKMPWDA2
+George Hefty,,,FALSE,
+,UCW1,,FALSE,Interface UPCS to SAP
+,UNMEUPC,,2002-01-24,Monthly feed of Unpaid Checks to Unclaimed Property Compliance System
+,UNWIUPC,,1998-04-27,Interface from UPCS into SAP
+German Gonzalez,,,FALSE,
+,GWD_HRIS_SG_HS,,2021-09-22,Creates HRIS files for Singapore Hourly and SalaryEmployees.
+,GWD_MER_US,,2021-09-25,Creates and sends Missing EmployeesReport forUSemployees.
+,GWM_PFG_SG,,2021-11-07,Creates and sends payroll files toVHR for Singaporeemployees.
+,GWW_PSR_US,,2021-09-27,Creates and sends the Payroll Status Report reflecting payroll status for US store
+Giovanna Galletti,,,FALSE,
+,MFD7,,1996-01-11,Triggers MVS jobs to extract MasterData data files(except on the 2nd work day)
+,MFM7,,1996-01-17,Triggers MVS jobs to extract MasterData data files(only on the 2nd work day)
+,OSMFGP,,2029-08-05,"Monthly FGP Processing  (DELETE ME,I CREATEDBY MISTAKE -- Giovanna)"
+Guilherme Texeira,,,FALSE,
+,EIMGLES,,2/1/213,RDCC-Company Restaurant month-end Ending InventoryProcessing and Postings into G/
+,HRDATSMAINTENANCE,,1/25/213,ATS Interface for the Restaurant maintenace transactions
+,RSM_FRAN_POST_REV_EMEA_2AG,,2/28/213,Franchise Sales posting into GL andRevenue generation cycle for EMEA 2AG Kamp Ka
+Ileana Dominguez,,,FALSE,
+,AMQRGG1,,2021-11-02,AM - Quarter end
+,AMRQGG1,,2027-12-04,AM - On-Request
+,FSM1NITEAT,,2027-02-02,AUSTRIA - Monthly  Run of Fixed Assets reclasses
+,FSM1NITEM,,2002-11-28,MEXICO  1st Work Night-Monthly Run
+,PSRQ1,,1999-01-07,PS - On Request
+,SRMI1,,1999-04-27,Syrup Rebate System Monthly Interface from ProSource
+,SRQI2,,1999-04-27,Syrup Rebate Quarterly Coke Processing
+Indranil Ghosh,,,FALSE,
+,FDWEDOOR,,1999-09-16,Extracts DOORS Ready Franchise Ageing Report by LeadFBM and Lead Area and sends t
+Ipsha Mishra,,,FALSE,
+,GWDSIMS_LOAD,,2021-12-21,The box loads all the daily SIMS transaction tables.
+,HRM_MONTHLY_PROCESSING,,2/7/211,HR Month End Update of 97 Hours
+,REDUSMANRENTAR,,2021-05-01,US Real Estate Daily Manual Rent Run for InterfacetoAccounts Receivable
+James Morales,,,FALSE,
+,RSDCCP_AMEX,,6/7/211,Retrieve Credit Card Processor information from American Express for processing in
+Jan Gedminas,,,FALSE,
+,DWDHRAIM_DAILY,,2021-05-07,Loads daily changes from SAP into the Authoriasystem
+,HRB_BIWEEKLY_BENEFITS,,2021-09-28,HR Weekly IDS 41K Deposits and Loans
+,HRWCVSRX_ERRORS,,2021-02-22,CVS Error Logs
+Jay Nolen,,,FALSE,
+,RID_CAN_RODX_CREATE,,2027-07-24,CENTRALIZED RODX FILE CREATION FORCANADA
+Jim Fields,,,FALSE,
+,DWDMI_EXTRACT,,2025-05-13,Creates an extract of menu item data on a daily basis
+,GWDDIMENSIONS,,2029-01-03,Loads Dimention data for Data Warehouse
+,HRDAIM_DELTA,HRDAIM_DAILY_DELTA,2025-01-24,Runs daily incremental Authoria application load jobs
+Jose Carmona,,,FALSE,
+,RID_CA_PREVIOUSWEEK,,2021-05-19,Dialy Canada MenuLink task
+,RID_CN_RS_GET_RODX_FILES_CMD,,2021-05-01,This job will pull back the RODX files from the ChinaRest
+,RID_CN_SEND_INVENTORY_FILE,,2021-06-14,Sends Inventory files to China sites
+,RID_US_RS_GET_XMT_FILES,,2029-01-16,Retrieve XMT files and move them tothe appropriate folder and archive them
+,RID_US_RS_SEND_CORP_REPORTS,,2028-08-13,Send Corporate Reports to US restaurants
+,RID_US_SEND_MS2_PACKET,,2028-08-02,Send MS2 Packet updates to Restaurants
+,RID_XFORMITY_CASHIERDETAIL_FTP,,2029-05-19,FTP's Cashier Performance files toXFormity
+,RIW_US_RS_GET_PAYROLL,,2028-01-06,Run command for US Payroll Pull Back
+,RIW_US_RS_PAYROLL_RESUBMITS,,2028-08-08,Get payroll and adjustment resubmits and movethemtocorp servers and archive
+Julie Heath,,,FALSE,
+,BRDCRYSTAL,,2021-11-26,daily Crystal Reports
+,BRMCRYSTAL,,2021-11-26,monthly Crystal Reports
+,BRWCRYSTAL,,2021-11-26,weekly Crystal Reports
+?,,,FALSE,
+,IWDFRANTL,,2021-11-26,Transfer and Load of Franchise Data
+,IWDREP,,2021-11-26,Daily Reporting Schedule This Schedule runs inentirety for the AM Reporting  the
+,IWMLOAD2,,2021-11-26,This is a special schedule for monthly processingforestimates and adjustments wi
+,IWMOSA2,,2021-11-26,Revised version of OSA monthly schedule for revised IW code Replaces IWMosa
+,IWRFOODCOST,,2021-11-26,"Using data received from FCB, calculates the dailyfood cost per menu item per res"
+,IWROFA_PLAN,,2021-11-26,This schedule loads the plan for the fiscal year fromOFA files
+,IWRSAP,,2021-11-26,Loads SAP file into IW-- ON REQUEST
+,IWWMONDAY,,2021-11-26,This schedule will run every Mondayexcept holidays
+,IWWNLOAD,,2021-11-26,These jons run as part of the IWWKLY SCHEDULE
+,IWWOSA2,,2021-11-26,Revised version of OSA for revisedIW code
+,IWWREPAM,,2021-11-26,"The jobs in this schedule are run as part weekly schedule entititled "" IWWKLY """
+,IWWREPPM,,2021-11-26,add job IWWUr98 for the DOORS datamart
+,MFDIALGN,,2021-12-06,Relational Alignment Update
+,MFMPRIOR,,2021-11-26,Update of ZARSP (restaurant) from ZREST and ZADPP(department) from ZADPT for prio
+,MFYPRIOR,,2021-11-26,Update of ZARSP (restaurant) from ZREST and ZADPP(department) from ZADPT for prio
+,PSM15TH,,2021-11-26,Monthly Schedule on the 15th
+,RIRBURSTER_MXDETAILPL,,2021-11-26,Mexico Detail Profit and Loss Report
+,RIRBURSTER_MXINCOME_STATEMENTS,,2021-11-26,Mexico Income Statement Report  -->Produced in Spanish
+,RIR_BURSTER_INCOME,,2021-11-26,This schedule will be used to create the Income Statement report
+,RIR_BURSTER_LABORWK,,2021-11-26,This schedule will be used to create the LaborWork report
+,RIR_BURSTER_PAYHOURS,,2021-11-26,This schedule will be used to create the Pay Hoursreport
+,RIR_BURSTER_PLVMONTH,,2021-11-26,This schedule will be used to create the Product LineVariance month report
+,RIR_BURSTER_PLVYEAR,,2021-11-26,This schedule will be used to create the Product LineVariance year report
+,RIR_BURSTER_PROFITANDLOSS,,2021-11-26,This schedule will be used to create the Profit and Loss report
+Kashmira Mehrotra,,,FALSE,
+,DMM_REST_WRKR_ALGN,,2021-02-19,Populates the REST_WORKER_ALGN_DIM_MONTHLY table in OperationsMart1
+,PDB_SAP_PD_CORE_REPORTS_MON,,2021-11-15,Payroll Restaurant Managers Net Payroll Reconciliation
+,PDW_SAP_PD_CORE_REPORTS_FRI,,2021-11-15,Payroll Restaurant Managers Net Payroll Reconciliation
+,PEB_SAP_PE_CORE_REPORTS_MON,,2021-11-15,Payroll Exempt Employees Net Payroll Reconciliation
+,PEB_THIRD_PARTY_STR_STOP,,2021-11-02,Payroll All Areas 3rd Party - StopInterfacesfromgoing to AP
+,PEW_SAP_PE_CORE_REPORTS_FRI,,2021-11-15,Payroll Exempt Employees Net Payroll Reconciliation
+,PMB_SAP_PM_CORE_REPORTS_MON,,2021-11-15,Payroll Restaurant Managers Mass. Net PayrollReconciliation
+,PMW_SAP_PM_CORE_REPORTS_FRI,,2021-11-15,Payroll Restaurant Managers Mass. Net PayrollReconciliation
+,PNB_SAP_PN_CORE_REPORTS_MON,,2021-11-15,Payroll Non-Exempt Employees Net Payroll Reconciliation
+,PNB_THIRD_PARTY_STR_STOP,,2021-11-02,Payroll All Areas 3rd Party - StopInterfacesfromgoing to AP
+,PNW_SAP_PN_CORE_REPORTS_FRI,,2021-11-15,Payroll Non-Exempt Employees ThirdParty Remittance Taxes
+,PWW_SAP_PWWCHECKS,,2021-08-02,Payroll Crew Weekly GoodMoney Report
+,PWW_SAP_PW_CORE_REPORTS_FRI,,2021-11-15,Payroll Crew Weekly Net Payroll Reconciliation
+,PWW_SAP_PW_CORE_REPORTS_MON,,2021-11-15,Payroll Crew Weekly Net Payroll Reconciliation
+,PWW_THIRD_PARTY_STR_STOP,,2021-11-02,Payroll All Areas 3rd Party - StopInterfacesfromgoing to AP
+Kiran D Venkataraju,,,FALSE,
+,FPWDATACONNECT,,2028-03-05,Delete Archived Data Connect uploaded files that aremore than 3 years old.
+Lazaro Ballesteros,,,FALSE,
+,DWM_HYP_FILE_GEN,,1/15/213,KPI Feed (Hyperion Feed). This jobcreates a fileforHYPERION (OFA) and place it
+Leonardo Hernandez,,,FALSE,
+,FDMCAREV_CO,,2021-09-15,CANADA Revenue Processing for Advertising andInvestment Spending for Company Rest
+,FKDEIDOCNA,,2021-08-23,North America Citibank IDoc Outbound
+,FKDREMITAMEXMX,,2021-05-12,American Express Mexico RemittanceFile
+,FKMCONWAY,,2021-11-02,Process flat vile for vendor Conway-22142
+,FKWE_AMEX_CH_EPA_REMIT,,2021-11-23,Generation and remittance of Amex SwitzerlandCreditCard Remittance File. This fi
+Linda Jones,,,FALSE,
+,PABFRICK_S,,2021-01-03,Frick Interface All Employees
+Lydia Avick,,,FALSE,
+,AMQRGG1,,2021-11-02,AM - Quarter end
+,LERGLCA,,2021-05-01,Lease Accounting General Ledger Interface - Canada
+,LERGLI,,2021-05-01,Lease Accounting General Ledger Interface
+,MFDAALA6,,1996-01-09,Job Stream Control Date
+,RSDUCOMP_SUN,,2021-05-29,copy of RSDUCOMP - difference is only how often schedule runs
+,RSDUMEAL,,2021-04-01,Updates ZMEAL with meal deal
+,RSM4,,2021-04-26,RDCC Monthly Job for US
+,RSM41,,2021-04-24,Monthly Job to Feed I/W ( This jobruns on Secondwork Night Only)
+,RSMC2,,2021-04-24,Post CANADA reported Sales to GL
+,RSMCANADA,,2021-04-26,RDCC - Company Sales Canada MonthlyJobs
+,RSMFSESTMRPT,,2021-08-03,Franchise Sales Historical Estimation Report for DOORS interface
+Lydia Avick; Ileana Dominguez,,,FALSE,
+,AMRQGG1,,2021-04-24,AM - On-Request
+Mallari Harapanahalli,,,FALSE,
+,HRBAETNARRA,,1/5/212,AETNARRA report
+,HRBPBDPRERPT5,HRB PBDPRERPT5,11/21/211,Biweekly Payroll Report
+,HRDEADPSSLSP,,11/7/211,"This job reads, encrypts and sendsSSL file from theRSC Spain ADP Spain"
+,HRDHRDBRASSRING FTP,HRD_BRASSRINGFTP,8/23/211,HRDBRASSRING FTP
+,HRMPAMIRIS_INBOUND,PAMIRIS_INBOUND,11/28/211,PAMIRIS_INBOUND Job
+,HRMPEOPLESCOUT_FILES,,8/23/211,PEOPLESCOUT_FILES
+,HRMPEOPLESCOUT_FIL_GET_REN_DEC,HRMPEOPLESCOUT_FILES_GET_REN_DEC,7/7/211,PEOPLESCOUT_FILES_GET_REN_DEC
+,HRW_HMO_INTERFACES,HRWHMOINTS,1/5/212,"HMO interface runs on a weekly basis - Avmed,BC/BS,Vytra"
+,PADCITIMF_ACK,,11/1/211,This job will run from monday through friday and willprint the acknowledgement re
+,PADCITITU_ACK,,11/8/211,This job will run Tuesdays and willprint theacknowledgement report for the issua
+,PWWCITIFR_S,,11/1/211,Payroll Crew Weekly Citibank ChecksIssued File
+,PWWCITITH_S,,11/1/211,Payroll Crew Weekly Citibank ChecksIssued File
+,PWWCITIWE_S,,11/17/211,Payroll Crew Weekly Citibank ChecksIssued File
+Maria Viera,,,FALSE,
+,Another Schedule with this ID exists.,FSMCAPLAN,2022-07-18,Loading of OFA Plan data to SAP forCanada
+,DMD_OPM1_ALIGN,,2023-03-01,Loads alignment data in OperationsMart1
+,DMR_FAIRSHARE,,2023-03-24,Loads fairshare data into MarketingMart1
+,DWD_DLY_ERR_CHK,DWD_DLY_ERROR_CHK,2024-05-18,Runs the daily error checking batchfile for the SIMSdata
+,DWD_OSA_BUILD,,2024-05-18,Runs the OSA Build and Derived Measures
+,DWR_CTA,,2023-01-17,Loads the competitive tactical activity data intothedata warehouse
+,DWR_FAIRSHARE_DW,,2023-03-24,Loads fairshare survey informationinto the Data Warehouse
+,DWR_FAIRSHARE_STG,,2023-03-24,Loads fair share survey data into staging areaofthedata warehouse
+,FDMINVSPRETROBILL,,2023-02-01,This schedule will generate retrospective billingtransactions into the SAP Accoun
+,FDMUSREV,,2023-02-01,"Generation of US Revenue - Royalty,Advertising and Investment Spending for Franch"
+,FDMUSREV_CO,,2023-02-01,Generation of Advertising and Investment Spendingrecievables for Company Restaura
+,FVD_AR7_SPLITTER,,2023-09-03,Create the Aged Accounts Receivablereports
+,FVM_GL37_SPLITTER,,2022-03-06,Create the 13 Month Summary P&L reports
+,HRA_ANNUAL_YEAREND,,2022-01-02,"41k Discrimination Test, External."
+,HRWBRASS_RING_JOBS,HRW_BRASS_RING_JOBS,2023-03-24,UPDATES SAP JOBS TO BRASS RING JOBCODES
+,IWMFIRST,,2023-02-24,This is the schedule to be run on the first ofeverymonth
+,IWMFOODCOST,,2023-03-01,"Using data received from FCB, calculates the dailyfood cost per menu item per res"
+,IWMMYSTERYSHOP,,2022-01-02,Collects mystery shop data and makes extracts
+,IWMREPWKD3,,2022-07-29,Monthly reporting schedule  This schedule executesonthe SECOND work day for mont
+,IWMWKD3,,2022-07-29,This schedule executes on the SECOND work dayformonthly reporting and runs on a
+,IWRAKING,,2022-07-26,Loads data from Ameriking for OSA
+,IWRQUALITYDINING,,2022-05-02,Update for Quality Dining franchisedata
+,IWRSYDRAN,,2022-07-26,Update for Sydran franchise data
+,MFDIFRAN,,2023-03-01,Franchise Information Update
+,PEB_SAP_PE_MDATA_REPORTS,,2023-05-07,Payroll Exempt Employees New Hire/Rehire
+,PMB_SAP_PM_MDATA_REPORTS,,2023-05-07,Payroll Restaurant Managers Mass. Wage Type /559 Balancing Report
+,PNB_SAP_PN_MDATA_REPORTS,,2023-05-07,Payroll Non-Exempt Employees New Hire/Rehire
+,POR_ON REQUEST_REPORTING,,2023-02-24,THESE JOBS ALL RUN INDEPENDENT OF EACH OTHER AND AREONLY TO BE RUN UPON USER REQU
+,REMRENTPAP,,2022-09-13,AP percent rent
+,REORENTP,,2022-09-13,AR Percent Rent
+,REORENTPAP,,2022-01-04,AP percent rent
+,RID_DATUT_REPORT,,2022-09-13,Creates the Daily Datut Error Report
+,RIR_CREATE_SUMMARY,,2022-08-09,Create a Summary report of all Security Levelreportsthat have been brought in fr
+,RSD5,,2023-02-01,Post A/R Franchise Sales Adjustments from RDCCToSAPGeneral Ledger
+,SADCLEAN,BASIS_DAILY,2023-02-24,Daily BKP System Reorganization/Cleanup for SAP Production client 1 and Client 
+,SAHWORKFLOW_MGNT,,2023-03-01,"THIS SCHEDULE WILL CONTAIN A JOB, WHICH WILL BE EXECUTED EVERY 3 MINUTES. THIS JO"
+,SAW BASIS_WEEKLY,SAW_BASIS_WEEKLY,2022-08-09,System Purge/Update Jobs Required for Effiicient Performance and to prevent table
+,SLMALIGNMENT,,2023-03-01,Transfers Alignment from Data Warehouse to Sales Mart
+Mark Foley,,,FALSE,
+,ASDCORPSYNC,,1/9/212,THIS IS THE JOB FOR CORP SYNC WITHIN THE KITCHEN SYNCPART
+,ASDFOSYNC,,1/9/212,THIS IS THE KICTHEN SYNC JOB WHICHWILL DO THEFRANCHISE ORGANIZER (FO) SYNC
+,ASDMFILOAD,,11/29/211,This is the job which sends Tell UsAbout Us (MFI)the ORG_HIER table dump for inf
+,ASDMFILOAD_FTP,,11/29/211,THIS JOB FTPs THE FILES CREATED BYTHE ASDMFILOADSCHEDULE TO MFI PATH.
+,ASDRAWUSAGE_FTP,,7/3/212,FTP THE RAWUSAGE FILE FROM SICOM FTP1 TO PTDUTL2.ONFAILURE PLEASE SET THE JOB T
+,ASDRESTSYNC,,1/9/212,THIS IS THE JOB FOR THE REST SYNC PART OF KITCHENSYNC
+,ASDSTARSFTP,,6/5/212,STARS FILE WILL NEED TO BE FTPED TOTHE SPECIFIEDLOCATION FOR THE VENDOR
+,ASME_UY_STD_HIER,,11/2/212,THIS JOB CREATES THE STANDARD HIERARCHY FILESFORURUGUAY BKC (STANDARD) HIERACHY
+,BNDBAI1,,1/23/212,Treasury Bank Statements will now be collectedelectronically.  These statements a
+,BNDBAI2,,7/21/211,Treasury Bank Statements will now be collectedelectronically.  These statements a
+,BNDBAIDATAFLOW,,8/1/211,Dataflow - EBS upload for mom&pop individual restaurant depository accounts
+,BNDFINANCESUITE,,2/13/212,This Job will transfer new bank statements & GL AcctStatements into the Finance S
+,BNDMT94CASHLOG,,2/13/212,Process the Cash Logistics Bank Statements
+,BNM822A,,9/29/211,Retrieve 822 bank files - 8th bankwork day
+,BNM822B,,9/29/211,Retrieve 822 bank files - 13th bankwork day
+,DMDSALES,,6/3/211,Data Mart jobs for BKSales / SalesAnalyzer Universes
+,DWDSALES_ARCHIVE_FZ,,11/2/212,This box archives the franchise rodx files from etl to archive folder and backup t
+,DWDSALES_GET_FZ,,11/2/212,This box brings the franchise rodxfiles frombk &sicom ftp to etl server
+,DWDSALES_LOAD_FZ,,11/2/212,This box merge all the franchise rodx files into oneand load that file to the war
+,DWDSICOM,,6/3/211,Collect SICOM data from SICOM Severs
+,DWD_ARIES_SICOM_FEED,,1/24/211,ARIES Alignment is fetched from ARIES master dtaaandpushed to SICOM server
+,DWD_FRAN_DATA_COLLECTION,,9/29/211,This box is for collecting the franchise datafiles from BK FTP server to ETL serv
+,DWD_FZ_PMIX,,11/2/212,This box is responsible for fetching the PMixdataofrefranchised stores from BK
+,DWD_MONTHLY_SOS_TEN,,1/24/211,Captures franchise speed of serviceinformation for the time period 1 - 2:3
+,DWD_PURGEARCHIVING,DWD_PURGEARCH,6/16/211,The script removes files older thana specificageina specific directory of the
+,DWD_RSI_FRAN_SALES,,6/3/211,The schedule pulls data from Francompsales.csvonftp1 ftped over by RSI daily.
+,DWD_SICOM_KM,,6/15/212,This box has been set up for transferring thefilefrom BK FTP server to SICOM ser
+,DWD_SICOM_SMG,,11/2/212,This box is created for the data feed from SMGtoSICOM
+,DWD_SICOM_SOS_FEED,,11/2/212,"this process is set up to fetch theSOS data fromwarehouse, format it and push th"
+,DWH_EOD_TRACKER,,6/5/212,This job captures the EOD status hourly
+,DWM_EXCHANGE_RATE_PREP,,11/9/211,This job will run a script which will add fewrowstothe exchange rate file(excha
+,DWM_OFA_FILE_GEN,,5/18/212,This job creates a file for OFA andplace it on the path \\ptcofa2\ofa64\files\K
+,DWR_GC_SAP_GL_MANU_RESTART,,6/16/211,It will create SAP GL file on request.
+,DWW_XFORMITY_WKTRACKER,,6/5/212,This job transfer the files from BKFTP servertoa shared folder for Xformity Wee
+,EIAGLDE_YEAREND,,6/1/211,YEAR-END RDCC-Company Restaurant month-end EndingInventory Processing and Posting
+,EIAGLES_YEAREND,,6/1/211,YEAR-END RDCC-Company Restaurant month-end EndingInventory Processing and Posting
+,EIAGLIT_YEAREND,,6/1/211,YEAR-END RDCC-Company Restaurant month-end EndingInventory Processing and Posting
+,EIAGLUK_YEAREND,,6/1/211,YEAR-END RDCC-Company Restaurant month-end EndingInventory Processing and Posting
+,EIMGLCA,,6/1/211,RDCC-Company Restaurant month-end Ending InventoryProcessing and Postings into G/
+,EIMGLDE,,6/1/211,RDCC-Company Restaurant month-end Ending InventoryProcessing and Postings into G/
+,EIMGLES,,6/1/211,RDCC-Company Restaurant month-end Ending InventoryProcessing and Postings into G/
+,EIMGLIT,,6/1/211,RDCC-Company Restaurant month-end Ending InventoryProcessing and Postings into G/
+,EIMGLUK,,6/1/211,RDCC-Company Restaurant month-end Ending InventoryProcessing and Postings into G/
+,EIMGLUS,,6/1/211,RDCC-Company Restaurant month-end Ending InventoryProcessing and Postings into G/
+,EIMTRANSFER_US,,11/2/212,RDCC-Company Inventory TRANSFERS Postings intoG/Lfor US
+,FBWILOAD,,4/29/211,Loads Menu Item Sales and CommodityWaste files intodatabase
+,FBWIMAC,,4/29/211,Loads Weekly Average Cost
+,FBWLOADCOST,,4/29/211,Copy Canadian and Mexican cost files to FTP server
+,FBWRFAP,,4/29/211,Creates Weekly Food and Paper Standard Cost Buildup report
+,FBWUCOST,,4/29/211,Calculates Weekly Portion and MenuItem CostsandSTANDARD Cost Entries
+,FDDICMREGISTER,FDD,11/2/212,ICM Regristarion table Archive program
+,FDMLASTWD,,2/15/211,Create interst Invoices for US andCanada.  AgingReport by DI/Investments
+,FDMNTERCLS1,FDMNTEUS,2/18/211,AR/US: Notes Receivable Reclass - Long Term ARNote to Short & Long Term G/L Entri
+,FDWDISPUTEBUFFER,FDW_PROCESS_BUFFER,6/3/211,Dispute Case Update
+,FKBOEDI2,,1/24/211,"AP/USA : Electronic Data Interchange - invoicefile transfer, from AVISTA ADVANTAG"
+,FKBOEDI3,,1/24/211,"AP/Canada : Electronic Data Interchange - invoicefile transfer, from AVISTA ADVAN"
+,FKDE3663,,7/6/211,This schedule contains one job thatprocess the flatfile for vendor BIDVEST LOGIS
+,FKDEGFSCHED,FKDAPCANINVC,7/11/211,AP/Can : Restaurant Food Distributor Electronic Invoice File
+,FKDE_JPM_US1_SUA,,1/7/213,FTP JP Morgan SUA US1 payment file
+,FKDE_JPM_US1_SUA,,3/5/213,FTP JP Morgan SUA US1 payment file
+,FKDE_JPM_US6_SUA,,1/7/213,FTP JP MOrgan SUA US6 payment file
+,FKDE_JPM_US6_SUA,,3/5/213,FTP JP MOrgan SUA US6 payment file
+,FKDIVBRMPF,,1/9/212,Vendor Invoice Billing Reconciliation for MPFS(Maines Paper & Food Service)
+,FKDI_AMEX_US_BIP,,2/18/211,
+,FKDI_JPM_US1_SUA,,1/7/213,Import JP Morgan SUA Reconciliationfile for US1
+,FKDI_JPM_US6_SUA,,1/7/213,Import JP Morgan SUA Reconciliationfiel for US6
+,FKDMARINV,,9/29/211,#NAME?
+,FKDUP1,,1/9/212,Daily Duplicate Payments
+,FKMAMEXCARD,,6/3/211,"AP : Purchasing and Meeting American Express Credit Card expenses, ( P-Card & M-Ca"
+,FKMEMAA,,1/26/212,AP: Advertising National and localinvoice files forposting and payment
+,FKMOSM2,"FKMAC6189536, FKMAC6189544 AND",6/5/212,Monthly - B/K and MAA Bank Reconciliation.
+,FKMTAPESTRY,,4/7/211,MAA - Process monthly  TAPESTRY Vendor InvoiceElectronic Files
+,FKQVENDDEL,,7/21/211,DELETE THE VENDOR WHICH HAS MARKEDFOR DELETION.(FI &MM)
+,FKWCOKE,,3/14/211,Process weekly Coke Invoice files through VIM
+,FKWFMFMUS,,11/9/211,Process the flat file for vendor fmFacilityMaintenance :Vendor Number   78991
+,FSMCCDE,,6/5/212,Emailing Cost Center report to Restaurant - Germany
+,FSMCCNL,,6/5/212,Emailing Cost Center report to Restaurant
+,FSMGLIWHSE,,7/6/211,New Process for loading GL actualsinto the IW
+,FSMHRDESALY,,#VALUE!,Germany (DE) Salary GL entries from Payroll run
+,FSMHRDEWAGE,,4/29/211,General Ledger entries from Germanyoutsourcedpayroll.  This schedule will cover
+,FSMOFAAPACACT,,2/25/211,Call mindtree on call for Job Failures  7/1/28-New job FSMJPACT was added to
+,FSMOFAEMEAACT,,2/24/211,Call Mindtree on call for Job Failures 4/9/28- Changed the job scheduling tim
+,FSMOFALAACT,,6/5/212,Call Mindtree onsite coordinator for job failuresat35 378 7585.
+,FSMOFALALE1,,6/5/212,Forecast upload from OFA to SAP - LA
+,FSMOFALALE2,,6/5/212,Forecast upload from OFA to SAP - LA
+,FSMOFALALE3,,6/5/212,Forecast upload from OFA to SAP - LA
+,FSMOFALALE4,,6/5/212,Forecast upload from OFA to SAP LA
+,FSMOFALAPLN,,6/5/212,Load Plan from OFA into SAP
+,FSMOFANAACT,,2/24/211,Call Mindtree on call for job failures 4/9/28- Changed the scheduling time fo
+,FSMPLCOVPNITE2,,2/13/212,#NAME?
+,FSRCURMOSELACCT,,2/13/212,Current Month Selected Accounts andP&L reports.3/23/25: Added step 2 to job
+,FSWUSPLXFORMITY,,11/9/211,Weekly FGP detailled P&L summary file to XformityServer
+,FVM_MEXICO_SPLITTER,FSMPTHRUF_FIELD_DOORS_1,2/13/212,Mexico SAP Financial Reports
+,GWDDIMENSIONS_DRV,,6/3/211,Loads Dimention data for Data Warehouse
+,GWD_HRIS_CA_SALARY,,2/13/212,Creates HRIS files for Canada Salaried Employees
+,GWD_HR_RET_ES,,1/27/211,Pulls HR data from SAP effective today and sends to MyLabor for ES employees
+,GWD_ODS_PURGE,,11/2/212,This job purges the data from ODS on a daily basisfor the min date present in the
+,GWD_SETINACTIVE,,6/5/212,This job will set the box GWD_SICOM_RODX as Inactivefor making it ready for the n
+,GWD_SICOM_FILEWATCHER,,6/5/212,This box/job will fetch the file watcher filefromSICOM to ETL server. This would
+,GWD_SICOM_RODX,,6/5/212,This box is created for fetching the RODX fileforRT5 and RT15 from Sicom for com
+,GWQGCBKGDATA,,7/12/211,To move data from the data warehouse to business environment
+,GWW_PDC_US_FRIDAY,,2/18/211,This schedule runs several jobs that perform datacollection of payroll data from
+,GWW_PDC_US_SUNDAY,,2/18/211,This schedule runs several jobs that perform datacollection of payroll data from
+,HRBEADPTIMEGB,,6/15/212,"Reads, encrypts, merges and transfers Time file fromthe local market in GB to ADP"
+,HRDATSMAINTENANCE,,6/16/211,ATS Interface for the Restaurant maintenace transactions
+,HRDATS_REJECTIONS,HRD_ATS_REJECTIONS,6/5/212,ATS_REJECTIONS Job
+,HRDBRASSRING,,1/11/211,BRASSRING INTERFACE PROGRAM
+,HRDBRASSRING_TABLE,,11/2/212,HRD BRASSRING INTERFACE PROGRAM
+,HRDEADPMASTNE,,1/21/211,Reads and decrypts master data filefrom the ADP.Sends decrypted file to NL marke
+,HRDEADPSSLNE,,1/21/211,"This job reads, encrypts and sendsSSL file from theNetherlands to ADP Netherland"
+,HRDHRIS_ADP_SPAIN,HRD_HRIS_ADP_SPAIN,7/21/211,HRIS ADp interface run for Spain
+,HRDHRIS_ADP_SPAIN,HRD_HRIS_ADP_SPAIN,6/15/212,HRIS ADP interface job for Spain updates
+,HRDHRIS_ADP_UK,,6/15/212,HRIS ADP interface run for UK
+,HRDHRIS_MICROS_SPAIN,,7/21/211,HRIS MICROS interface run for SPAIN
+,HRDHRIS_MICROS_UK,,7/21/211,HRIS Micros interface run for UK
+,HRDMSS_NOTIFICATION,,7/21/211,UK_Missing _MSS Notifications
+,HRMEADPTIMENE,,1/21/211,"Reads, encrypts and transfers Timefile from the Netherlands to ADP in the Nethger"
+,HRMPEOPLESCOUT FILES,HRMPEOPLESCOUTFILES,8/18/211,PEOPLESCOUT JOB
+,HRM_MONTHLY_PENSION,,2/13/212,HR Monthly Pension Interface
+,HRM_TERMINATION_REPORT,,11/2/212,Termination report for Global employees
+,HRRHRWEE_EXPORT,HRR_HRWEE_EXPORT,11/2/212,Employee Export Report
+,HRWHRW_OM_PA_SYNC,HRW_OM_PA_SYNC,11/2/212,OM and PA Sync Job
+,HRWORGPUBLISHER,,2/18/211,This Job runs every week to send the updated filetoOrg Publisher
+,HRWPWDCTSICKPAY,HRW_PWDCTSICKPAY,11/2/212,Paid Sick Leave Summary Report.
+,HRW_ALL_CITIAC_ACK,,7/3/212,CITI Acknowledgement Job
+,HRW_OM_PA_SYNC,,11/2/212,OM PA  Sync  Job
+,HYDBACKUPS,HYD,11/2/212,RUN HYPERION PLAN ESSBASE & LCM BACKUPS
+,HYDNEWYEARPLANLOAD,HYD,11/2/212,Load next year's plan data to essbase from template
+,HYMACTLOAD,HYM,11/2/212,LOAD ACTUALS DATA TO HYPERION FROMSAP
+,HYMFXRATE,HYM,11/2/212,LOAD FOREX RATES FROM SAP
+,HYMOFAEXPORT,HYM,11/2/212,Export Plan data for upload to OFA
+,HYRCOPYVERSION,HYR,11/2/212,COPY DATA FROM ONE VERSION TO ANOTHER VERSION
+,HYRPLANCALC,HYR,11/2/212,Calculate G&A Plan Data
+,MADMFTOFTP,MAD,7/11/211,This schedule will move Marketing Invoices toPTCFTP2 for processing in SAP.
+,MFDCODES_ARIES,,2/13/212,Daily extract of financial code tables to ARIES
+,OSWFGP,,4/29/211,Weekly FGP Processing
+,PADFDBL_INBOUND,,2/18/211,This job receives inbound status files sent from First Data.
+,PADFDBL_OUTBOUND,,2/18/211,This Job sends Batch Loader in encrypted format toFirst Data
+,PAMEXTR_S,,2/13/212,Payroll Extract for FOCUS
+,PAWESMS_S,,4/11/211,SMS Outbound Interface
+,PAWFDPS_INBOUND,,2/18/211,This receives the XML file sent byFirst Dataandprints the report
+,PAWFDPS_OUTBOUND,,2/18/211,Job to send Paystubs to First Data
+,PBRUTHOMSON_S,,6/5/212,Thomson Bank File Update
+,PNB_SAP_NOTES_13:,,7/25/211,Payroll Non-Exempt Employees Collect Lotus Notes Time(FTP PTCFTP2 to UNIX)
+,PWMCREWTERM_S,,2/13/212,Automatic Crew Termination
+,PWWCH,PWW_SAP_PWWCHECKS,2/18/211,RunsjobPWWCH which will create paym
+,PWWPREDME_FRI_S,PWWPREDME_FRI,2/18/211,This is the Weekly Job for PREDME Friday checkDate.This runs as part of payroll
+,PWW_TURNOVER_ANALYSIS_S,,9/29/211,Payroll Crew Weekly Populate TablesZHRAC & ZHRTC
+,REDCAMANRENTAP,,4/7/211,REMS Canada AP Manual Rent Process
+,REDUSMRMANRENTAP,,4/7/211,US Real Estate Daily Manual Rent run for AccountsPayable
+,REMCABRAP,,4/7/211,REMS/Canada batch interface for APFinancials
+,REMUSBASERTAP,,4/7/211,REMS US BASE RENT RUN FOR AP
+,RIW_US_FILE_KITCHEN_MINDER_ARC,,2/13/212,Move all data in c:\posdataforBKC older than 3 Daysto c:\posdataforBKC\Archive f
+,RSDCCP_DISCOVER,,7/6/211,Retrieve MERS file from Discover using SFTP
+,RSDUCOMP,,6/5/212,"RDCC Daily Process of POS/RODX restaurant polled data, and manual Adjustments. Als"
+,RSDU_POS_POLLING_EMAIL,,7/6/211,Triggers EMAIL to IT-POS distribution lists inEMEA with a Restaurant Polling Repo
+,RSD_FIRSTDATA,RSDCCP_FIRSTDATA,11/29/211,This job pulls daily MERS credit and debit detailforupload into Reconnet system
+,RSD_FIRSTDATA1,,11/29/211,This schedule will pull the Debit Detail filefromFirst Data for upload into Reco
+,RSMICMGCPOST,RSM,11/2/212,ICM GAME CHANGER POSTING
+,RSMICMPOST_ITP,RSM,11/2/212,ICM - ITP  POST CASE SIMULATION ANDPOST
+,RSMITPSETTLEMENT,RSM,11/2/212,ICM ITP SETTLEMENT JOBS
+,RSM_COMP_CLOSE_NA,,7/5/211,RDCC CLOSE of Company Restaurants in North America(US & CA)
+,RSM_ESTIMATION_APAC,,1/9/212,Estimation Cycle for Asia Pacific Franchise Restaurants
+,RSM_ESTIMATION_EMEA_CE,,6/5/212,"Estimation Cycle for Central EuropeRegion FranchiseRestaurants (2HU, 2PL,2RO,"
+,RSM_ESTIMATION_EMEA_ME,,1/9/212,"Estimation Cycle for Middle East Region FranchiseRestaurants (2SE, 2BH, 2JO, 2"
+,RSM_ESTIMATION_EMEA_MT,,11/2/212,"Estimation Cycle for MediterraneanRegion Franchise Restaurants (2IT, 2MT, 2IL,"
+,RSM_ESTIMATION_ES,,7/6/211,Estimation of Franchise Sales for Spain
+,RSM_FRAN_POST_REV_APAC,,1/9/212,Franchise Sales Posting and RevenueGenerationforAPAC - Asia Pacific
+,RSM_FRAN_POST_REV_EMEA_CE,,6/5/212,Franchise Sales Posting and RevenueGenerationforCentral Europe Region.
+,RSM_FRAN_POST_REV_EMEA_ME,,1/9/212,Franchise Sales Posting and RevenueGenerationforMiddle East Region.
+,RSM_FRAN_POST_REV_EMEA_MT,,11/2/212,Franchise Sales Posting and RevenueGenerationforMediterranean Region
+,RSM_FRAN_POST_REV_EMEA_SC,,6/14/211,Franchise Sales Posting and RevenueGenerationforScandi Region.
+,RSM_ICMPOSTING,RSM,2/14/212,ICM US game changer programs Posting
+,RSM_ICMSETTLEMENT,,2/14/212,ICM US game changer programs Settlement
+,RSM_ICMSETTLEMENT_CM,RSM,11/2/212,ICM GAME CHANGER SETTLEMENT JOBS FOR CURRENT MONTH
+,RSM_ICMSETTLEMENT_PM,RSM,6/15/212,ICM GAME CHANGER SETTLEMENT JOBS FOR PREVIOUSMONTH
+,RSWFGP,,4/29/211,Weekly FGP Processing
+,SRMREBATE,,2/9/211,Monthly - On Request - Interface from distributorre:Syrup Rebate
+Mayur Desai,,,FALSE,
+,FSDCAGIFTCARD,,2029-08-23,Process CA giftcard file from DW
+Megha Nagpal,,,FALSE,
+,FSMOFANAPLN_NFY,,2028-01-02,Load plan from OFA into SAP
+,RSDE5_POST_FSC_ADJ,,2028-06-24,"Post daily sales adjustment of franchise salesforInternational markets (GB, ES,"
+Miriam Camacho,,,FALSE,
+,RSWRDBANKS,RSWU_RDBANKS,2027-08-14,RDCC - create RDBANKS extract for POS back ofhouse
+Mohan Nagaswamy,,,FALSE,
+,DMDGIFTCARD,,2025-06-06,Loads Gift Card data into Data Mart
+,DMDINVENT,DMD,2023-11-02,The jobs in this box populate Operations MartwithInventory data
+,DMDMISMDP,,2024-11-22,Populates Menu Item / Service Mode/ Daypart datainOracle Mart
+,DMD_TE_ALIGNMENT,,2021-08-09,Populates Alignment Data for Traveland Expense inTEMART Schema
+,DMD_TE_AMEX_FILE_COPY,,4/29/211,Copies Amex files from PTCMSG3 toPTCFTP2
+,DWDMISMDP,,2024-06-04,"Menu Item, Service Mode, Daypart Sales"
+,DWDSALES,,2025-01-31,Data Warehouse Schedule to processsales information
+,DWDSALES,,2/23/211,Data Warehouse Schedule to processsales information
+,DWD_XFORMITY_FEED,,1/1/211,"Transfers Sales Data from Xformityin the RODXformatfro record types ,1,2,3,6,1"
+,DWMMENU_ITEM_COST,,2023-03-03,Populates Menu Item cost in Warehouse and Sales Mart
+,DWOMKT_POLLING,,2026-08-01,Loads market polling ballot data into the datawarehouse
+,DWR_FLASH_FEED,,1/19/211,Extracts TopLine and Half Hour Sales data forFlash Comp Sales. This schedule will
+,GWDCASH_RECONCILIATION,,2028-02-02,Populates Cash reconciliation details from ODStoWarehouse
+,GWDDATA_QUALITY,,2021-02-26,This is a daily schedule to run theInformatica DataQuality plans
+,GWDEND_OF_DAY,,2028-02-02,Populates End of Day info from ODSto Warehouse
+,GWDINVENTORY_TXN,,2028-02-02,Populates Inventory info from ODS to Warehouse
+,GWDRETAILTXN,,2028-07-09,Loads Retail Transaction Data fromODS to Warehouse
+,IWDARIES_TRANSFERS,,FALSE,Daily Data Transfers from Aries
+,IWDDAILY_LOAD_AND_MERGE,,FALSE,Load of Data from RDCC
+,IWDDAILY_TOP_LINE_SALES,,FALSE,Aggregates Top Line Sales information
+,IWDLOAD_AND_MERGE,,FALSE,Daily Load and Merge of RDCC DATA
+,IWDMONTHLY_TOP_LINE_SALES,,FALSE,Monthly Sales Information - (This Schedule isrunDaily to give updates)
+,IWDWEEKLY_TOP_LINE_SALES,,FALSE,Schedule for Weekly Top Line Sales(This scheduleisrun daily to give update)
+,IWMOSAAUDIT,,2021-06-07,Update OSA audit statistics
+,IWRCANADA,,2021-06-07,On Request schedule to populate weekly tables
+Mohan Nilakantan,,,FALSE,
+,PSONITE3-4,,1997-09-15,3rd & 4th Work Nights
+Mohanty Pankaj,,,FALSE,
+,BNDBAICITIEMEA,BNDBAICITIEMEA_BOX,2021-08-13,#NAME?
+,HRHHR_ADP_SPAIN,HRH,4/8/211,HR_ADP_SPAIN
+,RSDCCP_FARS,,2021-05-07,Credit Card Information from FirstData - known asFARS and Gift Card information
+,SSDBWPPROCESS_CHAINS,SSDBWPROCESS_CHAINS,2/25/211,"From: SSMS, PowerCenter & STR To: BW --> Dailyincremental interface (Process Chai"
+Moorthy Dhandapani,,,FALSE,
+,ASBE_ARIES_PHONES,ASBE_ARIES_PHONES_BOX,2023-05-03,Extracts Phone Nos. from Aries forWorkers andFranchisees to be blocked and exclu
+,ASBREST_TRANSFORM_TDS,,2021-03-16,Loads Order and Price ConfirmationInformationinto Aries (Source:  Texas Digital
+,ASDADUPDT,ASDADUPDT_BOX,2027-03-19,Active Directory To Aries Interface
+,ASDEALGN,,2022-06-17,Create Alignment Export files for SAP
+,ASDECO,,2027-08-15,SAP - Daily Cost Center Addition process
+,ASDECO,,2022-06-17,SAP - Daily Cost Center Addition process
+,ASDEEIPP,,2029-06-01,File extract from ARIES for EIPP (SAP BW)
+,ASDEFRAN,,2028-05-12,Create Franchising Export files forSAP
+,ASDEFRAN,,2025-07-14,Create Franchising Export files forSAP
+,ASDEPCSSMS,,2029-06-01,Create Powercenter Export files forSSMS
+,ASDEREST,,2027-08-08,Create Restaurant Export files forSAP
+,ASDEREST,,2025-07-14,Create Restaurant Export files forSAP
+,ASDEVENT,,2025-05-13,Creates Generic Restaurant dat fileextract alongwith Worker File and post on FTP
+,ASDE_ATS,ASDE_ATS_BOX,2029-07-29,Location Import for ATS
+,ASDE_MAPQUEST,ASDE_MAPQUEST_BOX,2029-07-15,Restaurant list for BKCareers.com Address lookup website.
+,ASDE_MSHOP,,2024-01-08,Daily Mystery Shop Site Files creation for ShopNCheckand DSG.   Process Steps: 1.
+,ASDE_OPS_DOWNLOADS,,2025-12-21,Create and transmit files for retrieval via DownloadCenter
+,ASDE_SMG,,2028-02-07,"THIS SCHEDULE IS A DAILY DATA EXTRACT TO SMG (Guest Trac) ,  TTS & Xformity."
+,ASDE_SMG,,2028-05-31,"THIS SCHEDULE IS A DAILY DATA EXTRACT TO SMG (Guest Trac) ,  TTS & Xformity."
+,ASDE_WORKERS,,2026-04-11,"Daily Extracts of field worker's BKUIDS, E-MaillandORGUNIT assigments from Arie"
+,ASDFFRP,,2025-08-09,"This batch job opens a Microsoft Access application that automatically copies, via"
+,ASDI_SAP_IN_ATTRIB,,2025-07-14,Get Attributes from SAP
+,ASDPWRCTR1,ASDPWRCTR1_BOX,2028-01-27,PowerCenter File Watcher - TheNetwork Interface
+,ASDUNO,,2023-08-15,"Notes -  Backup of Current/Prior, Daily Process and aRestore if Daily process fai"
+,ASD_SMTOLOTUS,,2026-11-07,Smarts to Lotus Notes Refresh Process
+,ASMECC,,2022-06-27,SAP - Export the Cost Center changes that occurredduring the month to SAP
+,ASMECO,,FALSE,SAP- Cost Centers Addition Processfor First WorkNight
+,ASMECZ,,2022-06-27,SAP - Exports ZHRCV data from Ariesto SAP
+,ASMEREV1,,2028-09-18,monthly extract of revenue data oncalendar day 1
+,ASMERFPR,,FALSE,"Creates an extract file of all Open,US Restaurantsand its associated  Franchise G"
+,ASME_AP_ALT_HIER,,2026-08-01,Asia Pacific Alternate Hierarchy
+,ASME_AP_STD_HIER,,2025-07-14,Asia Pacific Standard Hierarchies for SAP
+,ASME_AR_ALT_HIER,,2028-06-04,Argentina Alternate Hierarchy
+,ASME_AR_STD_HIER,,2028-06-04,Argentina Standard Hierarchies forSAP
+,ASME_AT_ALT_HIER,,2026-08-01,Austria Alternate Hierarchy
+,ASME_AT_STD_HIER,,2026-08-01,Austria Standard Hierarchies for SAP
+,ASME_BG_STD_HIER,,2029-06-01,Bulgaria Standard Hierarchies for SAP
+,ASME_BR_ALT_HIER,,2026-08-01,Brazil Alternate Hierarchy
+,ASME_BR_STD_HIER,,2026-04-11,Brazil Standard Hierarchies for SAP
+,ASME_CA_ALT_HIER,,2026-04-25,Canada Alternate Hierarchies
+,ASME_CA_ALT_HIER,,2028-12-16,Canada Alternate Hierarchies
+,ASME_CA_STD_HIER,,2028-11-05,Canada Standard Hierarchies
+,ASME_CHCO_ALT_HIER,,2026-08-01,SwissCo EMEA Alternate Hierarchy
+,ASME_CHCO_STD_HIER,,2028-06-04,SwissCo EMEA Standard Hierarchies for SAP
+,ASME_CH_ALT_HIER,,2026-08-01,Switzerland Alternate Hierarchy
+,ASME_CH_STD_HIER,,2026-08-01,Switzerland Standard Hierarchies for SAP
+,ASME_CN_ALT_HIER,,2026-08-01,China Alternate Hierarchy
+,ASME_CN_STD_HIER,,2026-08-01,China Standard Hierarchies for SAP
+,ASME_CZ_STD_HIER,,2028-11-05,Czech Republic Standard Hierarchiesfor SAP
+,ASME_DE_ALT_HIER,,2025-07-14,Germany Alternate Hierarchies
+,ASME_DE_STD_HIER,,2025-07-14,Germany Standard Hierarchies for SAP
+,ASME_DK_STD_HIER,,2029-04-15,Denmark Standard Hierarchies for SAP
+,ASME_EFM_ALT_HIER,,2025-07-14,EFM Alternate Hierarchies
+,ASME_EFM_STD_HIER,,2025-07-14,EFM Standard Hierarchies for SAP
+,ASME_ES_ALT_HIER,,2025-07-14,Spain Alternate Hierarchies
+,ASME_ES_STD_HIER,,2025-07-14,Germany Standard Hierarchies for SAP
+,ASME_GI_ALT_HIER,,2029-04-15,Gibraltar Alternate Hierarchy
+,ASME_GI_STD_HIER,,2029-02-27,Gibraltar Standard Hierarchies forSAP
+,ASME_GI_STD_HIER,,2029-04-15,Gibraltar Standard Hierarchies forSAP
+,ASME_GO_ALT_HIER,,2027-12-01,Global Alternate Hierarchy
+,ASME_GO_STD_HIER,,2026-08-01,Global Standard Hierarchies for SAP
+,ASME_HR_MIPS,,2022-07-19,Orgunit Hierarchy and Location Extracts for HRCompensation
+,ASME_IL_ALT_HIER,,2026-08-01,Israel Alternate Hierarchy
+,ASME_IL_STD_HIER           ?,ASME_IL_STD_HIER,#VALUE!,Israel Standard Hierarchies for SAP
+,ASME_IT_ALT_HIER,,2026-08-01,Italy Alternate Hierarchy
+,ASME_IT_STD_HIER,,2028-03-03,Italy Standard Hierarchies for SAP
+,ASME_JP_ALT_HIER,,2028-06-04,Japan Alternate Hierarchy
+,ASME_JP_STD_HIER,,2028-06-04,Japan standard Hierarchies for SAP
+,ASME_KR_ALT_HIER,,2028-05-02,South Korea Alternate Hierarchy
+,ASME_KR_STD_HIER,,2028-05-02,South Korea standard Hierarchies for SAP
+,ASME_LA_ALT_HIER,,2026-04-11,Latin America Alternate Hierarchies
+,ASME_LA_STD_HIER,,2028-06-04,Latin America Standard Hierarchiesfor SAP
+,ASME_MAPQUEST,ASME_MAPQUEST_BOX,2028-05-06,Restaurant list for MapQuest.com Address lookup website.
+,ASME_MX_ALT_HIER,,2026-04-11,Mexico Alternate Hierarchies for SAP
+,ASME_MX_STD_HIER,,2026-04-11,Mexico Standard Hierarchies for SAP
+,ASME_NL_ALT_HIER,,2025-07-14,Netherlands Alternate Hierarchies
+,ASME_NL_STD_HIER,,2025-07-14,Netherlands Standard Hierarchies for SAP
+,ASME_PERRICULUM,,2029-06-01,Extract the 3 file for Perriculum in ftp site
+,ASME_PL_STD_HIER,,2029-06-01,Poland Standard Hierarchies for SAP
+,ASME_PT_ALT_HIER,,2026-08-01,Portugal Alternate Hierarchy
+,ASME_PT_STD_HIER,,2026-08-01,Portugal Standard Hierarchies for SAP
+,ASME_RO_STD_HIER,,2028-07-01,Romania Standard Hierarchies for SAP
+,ASME_SE_ALT_HIER,,2026-08-01,Sweden Alternate Hierarchy
+,ASME_SE_STD_HIER,,2026-08-01,Sweden Standard Hierarchies for SAP
+,ASME_SGCO_ALT_HIER,,2026-08-01,SingCo APAC Alternate Hierarchy
+,ASME_SGCO_STD_HIER,,2026-08-01,SingCo APAC Standard Hierarchies for SAP
+,ASME_SG_ALT_HIER,,2029-04-15,Singapore Alternate (CEO) Hierarchies for SAP
+,ASME_SG_STD_HIER,,2029-04-15,Singapore Standard Hierarchies forSAP
+,ASME_SK_STD_HIER,,2029-06-01,Slovakia Standard Hierarchies for SAP
+,ASME_STARS,ASME_STARS_BOX,2026-05-01,Creates and FTP and Alignment Datafile (StarsAlgn.TXT) to be uploaded into STARS
+,ASME_TR_ALT_HIER,,2026-08-01,Turkey Alternate Hierarchy
+,ASME_TR_STD_HIER,,2026-08-01,Turkey Standard Hierarchies for SAP
+,ASME_UK_ALT_HIER,,2025-07-14,UK Alternate Hierarchies
+,ASME_UK_STD_HIER,,2025-07-14,UK Standard Hierarchies for SAP
+,ASME_US_ALT_HIER,,2026-04-05,US Alternate Hierarchies for SAP
+,ASME_US_STD_HIER,,2026-04-11,US Standard Hierarchies for SAP
+,ASMFTPCAPWIZ,,2027-03-27,Monthly Update to the Franchise Association -Franchise Congressman
+,ASMFTPCAPWIZ,,2029-01-22,Monthly Update to the Franchise Association -Franchise Congressman
+,ASMLASEXT,,2026-06-21,Lease Accounting Interface for US
+,ASMLASEXT2,,2026-06-21,Lease Accounting Interface to SAP for Canada
+,ASMUALG,,2026-08-01,Change Version Code of Alignments from CurrenttoPrior Month
+,ASMUIW,,2026-03-31,IW - Populates the IW_ALGN_ORG_UNIT_REL tablewithalignment hierarchies from the
+,ASMUIW,,2028-11-06,IW - Populates the IW_ALGN_ORG_UNIT_REL tablewithalignment hierarchies from the
+,ASMU_BO_REST_COUNT,,2022-08-02,Captures Active Restaurant Counts per Region @Month's End (1st. work day) and gen
+,ASMU_REST_ALGN_PRIOR,,2023-03-01,Truncates table REST_ALGN_PRIOR andcaptures Alignment information at Month End fr
+,ASQEDPA,,FALSE,Restaurant Activity extract file for Dr. Pepper
+,ASREMIR,,FALSE,Creates a generic restaurant file for MichiganNational Bank
+,ASREOPER,,FALSE,"Creates  Operators Add,Change,Delete files forNotes"
+,ASREOPM,,FALSE,Updates OPS. Manual local databaseused for Restaurant/Franchise mailings
+,ASREREST,,FALSE,"Creates Restaurant Add,Change,Delete files forNotes"
+,ASRERSFR,,FALSE,Generic Franchise/Restaurant File generated upon request
+,ASRETABS,,FALSE,Exports to Notes a set of files with Restaurant attributes information
+,ASREWORK,,FALSE,"Creates a Worker Add,Change,Deletefiles for Notes"
+,ASRE_MSHP,,1999-11-11,Create Mystery Shop Site File
+,ASRIRATI,,FALSE,Imports Restaurant Ratings from Notes to ARIES
+,ASRLVL4,,FALSE,"Creates ADD,CHANGE and DELETE filesfor WITTLVL4"
+,ASRRNCD,,FALSE,Restores tables used during the daily notes process.
+,ASRUCA,,FALSE,Build Base table used to track CostCenter Additions
+,ASRUCC,,FALSE,Build Base table used to track CostCenter Changes
+,ASRUIW,,FALSE,IW - Populates the IW Alignment table with 'PriorMonth' hierarchy information.
+,ASRUNCD,,FALSE,Notes - Full Aries to Notes ExtractOn Request
+,ASRURAT,,FALSE,Notes -  Full Rating Load
+,ASWEEIPP,,2029-04-13,File extract from ARIES for EIPP (SAP BW)
+,ASWEVENT,,2027-03-27,Creates generic Restaurant file which is usedto sendto vendors
+,ASWEWORKERALIGN,,2029-04-15,File extract from ARIES for Workeralignment (Restaurant support Kevin adamson)
+,ASWE_ARIES_TO_SMG_BKUID,,2023-08-15,"Weekly Extracts field workers BKUIDS, E-MaillandORGUNIT assigments from Aries f"
+,ASWE_REST_REMODEL,,2023-11-11,Extract Coke files from ARIES withDT 2 certifiedrestaurants
+,ASWPWRCT,,FALSE,Creates a file for Fran/Rest Information for PowerCenter1: c:\aries\bin\external\
+,ASWRSI_FRANCHISEE_CONTACT,,2021-03-16,Retrieves Franchisee Contact Information formRSIandLoads into Aries
+,ASWSMEREST,,1999-04-02,ARIES to Network Interface
+,ASWU_NCD,,2022-01-02,ARIES-to-NOTES interface 'Table Clean-up' weekly process.  Runs SQL Store Procedur
+,AXMLASEXT,,2026-05-25,Lease Accounting Interface
+,AXMREVENUE,,2026-01-12,Load SAP Revenue data tables with data from ARIES
+,AXMREVENUE_1,,2028-09-19,COPY OF AXMREVENUE - except it runson calendar day 1at :25: after ASMEREV1 b
+,BOMDW_BOXIR2HRVBMACRO,,2028-07-03,"This Box has a VB Macro Reports torun automaticallythrough scripts, Once this jo"
+,BOWDW_BOXIR2HRVBMACRO,,2028-07-03,"This Box has a VB Macro Reports torun automaticallythrough scripts, Once this jo"
+,DMDHR_INF,,2028-04-01,The DMDHR_INF schedule will kick off the HR Informatica sessions.
+,FBDECOMM,,2021-06-07,Extract Commodities from FCB and transfer to Unix
+,FBDEMEAL,,2021-06-07,Extract meal deal data from FCB andcopy the filetoUnix
+,FBDEMENU,,2021-06-07,Extract Menu Items from pmix_menuitem and transferfile to Unix
+,FBDESPDC,,2021-01-19,Extract and transfer Supplier Distribution centerstoSAP
+,FBDESPLY,,2021-06-07,Extract and transfer Supplier Itemsto Unix
+,FBDEUOM,,2021-06-07,Extract UOM from code_uom_typ and transfer file toUnix
+,FBDUGLAC,,2021-06-07,Loads GL Accounts from SAP into ARIES
+,FBMFRESHTB,,2022-11-19,Refresh FCB - SAP interface relateddatabase tables
+,FBMILOAD,,2022-12-06,"Loads Menu Item Sales, Commodity Waste  and Drop Restaurants files into database"
+,FBMIMAC,,2022-03-06,Loads Monthly Average Cost
+,FBMUCOST,,2022-12-06,"Calculates Portion and Menu Item Costs,  generatesFood and Paper Reports, Menu It"
+,FBMUCPCOST,FBMUCPCOS,2022-01-31,Copy Canadian and Mexican cost files to FTP server
+,FBMUDEL,,2021-07-03,"Deletes previous month's Average Cost, Sales,Waste,and Dropped restaurants files"
+,FBMUROLL,,1999-12-15,Rolls up previous month commodity cost into current month
+,FBREMIS,FBREMIS_BURSTER_FCB,2025-06-21,Creates text version of Menu Item Sales reports for Xcellenet
+,FBREMIS,FBREMIS_BURSTER_FCB,2029-05-08,Creates text version of Menu Item Sales reports for Xcellenet
+,FBRRMAC,,2022-11-19,Creates Cost Difference Reports
+,FBRUADJ,,2022-12-06,"Adjustment Cycle - calculates Portion and MenuItem Costs,  generates Food & Paper"
+,FBRUADJ,,2029-06-18,"Adjustment Cycle - calculates Portion and MenuItem Costs,  generates Food & Paper"
+,FBWUDEL,,2023-11-07,"Deletes previous week's Average Cost, Sales and Wastefiles"
+,FBWUROLL,,2023-11-07,Rolls up previous month commodity cost into current week
+,PRDTRACK,,2021-06-04,Retrieve and uncompress the tracking information file(bkctrack.zip) for UPS shipm
+,PRRSHIP_REQ,,2022-04-01,Extract of shipping information forA-3.  ThefileSHIP_REQ.csv is created and com
+,RVDEREVN,,2025-07-14,Creates Revenue/Royalty extracts for SAP
+,RVMEREVN,,2021-06-04,Creates Revenue/Royalty extracts for SAP
+,RVMEREVN_1,,2028-09-18,COPY OF RVDEREVN - only exception is that it runsoncalendar day 1 at :15: (1
+,SLDSALES_MART,,2027-02-13,This schedule populates datamart with informationfrom data warehouse
+,SMDE.SUP.PROD.ABL,,2021-04-01,Updates table in SMS database for use with view for notes interface
+,SMDE_STETON,,2024-11-09,Creates SMARTS Export files for Steton (https://bkaudits.com)
+,SMDI.SILLIKER.NEW.IMPORT,,2022-03-06,Runs batch file (SMISILKRNEW.BAT) that contains executable to load data into SILLI
+,SMDSMEPOWER,,2021-04-01,SMARTS to PowerCenter Interface
+,SMDSMISILKER,,2022-03-06,Siliker Lab to SMARTS interface
+Nalin Nishant,,,FALSE,
+,SUD_MATRIX_DATAEXTRACT,,2029-07-29,This batch process will pull the data from theBKSurvey database and generate the
+Nazia Qaizer,,,FALSE,
+,Another Schedule with this ID exists.,DWD_MONTHLY_SOS_TEN,1/12/211,This job loads franchise data enterred throughdata connect to warehouse
+,DMD_OPM_SOS,,1/12/211,Loads speed of service data into OperationsMart
+,DWDRSI_EXTRACTS,,4/9/212,This Box contains jobs that sends extract files toRSI
+,DWD_SICOM_ARIES_FEED,,1/5/211,transfer a file from AriesMart1 toSICOM
+,DWD_TTS_BATCH,,3/6/212,This job fetches the TTS files in PDF format fromFTPsite to ET Scorecard deliver
+Niranjan Pamireddy,,,FALSE,
+,HRD_ADP_UK,,4/12/211,ADP interface test
+Omar Perez,,,FALSE,
+,HRDEADPSSLGB,,2029-03-06,"This job reads, encrypts ans sendsSSL files fromtheRSC in Great Britain to ADP."
+,HRDHRDEADPMASTNL,HRDEADPMASTNL,2027-01-02,Read master data from ADP and sendit to the loclamarket in Netherlands
+,PABCITIACH_ACK,,2021-11-07,Print acknowledgements for all theCitibank ACH files
+,PADCITIMF_ACK,,2021-11-02,This job will run from monday through friday and willprint the acknowledgement re
+,PAWCITIMO_ACK,,2021-11-07,Print Acknowledgement report from Citibank fortheVOIDS files
+Oscar Cabanillas,,,FALSE,
+,HRM_MONTHLY_DECEMBER,,2021-01-03,HR Smith Barney Share Value Interface
+,HRM_POST-MONTHLY_PROCESSING,,2021-01-03,HR Upload Erisa file from Network
+,PABPILLAR_S,,2021-01-03,Payroll All Areas Pillar Credit Union Deposits
+,PADGARLT_S,,2021-01-03,Payroll All Areas Garnishment Notice Letters
+,PAMESMS_S,,2021-01-03,SMS Outbound Interface
+,PAMR7_S,,2021-01-03,Check Reconcilliation Reporting
+,PAR_RELO_LOAD_S,,2021-01-17,Payroll All Areas Relo Load
+,PAWOFFCYCLEFRI_S,,2021-01-03,Off Cycle Payroll Processing
+,PAWOFFCYCLEMNDY_S,,2021-01-03,Off cycle Processing
+,PAWOFFCYCLEWED_S,,2021-01-03,Payroll All Areas Off Cycle PayrollProcessing
+,PAW_THIRD_PARTY_STR_STOP,,2021-01-03,Payroll All Areas 3rd Party - StopInterfacesfromgoing to AP
+,PBM_SAP_PBMCHECKS,,2021-01-03,Payroll Crew Bi-Weekly GoodMoney Report
+,PDBMATCHW_S,,2021-01-03,Payroll Restaurant Managers ExtractPERNR's with Matchcode-W set
+,PDBPRERPT2_S,,2021-01-03,Payroll Restaurant Managers Garnishments
+,PDBSTART_S,,2021-01-03,Payroll Restaurant Managers Start Payroll
+,PDB_INTEGRATE_FICO,,2021-01-03,Error Evaluation Run
+,PDB_THIRD_PARTY_STR_STOP,,2021-11-02,Payroll All Areas 3rd Party - StopInterfacesfromgoing to AP
+,PDR_AWARD_LOAD_S,,2021-01-17,Payroll Restaurant Managers PD AwardBanq load
+,PDWPAYMETHOD_S,,2021-01-03,Payroll Restaurant Managers MANAGERS W/INVALIDPAYMENT METHOD
+,PEBMATCHW_S,,2021-01-03,Payroll Exempt Employees Extract PERNR's withMatchcode-W set
+,PEBSTART_S,,2021-01-03,Payroll Exempt Employees Start Payroll
+,PEB_INTEGRATE_FICO,,2021-01-03,Error Evaluation Run
+,PEB_SAP_PE_PRE_REPORTS,,2021-01-03,Payroll Exempt Employees GoodMoneyReport
+,PEB_THIRD_PARTY_STR_STOP,,2021-11-02,Payroll All Areas 3rd Party - StopInterfacesfromgoing to AP
+,PEPRERPT2_S,,2021-01-03,Payroll Exempt Employees Garnishments
+,PMBMATCHW_S,,2021-01-03,Payroll Restaurant Managers Mass. Extract PERNR'swith Matchcode-W set
+,PMBPREDME_S,,2021-01-03,Payroll Restaurant Managers Mass. Pre-DME Create File
+,PMBPRERPT2_S,,2021-01-03,Payroll Restaurant Managers Mass. Garnishments
+,PMBSTART_S,,2021-01-03,Payroll Restaurant Managers Mass. Start Payroll
+,PMB_INTEGRATE_FICO,,2021-01-03,Error Evaluation Run
+,PMB_SAP_PM_PRE_REPORTS,,2021-01-03,Payroll Restaurant Managers Mass. GoodMoney Report
+,PMB_THIRD_PARTY_STR_STOP,,2021-11-02,Payroll All Areas 3rd Party - StopInterfacesfromgoing to AP
+,PNBMATCHW_S,,2021-01-03,Payroll Non-Exempt Employees Run Payroll for Corrected Employees
+,PNBPRERPT2_S,,2021-01-03,Payroll Non-Exempt Employees Garnishments
+,PNBRPTIME_S,,2021-01-03,Payroll Non-Exempt Employees StartRPTIME
+,PNBSTART_S,,2021-01-03,Payroll Non-Exempt Employees StartPayroll
+,PNB_INTEGRATE_FICO,,2021-01-03,Error Evaluation Run
+,PNB_SAP_PN_PRE_REPORTS,,2021-01-03,Payroll Non-Exempt Employees GoodMoney Report
+,PNB_THIRD_PARTY_STR_STOP,,2021-11-02,Payroll All Areas 3rd Party - StopInterfacesfromgoing to AP
+,POACH_S,,2021-01-03,Payroll Optional Pre-DME Create File
+,POBACH_S,,2021-11-05,Payroll Optional Pre-DME Create File
+,POB_GARN_AP_CHECK_RPT,,2021-01-03,Payroll Optional Garnishment A/P Check Report
+,POB_SAP_PDPEPN_CHECK_RUN,,2021-11-05,Payroll Optional GoodMoney Report
+,PSR_FLEET_LOAD_S,,2021-01-17,Error Fleet Load
+,PWDMINOR_S,,2021-01-03,Minor's Exception Report
+,PWLFRICK_S,,2021-01-03,Frick Interface of Weekly Pay Area
+,PWLPILLAR_S,,2021-01-03,Payroll Crew Weekly Pillar Credit Union Deposits
+,PWRR_OFCCP,,2021-01-17,Dept of Labor OFCCP Equal Opportunity Survey
+,PWWCITIFR_S,,2021-11-02,Payroll Crew Weekly Citibank ChecksIssued File
+,PWWCITIMO_S,,2021-11-02,Payroll Crew Weekly Citibank ChecksVOID File
+,PWWCITITH_S,,2021-11-02,Payroll Crew Weekly Citibank ChecksIssued File
+,PWWCOBRA_S,,2021-01-03,Cobra Reporting
+,PWWFRILOAD,,2021-01-03,Extract Time Transactions from XMTFiles and Loadinto SAP
+,PWWMATCHW_S,,2021-01-03,Payroll Crew Weekly Run Payroll forCorrectedEmployees
+,PWWPREDME_S,,2021-01-03,Payroll Crew Weekly Pre-DME CreateFile
+,PWWPRERPT2_S,,2021-01-03,Payroll Crew Weekly Garnishments
+,PWWRCOT_S,,2021-01-03,Correct Triggering Event
+,PWWR_PYHOURS_S,,2021-01-03,Loaned Hours Report
+,PWWSTART_S,,2021-01-03,"Payroll Crew Weekly Start Payroll,triggers all PW_PAY jobs"
+,PWWTIMELOAD_SAT_S,,2021-01-03,Payroll Crew Weekly Load of Time Poll to IT21's
+,PWWUROS_S,,2021-01-03,Update Table ZROSP - Used by missing stores reports
+,PWWXMT1_S,,2021-01-03,Payroll Crew Weekly Backup PYTIME.DAT to PYTIME.BAK
+,PWW_GARN_AP_CHECK_RPT,,2021-01-03,Payroll Crew Weekly Garnishment A/PCheck Report
+,PWW_INTEGRATE_FICO,,2021-01-03,Payroll Crew Weekly Evaluation Run
+,PWW_SAP_PWWXMT2,,2021-01-03,Payroll Crew Weekly
+,PWW_SAP_PW_MDATA_RPTS_LATE,,2021-01-03,Payroll Crew Weekly Active Crew
+,PWW_THIRD_PARTY_STR_STOP,,2021-11-02,Payroll All Areas 3rd Party - StopInterfacesfromgoing to AP
+Pallavi Garg,,,FALSE,
+,DMDSALES_AND_TRAFFIC,,2021-06-09,This is a daily schedule that runseveryday at1and is dependent on successfu
+,GWDPKG_REST_MASTERS,,2028-07-23,This package populates various restaurant masters.
+,GWDRODX_ERROR,,2028-07-23,This schedule looks for rodx_error_watcher file and informs support team when foun
+,GWDSTORED_PROCS,,2028-07-23,This schedule runs the stored procsfor the GDW. Thisschedule contains first job
+,GWWDIMENSIONS_DRV,,2029-09-25,Loads Dimention data for Data Warehouse
+,GWWDIMENSIONS_MASTERS,,2029-01-23,This package populates various restaurant masters
+Patrick Jean-Pierre,,,FALSE,
+,PODShoes_For_Crew,,2021-01-18,Shoes For Crew
+Paula Young,,,FALSE,
+,SUD_MATRIX_DATAEXTRACT,,2025-12-01,This batch process will pull the data from theBKSurvey database and generate the
+Rafael Bouillon,,,FALSE,
+,PAD_THIRD_PARTY,,2028-11-01,Payroll All Areas 3rd Party Transfer to FI/CO- A/P
+Raj Kammili1,,,FALSE,
+,FKDKOFAXCSKS_COPY,FKDSIM1,2/6/213,csks.csv file copy to Kofax file server
+,FKDSIM1,,2/6/213,Daily jobs for SAP Invoice Management
+Reynaldo Nunez,,,FALSE,
+,ASWEADP,,2021-07-16,File extract from ARIES for ADP (vendor)
+,DMDSALES,,4/2/212,Data Mart jobs for BKSales / SalesAnalyzer Universes
+,DWH_HR_RCT_ES,,1/25/211,Pulls HR data from SAP and sends toMyLabor for ESemployees
+,GWDFACTS,,4/1/212,Populates all the fact tables fromODS to Warehouse
+,GWDFACTS,,4/1/212,Populates all the fact tables fromODS to Warehouse
+,GWDINFA_JAVA,,3/23/212,This is Box that runs all JAVA jobsin POS XMLInformatica Set Up project
+,GWDINFA_MASTER,,2021-12-21,This box runs the master data jobs
+,GWDINFA_ODSINTG,,2021-12-21,This is the first Informatica job box
+,GWDINFA_RODX,,2/22/211,This box generates RODX files. Thebox shouldrundaily at every 3th minute excep
+,GWD_TDC_ES,,1/25/211,Collects and processes detailed labor data intheform of time punch xml files fro
+,GWH_HR_RCT_ES,,#VALUE!,Pulls HR data from SAP and sends to MyLabor for ES employees
+,GWMSIMS_XREF,,1/2/212,The box runs the job which will load monthly RSI cross reference file every 1st da
+,GWWSTORED_PROCEDURES,,3/2/211,This schedule runs the stored procsfor the GDW.
+,GWW_PDC_CA,,3/7/211,Collects and processes weekly payroll data forCAemployees.
+,GWW_PDC_ES,,1/25/211,Runs several jobs that perform datacollectionofpayroll data from MyLabor for ES
+,GWW_PDC_US,,2021-12-21,This schedule runs several jobs that perform datacollection of payroll data from
+,GWW_PDC_US_FRIDAY,,2/22/211,This schedule runs several jobs that perform datacollection of payroll data from
+,GWW_PFG_ES,,1/25/211,Creates and sends Payroll XMT filesto SAP
+,GWW_PFG_US,,2021-12-22,Creates and sends Payroll XMT filesto SAP forUSemployees.
+,HRMS_TO_AG_MONTHLY,,2029-11-17,Position to Role assignment
+,LEMEXT1,LEM,2026-05-25,Lease Accounting Monthly Extract -LEASEACCTG
+,LEMEXTSAP1,,2026-05-25,Lease Accounting to SAP Interface
+,LEMSAPEXT1,,2026-05-25,Lease Accounting to SAP interface extract
+,RSD4,,4/4/212,RDCC : Daily Processing of POS files
+,SLMDAILY_DP_SALES_STEP1_HIST,,3/19/212,Populates Daypart Sales from Warehouse to SalesMart1in Sqlserver.
+,SMDE_STETON,,2021-02-23,Creates SMARTS Export files for Steton (https://bkaudits.com)
+Ricardo Rodriguez,,,FALSE,
+,RID_CA_RS_ZIP_RADIANT_DAILY,,2021-05-05,Creates and Pulls back daily saleszip file
+,RID_SG_RS_SEND_INVETORY_FILE,,2021-04-02,Singapore Inventory File Send
+,RID_ST_TABLES,,2021-04-02,Daily Canada task for MenuLink
+,RIW_CA_PAYROLL_REMINDER_FILE,,2021-01-07,Sends reminder to RGMs to submit payroll
+Robert Jaeger,,,FALSE,
+,RID_US_RS_GET_DCS_REPORT_MIC,,2028-11-05,Get DCS Reports from US MICROS Rest
+,RID_US_SEND_MS2_PACKET_DESC,,2029-01-21,Fail over - Send MS2 Packet changesto Rest. in reverse order
+Robert Sarnack,,,FALSE,
+,FHWIW,,2002-02-16,Load the IW data into the FLASH SQL7 DB afterweeklyclosing times on BKMPWDA2
+Roger Amador,,,FALSE,
+,RID_XRFTP,,2028-07-01,FTPs files sent in bny restaurantsto the SAPserver
+,RSDU_RODX_DECONVERT,,2028-06-03,Run RODX_DECONVERT
+Ronald Estrada,,,FALSE,
+,DBDOPB_ASYSP1_EXPORT,,2021-08-08,ASYSP1 full export backup dump
+,DBDOPB_BKASYSP1_EXPORT,,2021-01-17,BKASYSP1 full export backup dump
+,DBRSPE_FLASHSQLSVR_RESTART,,2021-01-18,Restart SQL Server and Executive Processes
+Rosie Miguez,,,FALSE,
+,REMCanada Pct Rent AR/GL interfac,,2021-04-24,Canada AR/AP/GL Percent Rent Interface
+,REMOORM1,,1996-01-07,First Wednesday 11:
+,RSDC5,,1999-01-25,Post Canada Sales Adjustments to GL
+,RSMC2,,2021-04-24,Post CANADA reported Sales to GL
+,RSMFSESTMRPT,,2021-08-03,Franchise Sales Historical Estimation Report for DOORS interface
+Satish Wani,,,FALSE,
+,FKDPAYMENT_LAM,,2029-01-15,
+,RSM41,,2021-04-24,Monthly Job to Feed I/W ( This jobruns on Secondwork Night Only)
+,RSMC2,,2021-04-24,Post CANADA reported Sales to GL
+,RSMFSESTMRPT,,2021-08-03,Franchise Sales Historical Estimation Report for DOORS interface
+Satish Wani; Lydia Avick,,,FALSE,
+,RSMCANADA,,2021-08-03,RDCC - Company Sales Canada MonthlyJobs
+Shantanu Ghose,,,FALSE,
+,ASDADUPDT,ASDADUPDT_BOX,2021-12-21,Active Directory To Aries Interface
+,ASDALIGN,,2021-12-01,ARIES to Restaurant Systems Interface
+,ASDE_ATS,ASDE_ATS_BOX,2021-11-08,Location Import for ATS
+,ASME_ATTENTION_LINE,,2021-07-08,Upload restaurant attention line inAries Restaurant
+,PRDTRACK,,2021-06-29,Retrieve and uncompress the tracking information file(bkctrack.zip) for UPS shipm
+,PRWTRACK_MON,,2021-06-25,Retrieve and uncompress the tracking information file(bkctrakm.zip) for UPS shipm
+,PRWTRACK_THU,,2021-06-28,Retrieve and uncompress the tracking information file(BKCTRAKR.zip) for UPS shipm
+,PRWTRACK_TUE,,2021-06-28,Retrieve and uncompress the tracking information file(BKCTRAKT.zip) for UPS shipm
+,PRWTRACK_WED,,2021-06-08,Retrieve and uncompress the tracking information file(BKCTRAKW.zip) for UPS shipm
+Sharon Mei,,,FALSE,
+,DMDHRODS_INFORMATICA,,2024-12-06,This schedule invokes the Informatica sessionfortheHR ODS.
+,DMD_HRMART,,2024-03-09,Loads HRMart tables from the data warehouse
+Somsubhro Chatterjee,,,FALSE,
+,A Schedule with this ID already exist,ASDMFILOAD,11/17/211,afadfdaf
+,ASDALIGN,,7/12/211,ARIES to Restaurant Systems Interface
+,ASDEALGN,,2/15/211,Create Alignment Export files for SAP
+,ASDPWRCT,,3/2/212,Creates a file for Fran/Rest Information for ePowerCenter: e:\aries\bin\external\a
+,ASDRESTSYNC,,4/5/212,THIS IS THE JOB FOR THE REST SYNC PART OF KITCHENSYNC
+,ASME_CZ_STD_HIER,,8/29/212,Czech Republic Standard Hierarchiesfor SAP
+,AXDRAWUSAGE_FTP,,5/25/212,FTP JOB FOR COPYING THE RAW USAGE FILE FROM FTP1 TO PTDUTL2
+,AXDRESTSYNC,,12/16/211,THIS IS THE REST SYNC JOB OF KITCHEN SYNC.
+,FBWUDEL,,4/26/211,"Deletes previous week's Average Cost, Sales and Wastefiles"
+,HRDSTARSFTP,,4/12/212,STARS FILE WILL NEED TO BE FTPED TOTHE SPECIFIEDLOCATION FOR THE VENDOR
+,OBDRESTMGR_TRANSFER,,12/15/211,This schedule runs jobs that synchronize restaurant manager identity data from SAP
+,RSDRESTSYNC,,12/16/211,THIS IS THE JOB FOR REST SYNC WITHIN THE KITCHEN SYNCPART
+Sony Joseph,,,FALSE,
+,BHDBW_HRDAC,BHD_BI_HR_BKP_BWP,1/23/212,BW HRDAC Process Chains
+,BIDL_ZPC_HRDAC,BIDL_HRDAC_BKP_BWP,11/9/212,HRDAC  BW Process Chain
+,HRWPAW_ALL_CITIAC_ACK_FW,PAW_ALL_CITIAC_ACK_FW,7/11/212,PAW_ALL_CITIAC_ACK_FW  file watcherstep
+,HRW_ALL_CITIAC_ACK,,7/19/212,CITI acknowledgement  Job
+,HRW_ALL_CITIAC_ACK_2,HRW_ALL_CITIAC_ACK,7/19/212,CITI acknowledgement job
+Srinivas Muthekepalli,,,FALSE,
+,FKDASM2,,1996-01-04,Update of Z_DAILY_PROCESS_DATE
+,MMDASM1,,1996-01-04,Capital - Daily - Purchase order printing
+Stephanie Wagner,,,FALSE,
+,HRD_ORGCHART,,2027-02-07,Org Chart Interface  - SAP to OrgPublisher daily update
+,HRM_MX_TURNOVER_REPORTS,,2029-12-08,Reports to be used for Turnover Calculation inMexico
+,OBDRESTMGR_SAP_TRANSFER,,2026-03-03,Interface (file transfer) for Active Directory(Oblix) to & from SAP.   This will
+Suda Yella Reddy,,,FALSE,
+,FSM1NITEDE,,7/2/212,GERMANY - Monthly  Run
+Tracy Elliot,,,FALSE,
+,IWR_POLLING,,2021-11-02,Market Polling tables creation
+Udhaya Johendran,,,FALSE,
+,AMMCNA1,,5/3/212,CHINA - Monthend Schedule
+,FKDE_AMEX_US_BIP,FKDE_AMEX_US_BIP_BOX,11/5/212,Move Amex BIP payment file to PTCFTP1
+,FKDMEXEDI1,,6/5/212,AP: Mexico Invoice EDI ( FTP ) process.
+,FKDREIN1,,8/24/212,"AP: Reinhart Fodd Svc's, process daily invoices fromdelivered goods to restaurant"
+,FKDTESTJOB,FKD,11/6/212,This schedule contains one job thatprocess the flatfile for vendor TEST job crea
+,FSM1NITEES,,2029-08-14,SPAIN - Monthly  Run
+,FSMTR,ANOTHER SCHEDULE WITH THIS ID EXIST,2029-01-02,test TR
+,RSDICMADJUSTMENT,RSD,6/12/212,ICM ITP Daily Adjustment and Settlement Jobs
+,RSDU_POS_POLLING_EMAIL,,7/7/211,Triggers EMAIL to IT-POS distribution lists inEMEA with a Restaurant Polling Repo
+,RSM_REVENUE_COMP_MX,,3/23/212,Revenue Cycle for Company Restaurants in Mexico
+(Not Categorized),,,FALSE,
+,FDOPTAX,,1998-11-03,Property Tax AR Interface
+,FSMPREPL,,2021-01-17,GL PRELIM
