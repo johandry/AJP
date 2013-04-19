@@ -3,7 +3,7 @@
 #################
 
 #*.jil
-#*.csv
+*.csv
 *.xlsx
 *.txt
 *.sqlite
