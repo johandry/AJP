@@ -24,7 +24,6 @@ class Job
 	def to_s
 	  job_type = (@type == 'c')?"Job":(@type == 'b')?"Box":(@type == 'f')?"Filewatcher":"Unknown Job Type"
 	  "#{job_type} #{@name}\n" <<
-		"\tID: #{@id}\n" << 
 		"\tName: #{@name}\n" <<
 		"\tType: #{@type}\n" <<
 		"\tBox Name: #{@box_name}\n" <<
@@ -41,4 +40,24 @@ class Job
 		"\tSTDERR File: #{@std_err_file}\n" <<
 		"\tAlarm if Fails: #{@alarm_if_fail}\n"
 	end
+	
+	def to_ror
+	  "Jobs.create(\n" <<
+		"\tname: '#{@name}',\n" <<
+		"\tjob_type: '#{@type}',\n" <<
+		"\tbox_name: '#{@box_name}',\n" <<
+		"\tcommand: '#{@command}',\n" <<
+		"\tmachine: '#{@machine}',\n" <<
+		"\towner: '#{@owner}',\n" <<
+		"\tpermission: '#{@permission}',\n" <<
+		"\tdate_condition: #{@date_condition || 0},\n" <<
+		"\tdays_of_week: '#{@days_of_week}',\n" <<
+		"\tstart_times: '#{@start_times}',\n" <<
+		"\tcondition: '#{@condition}',\n" <<
+		"\tshort_description: '#{@description}',\n" <<
+		"\tstr_out_file: '#{@std_out_file}',\n" <<
+		"\tstr_err_file: '#{@std_err_file}',\n" <<
+		"\talarm_if_fail: #{@alarm_if_fail || 0}\n" <<
+	  ")"
+  end
 end

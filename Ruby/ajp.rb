@@ -66,7 +66,8 @@ Options:
 		
 		formats = { 'csv' => 'to_csv',
 					'txt' => 'to_s',
-					'yaml'=> 'to_yaml' }
+					'yaml'=> 'to_yaml',
+					'ror' => 'to_ror' }
 					
 		options[:export] = false
 		opts.on('-e FORMAT', '--export FORMAT', formats, "Export the objects in the format specified from the database.") do |param|
@@ -101,10 +102,10 @@ options = get_options
 
 # Populate the objets and refresh the DB's if requested
 jobs 	= Jobs.new(options[:db], options[:refresh], options[:jobs], options[:verbose])
-users 	= Users.new(options[:db], options[:refresh], options[:users], options[:verbose])
-ownerships 	= Ownerships.new(jobs, users, options[:db], options[:refresh], options[:ownerships], options[:verbose])
+# users 	= Users.new(options[:db], options[:refresh], options[:users], options[:verbose])
+# ownerships 	= Ownerships.new(jobs, users, options[:db], options[:refresh], options[:ownerships], options[:verbose])
 
 # Different output options
 jobs.to_file(options[:export].to_sym, options[:jobs]) if options[:export] and options[:jobs]
-users.to_file(options[:export].to_sym, options[:users]) if options[:export] and options[:users]
-ownerships.to_file(options[:export].to_sym, options[:ownerships]) if options[:export] and options[:ownerships]
+# users.to_file(options[:export].to_sym, options[:users]) if options[:export] and options[:users]
+# ownerships.to_file(options[:export].to_sym, options[:ownerships]) if options[:export] and options[:ownerships]

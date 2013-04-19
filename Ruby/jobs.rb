@@ -185,6 +185,14 @@ class Jobs
 			db.close if db
 		end		
 	end
+	
+	def to_ror
+	  ror_output = 'Jobs.delete_all' << "\n\n"
+	  @jobs.each do |job|
+	    ror_output << job.to_ror << "\n"
+    end
+    ror_output
+  end
 
 	def to_yaml
 	  yaml_output = ''
