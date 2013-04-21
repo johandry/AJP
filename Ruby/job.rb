@@ -42,11 +42,11 @@ class Job
 	end
 	
 	def to_ror
-	  "Jobs.create(\n" <<
+	  "Job.create(\n" <<
 		"\tname: '#{@name}',\n" <<
 		"\tjob_type: '#{@type}',\n" <<
 		"\tbox_name: '#{@box_name}',\n" <<
-		"\tcommand: '#{@command}',\n" <<
+		"\tcommand: %q[ #{@command} ],\n" <<
 		"\tmachine: '#{@machine}',\n" <<
 		"\towner: '#{@owner}',\n" <<
 		"\tpermission: '#{@permission}',\n" <<
@@ -54,7 +54,7 @@ class Job
 		"\tdays_of_week: '#{@days_of_week}',\n" <<
 		"\tstart_times: '#{@start_times}',\n" <<
 		"\tcondition: '#{@condition}',\n" <<
-		"\tshort_description: '#{@description}',\n" <<
+		"\tshort_description: %q[ #{@description} ],\n" <<
 		"\tstr_out_file: '#{@std_out_file}',\n" <<
 		"\tstr_err_file: '#{@std_err_file}',\n" <<
 		"\talarm_if_fail: #{@alarm_if_fail || 0}\n" <<
