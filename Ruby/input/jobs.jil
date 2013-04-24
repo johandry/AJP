@@ -1,3 +1,5 @@
+
+
 /* ----------------- SAH_SAP_COLLECTOR_FOR_PERFMON ----------------- */ 
 
 insert_job: SAH_SAP_COLLECTOR_FOR_PERFMON   job_type: c 
@@ -2822,7 +2824,6 @@ alarm_if_fail: 0
  alarm_if_fail: 1
 
 
-
  /* ----------------- AMMR003 ----------------- */ 
 
  insert_job: AMMR003   job_type: c 
@@ -5091,7 +5092,6 @@ alarm_if_fail: 0
  condition: s(FVM_GL35.DAT)
  description: "FVM_GL35_DD_copy"
  alarm_if_fail: 1
-
 
 
  /* ----------------- FVM_GL39.DAT ----------------- */ 
@@ -9312,6 +9312,66 @@ alarm_if_fail: 0
  alarm_if_fail: 1
 
 
+ /* ----------------- PSMU009_AT ----------------- */ 
+
+ insert_job: PSMU009_AT   job_type: c 
+ box_name: PSMOSM1
+ command: auto_r3v45 -C BKAUTOSYS audit 3 job PSMU009_AT
+ machine: bkpcis
+ owner: bkpbtch@bkglobal
+ permission: gx,wx,mx
+ description: "Capital Spending Reporting"
+ alarm_if_fail: 1
+
+
+ /* ----------------- PSMU010_BG ----------------- */ 
+
+ insert_job: PSMU010_BG   job_type: c 
+ box_name: PSMOSM1
+ command: auto_r3v45 -C BKAUTOSYS audit 3 job PSMU010_BG
+ machine: bkpcis
+ owner: bkpbtch@bkglobal
+ permission: gx,wx,mx
+ description: "WBS Open Greater > 1yr for Media or 6 mo for Other Expenses Report"
+ alarm_if_fail: 1
+
+
+ /* ----------------- PSMU011_CZ ----------------- */ 
+
+ insert_job: PSMU011_CZ   job_type: c 
+ box_name: PSMOSM1
+ command: auto_r3v45 -C BKAUTOSYS audit 3 job PSMU011_CZ
+ machine: bkpcis
+ owner: bkpbtch@bkglobal
+ permission: gx,wx,mx
+ description: "Mexico MAA WBS Status Report for all active projects"
+ alarm_if_fail: 1
+
+
+ /* ----------------- PSMU012_CH ----------------- */ 
+
+ insert_job: PSMU012_CH   job_type: c 
+ box_name: PSMOSM1
+ command: auto_r3v45 -C BKAUTOSYS audit 3 job PSMU012_CH
+ machine: bkpcis
+ owner: bkpbtch@bkglobal
+ permission: gx,wx,mx
+ description: "WBS Open Greater > 1yr for Media or 6 mo for Other Expenses Report"
+ alarm_if_fail: 1
+
+
+ /* ----------------- PSMU013_PT ----------------- */ 
+
+ insert_job: PSMU013_PT   job_type: c 
+ box_name: PSMOSM1
+ command: auto_r3v45 -C BKAUTOSYS audit 3 job PSMU013_PT
+ machine: bkpcis
+ owner: bkpbtch@bkglobal
+ permission: gx,wx,mx
+ description: "Germany MAA Accruals & Prepaids Postings and Report"
+ alarm_if_fail: 1
+
+
 /* ----------------- SAMJOBSTAT ----------------- */ 
 
 insert_job: SAMJOBSTAT   job_type: b 
@@ -9356,10 +9416,10 @@ owner: bkpbtch@BKGLOBAL
 permission: gx,wx,mx
 date_conditions: 1
 days_of_week: all
-start_times: "00:45,02:45,05:45,07:30,11:30,15:45"
-condition: s(RSDUCOMP) & s(DWD_XFORMITY_FEED)
+start_times: "00:45,02:45,05:45,07:20,11:30,15:45"
+condition: s(RSDUCOMP) & s(DWD_XFORMITY_FEED) & s(DWDSICOM)
 description: "Populates daily total sales information from RDCC"
-max_run_alarm: 60
+max_run_alarm: 40
 alarm_if_fail: 1
 
 
@@ -9368,7 +9428,7 @@ alarm_if_fail: 1
  insert_job: DWDDAILY_TOTAL_SALES_DRV   job_type: c 
  box_name: DWDSALES
  command: /informatica/dw/infa/infa_shared/scripts/common/start_inf_session.sh bkpbtch inpconn s_m_dw_daily_total_sales_drv 1 1
- machine: prdetl00
+ machine: prdetl01
  owner: bkpbtch@BKGLOBAL
  permission: gx,wx,mx
  condition: s(DWDDAILY_RSI_SALES)
@@ -9381,7 +9441,7 @@ alarm_if_fail: 1
  insert_job: DWDDAILY_SALES_MANUAL_ENTRY   job_type: c 
  box_name: DWDSALES
  command: /informatica/dw/infa/infa_shared/scripts/common/start_inf_session.sh bkpbtch inpconn s_m_dw_daily_total_sales_manual_entry 1 1
- machine: prdetl00
+ machine: prdetl01
  owner: bkpbtch@BKGLOBAL
  permission: gx,wx,mx
  condition: s(DWDDAILY_TOTAL_SALES_DRV)
@@ -9394,7 +9454,7 @@ alarm_if_fail: 1
  insert_job: DWDDAILY_SALES_FCT   job_type: c 
  box_name: DWDSALES
  command: /informatica/dw/infa/infa_shared/scripts/common/start_inf_session.sh bkpbtch inpconn s_m_dw_daily_sales_fct 1 1
- machine: prdetl00
+ machine: prdetl01
  owner: bkpbtch@BKGLOBAL
  permission: gx,wx,mx
  condition: s(DWDDAILY_SALES_POLLING_ADJ)
@@ -9406,7 +9466,7 @@ alarm_if_fail: 1
 
  insert_job: DWDRDCC_WATCH   job_type: f 
  box_name: DWDSALES
- machine: prdetl00
+ machine: prdetl01
  owner: bkpbtch@BKGLOBAL
  permission: gx,wx,mx
  description: "DWDRDCC_WATCH"
@@ -9420,7 +9480,7 @@ alarm_if_fail: 1
  insert_job: DWDRENAME_FILES   job_type: c 
  box_name: DWDSALES
  command: /informatica/dw/infa/infa_shared/scripts/proj_wh_sales1/rename_files.sh
- machine: prdetl00
+ machine: prdetl01
  owner: bkpbtch@BKGLOBAL
  permission: gx,wx,mx
  condition: s(DWDRDCC_WATCH)
@@ -9433,7 +9493,7 @@ alarm_if_fail: 1
  insert_job: DWDMONTHLY_FRANCHISE_SALES   job_type: c 
  box_name: DWDSALES
  command: /informatica/dw/infa/infa_shared/scripts/common/start_inf_session.sh bkpbtch inpconn s_m_dw_monthly_franchise_sales 1 1
- machine: prdetl00
+ machine: prdetl01
  owner: bkpbtch@BKGLOBAL
  permission: gx,wx,mx
  condition: s(DWDDAILY_TOTAL_SALES_DRV)
@@ -9446,7 +9506,7 @@ alarm_if_fail: 1
  insert_job: DWDWEEKLY_SALES_DRV   job_type: c 
  box_name: DWDSALES
  command: /informatica/dw/infa/infa_shared/scripts/common/execproc.sh warehouse1 dwp usp_weekly_sales_drv
- machine: prdetl00
+ machine: prdetl01
  owner: bkpbtch@BKGLOBAL
  permission: gx,wx,mx
  condition: s(DWDDAILY_SALES_POLLING_ADJ)
@@ -9459,7 +9519,7 @@ alarm_if_fail: 1
  insert_job: DWDWEEKLY_SALES_FCT   job_type: c 
  box_name: DWDSALES
  command: /informatica/dw/infa/infa_shared/scripts/common/start_inf_session.sh bkpbtch inpconn s_m_dw_weekly_sales_fct 1 1
- machine: prdetl00
+ machine: prdetl01
  owner: bkpbtch@BKGLOBAL
  permission: gx,wx,mx
  condition: s(DWDWEEKLY_SALES_DRV_STG)
@@ -9472,7 +9532,7 @@ alarm_if_fail: 1
  insert_job: DWDMONTHLY_SALES_FCT   job_type: c 
  box_name: DWDSALES
  command: /informatica/dw/infa/infa_shared/scripts/common/start_inf_session.sh bkpbtch inpconn s_m_dw_monthly_sales_fct 1 1
- machine: prdetl00
+ machine: prdetl01
  owner: bkpbtch@BKGLOBAL
  permission: gx,wx,mx
  condition: s(DWDMONTHLY_SALES_DRV_STG)
@@ -9485,7 +9545,7 @@ alarm_if_fail: 1
  insert_job: DWDARCHIVE_RDCC_FILES   job_type: c 
  box_name: DWDSALES
  command: /informatica/dw/infa/infa_shared/scripts/proj_wh_sales1/archive_rdcc_files.sh
- machine: prdetl00
+ machine: prdetl01
  owner: bkpbtch@BKGLOBAL
  permission: gx,wx,mx
  condition: s(DWDDAILY_SALES_POLLING_ADJ) & s(DWDDAILY_MI_SALES) & s(DWDHALF_HOUR_SALES) & s(DWDHALF_HOUR_TICKETS) & s(DWDDAILY_INVENTORY_BAS_STEP1)
@@ -9498,7 +9558,7 @@ alarm_if_fail: 1
  insert_job: DWDDAILY_SM_SALES_FCT   job_type: c 
  box_name: DWDSALES
  command: /informatica/dw/infa/infa_shared/scripts/common/start_inf_session.sh bkpbtch inpconn s_m_dw_daily_sm_sales_fct 1 1
- machine: prdetl00
+ machine: prdetl01
  owner: bkpbtch@BKGLOBAL
  permission: gx,wx,mx
  condition: s(DWDRENAME_FILES)
@@ -9511,7 +9571,7 @@ alarm_if_fail: 1
  insert_job: DWDDAILY_SM_SALES_MANUAL_ENTRY   job_type: c 
  box_name: DWDSALES
  command: /informatica/dw/infa/infa_shared/scripts/common/start_inf_session.sh bkpbtch inpconn s_m_dw_daily_sm_sales_manual_entry 1 1
- machine: prdetl00
+ machine: prdetl01
  owner: bkpbtch@BKGLOBAL
  permission: gx,wx,mx
  condition: s(DWDDAILY_SM_SALES_FCT)
@@ -9524,7 +9584,7 @@ alarm_if_fail: 1
  insert_job: DWDDAILY_SM_SALES_POLLING_ADJ   job_type: c 
  box_name: DWDSALES
  command: /informatica/dw/infa/infa_shared/scripts/common/start_inf_session.sh bkpbtch inpconn s_m_dw_daily_sm_sales_polling_adj 1 1
- machine: prdetl00
+ machine: prdetl01
  owner: bkpbtch@BKGLOBAL
  permission: gx,wx,mx
  condition: s(DWDDAILY_SM_SALES_MANUAL_ENTRY)
@@ -9537,7 +9597,7 @@ alarm_if_fail: 1
  insert_job: DWDMONTHLY_SALES_DRV   job_type: c 
  box_name: DWDSALES
  command: /informatica/dw/infa/infa_shared/scripts/common/execproc.sh warehouse1 ewp usp_monthly_sales_drv
- machine: prdetl00
+ machine: prdetl01
  owner: bkpbtch@BKGLOBAL
  permission: gx,wx,mx
  condition: s(DWDDAILY_SALES_POLLING_ADJ) & s(DWDMONTHLY_FRANCHISE_SALES)
@@ -9550,7 +9610,7 @@ alarm_if_fail: 1
  insert_job: DWDDAILY_SALES_POLLING_ADJ   job_type: c 
  box_name: DWDSALES
  command: /informatica/dw/infa/infa_shared/scripts/common/start_inf_session.sh bkpbtch inpconn s_m_dw_daily_total_sales_polling_adj 1 1
- machine: prdetl00
+ machine: prdetl01
  owner: bkpbtch@BKGLOBAL
  permission: gx,wx,mx
  condition: s(DWDDAILY_SALES_MANUAL_ENTRY)
@@ -9563,7 +9623,7 @@ alarm_if_fail: 1
  insert_job: DWDDAILY_MI_SALES   job_type: c 
  box_name: DWDSALES
  command: /informatica/dw/infa/infa_shared/scripts/common/start_inf_session.sh bkpbtch inpconn s_m_dw_daily_menu_item_sales_bas 1 1
- machine: prdetl00
+ machine: prdetl01
  owner: bkpbtch@BKGLOBAL
  permission: gx,wx,mx
  condition: s(DWDRENAME_FILES)
@@ -9576,7 +9636,7 @@ alarm_if_fail: 1
  insert_job: DWDHALF_HOUR_SALES   job_type: c 
  box_name: DWDSALES
  command: /informatica/dw/infa/infa_shared/scripts/common/start_inf_session.sh bkpbtch inpconn s_m_dw_daily_hh_sales_bas 1 1
- machine: prdetl00
+ machine: prdetl01
  owner: bkpbtch@BKGLOBAL
  permission: gx,wx,mx
  condition: s(DWDRENAME_FILES)
@@ -9584,13 +9644,12 @@ alarm_if_fail: 1
  alarm_if_fail: 1
 
 
-
  /* ----------------- DWDHALF_HOUR_TICKETS ----------------- */ 
 
  insert_job: DWDHALF_HOUR_TICKETS   job_type: c 
  box_name: DWDSALES
  command: /informatica/dw/infa/infa_shared/scripts/common/start_inf_session.sh bkpbtch inpconn s_m_dw_daily_hh_tickets_bas 1 1
- machine: prdetl00
+ machine: prdetl01
  owner: bkpbtch@BKGLOBAL
  permission: gx,wx,mx
  condition: s(DWDHALF_HOUR_SALES)
@@ -9603,7 +9662,7 @@ alarm_if_fail: 1
  insert_job: DWDWEEKLY_SALES_DRV_STG   job_type: c 
  box_name: DWDSALES
  command: /informatica/dw/infa/infa_shared/scripts/common/execproc.sh warehouse1 ewp usp_weekly_sales_drv_stg
- machine: prdetl00
+ machine: prdetl01
  owner: bkpbtch@BKGLOBAL
  permission: gx,wx,mx
  condition: s(DWDWEEKLY_SALES_DRV)
@@ -9616,7 +9675,7 @@ alarm_if_fail: 1
  insert_job: DWDMONTHLY_SALES_DRV_STG   job_type: c 
  box_name: DWDSALES
  command: /informatica/dw/infa/infa_shared/scripts/common/execproc.sh warehouse1 ewp usp_monthly_sales_drv_stg
- machine: prdetl00
+ machine: prdetl01
  owner: bkpbtch@BKGLOBAL
  permission: gx,wx,mx
  condition: s(DWDMONTHLY_SALES_DRV)
@@ -9629,7 +9688,7 @@ alarm_if_fail: 1
  insert_job: DWDDAILY_RSI_SALES   job_type: c 
  box_name: DWDSALES
  command: $PMScripts/common/start_inf_session.sh bkpbtch inpconn wf_dw_daily_total_sales_drv_Fz 1 1
- machine: prdetl00
+ machine: prdetl01
  owner: bkpbtch@BKGLOBAL
  permission: gx,wx,mx
  condition: s(DWDDAILY_SM_SALES_POLLING_ADJ)
@@ -11616,7 +11675,7 @@ alarm_if_fail: 0
  insert_job: SLDDAILY_SM_SALES_STEP1   job_type: c 
  box_name: SLDMISMDP_SALES
  command: /informatica/dw/infa/infa_shared/scripts/common/start_inf_session.sh bkpbtch inpconn s_m_sm_daily_service_mode_sales_fct_step1 1 1
- machine: prdetl00
+ machine: prdetl01
  owner: bkpbtch@BKGLOBAL
  permission: gx,wx,mx
  condition: s(DWDMISMDP) & s(SLDSALES_MART)
@@ -11629,7 +11688,7 @@ alarm_if_fail: 0
  insert_job: SLDWEEKLY_SM_SALES_STEP1   job_type: c 
  box_name: SLDMISMDP_SALES
  command: /informatica/dw/infa/infa_shared/scripts/common/start_inf_session.sh bkpbtch inpconn s_m_sm_weekly_service_mode_sales_fct_step1 1 1
- machine: prdetl00
+ machine: prdetl01
  owner: bkpbtch@BKGLOBAL
  permission: gx,wx,mx
  condition: s(SLDDAILY_SM_SALES_STEP1)
@@ -11642,7 +11701,7 @@ alarm_if_fail: 0
  insert_job: SLDMONTHLY_SM_SALES_STEP1   job_type: c 
  box_name: SLDMISMDP_SALES
  command: /informatica/dw/infa/infa_shared/scripts/common/start_inf_session.sh bkpbtch inpconn s_m_sm_monthly_service_mode_sales_fct_step1 1 1
- machine: prdetl00
+ machine: prdetl01
  owner: bkpbtch@BKGLOBAL
  permission: gx,wx,mx
  condition: s(SLDDAILY_SM_SALES_STEP1)
@@ -11655,7 +11714,7 @@ alarm_if_fail: 0
  insert_job: SLDWEEKLY_MI_SALES_STEP1   job_type: c 
  box_name: SLDMISMDP_SALES
  command: /informatica/dw/infa/infa_shared/scripts/common/start_inf_session.sh bkpbtch inpconn s_m_sm_weekly_menu_item_sales_fct_step1 1 1
- machine: prdetl00
+ machine: prdetl01
  owner: bkpbtch@BKGLOBAL
  permission: gx,wx,mx
  condition: s(SLDDAILY_MI_SALES)
@@ -11668,7 +11727,7 @@ alarm_if_fail: 0
  insert_job: SLDMONTHLY_MI_SALES_STEP1   job_type: c 
  box_name: SLDMISMDP_SALES
  command: /informatica/dw/infa/infa_shared/scripts/common/start_inf_session.sh bkpbtch inpconn s_m_sm_monthly_menu_item_sales_fct_step1 1 1
- machine: prdetl00
+ machine: prdetl01
  owner: bkpbtch@BKGLOBAL
  permission: gx,wx,mx
  condition: s(DWDMISMDP) & s(SLDSALES_MART)
@@ -11681,7 +11740,7 @@ alarm_if_fail: 0
  insert_job: SLDMONTHLY_DP_SALES_STEP1   job_type: c 
  box_name: SLDMISMDP_SALES
  command: /informatica/dw/infa/infa_shared/scripts/common/start_inf_session.sh bkpbtch inpconn s_m_sm_monthly_daypart_sales_fct_step1 1 1
- machine: prdetl00
+ machine: prdetl01
  owner: bkpbtch@BKGLOBAL
  permission: gx,wx,mx
  condition: s(SLDDAILY_DP_SALES_STEP1)
@@ -11694,7 +11753,7 @@ alarm_if_fail: 0
  insert_job: SLDDAILY_MI_SALES   job_type: c 
  box_name: SLDMISMDP_SALES
  command: /informatica/dw/infa/infa_shared/scripts/common/start_inf_session.sh bkpbtch inpconn s_m_sm_daily_menu_item_sales_fct 1 1
- machine: prdetl00
+ machine: prdetl01
  owner: bkpbtch@BKGLOBAL
  permission: gx,wx,mx
  condition: s(DWDMISMDP) & s(SLDSALES_MART)
@@ -11707,7 +11766,7 @@ alarm_if_fail: 0
  insert_job: SLDWEEKLY_DP_SALES_STEP1   job_type: c 
  box_name: SLDMISMDP_SALES
  command: /informatica/dw/infa/infa_shared/scripts/common/start_inf_session.sh bkpbtch inpconn s_m_sm_weekly_daypart_sales_fct_step1 1 1
- machine: prdetl00
+ machine: prdetl01
  owner: bkpbtch@BKGLOBAL
  permission: gx,wx,mx
  condition: s(SLDDAILY_DP_SALES_STEP1)
@@ -11720,7 +11779,7 @@ alarm_if_fail: 0
  insert_job: SLDDAILY_DP_SALES_STEP1   job_type: c 
  box_name: SLDMISMDP_SALES
  command: /informatica/dw/infa/infa_shared/scripts/common/start_inf_session.sh bkpbtch inpconn s_m_sm_daily_daypart_sales_fct_step1 1 1
- machine: prdetl00
+ machine: prdetl01
  owner: bkpbtch@BKGLOBAL
  permission: gx,wx,mx
  condition: s(DWDMISMDP) & s(SLDSALES_MART)
@@ -11733,7 +11792,7 @@ alarm_if_fail: 0
  insert_job: SLDDAILY_MENU_ITEM_ROLLUP   job_type: c 
  box_name: SLDMISMDP_SALES
  command: /informatica/dw/infa/infa_shared/scripts/common/start_inf_session.sh bkpbtch inpconn s_m_sm_daily_menu_item_rollup_fct 1 1
- machine: prdetl00
+ machine: prdetl01
  owner: bkpbtch@BKGLOBAL
  permission: gx,wx,mx
  condition: s(SLDDAILY_MI_SALES)
@@ -11746,7 +11805,7 @@ alarm_if_fail: 0
  insert_job: SLDWEEKLY_MENU_ITEM_ROLLUP   job_type: c 
  box_name: SLDMISMDP_SALES
  command: /informatica/dw/infa/infa_shared/scripts/common/start_inf_session.sh bkpbtch inpconn s_m_sm_weekly_menu_item_rollup_fct 1 1
- machine: prdetl00
+ machine: prdetl01
  owner: bkpbtch@BKGLOBAL
  permission: gx,wx,mx
  condition: s(SLDWEEKLY_MI_SALES_STEP1)
@@ -11759,7 +11818,7 @@ alarm_if_fail: 0
  insert_job: SLDMONTHLY_MENU_ITEM_ROLLUP   job_type: c 
  box_name: SLDMISMDP_SALES
  command: /informatica/dw/infa/infa_shared/scripts/common/start_inf_session.sh bkpbtch inpconn s_m_sm_monthly_menu_item_rollup_fct 1 1
- machine: prdetl00
+ machine: prdetl01
  owner: bkpbtch@BKGLOBAL
  permission: gx,wx,mx
  condition: s(SLDWEEKLY_MI_SALES_STEP1)
@@ -13033,7 +13092,7 @@ alarm_if_fail: 1
  insert_job: DWDREFRESH_MONTHLY_MI_SALES   job_type: c 
  box_name: DWDMISMDP
  command: /informatica/dw/infa/infa_shared/scripts/common/execproc.sh warehouse1 ewp usp_monthly_menu_item_sales
- machine: prdetl00
+ machine: prdetl01
  owner: bkpbtch@BKGLOBAL
  permission: gx,wx,mx
  condition: s(DWDDAILY_MI_SALES)
@@ -13046,7 +13105,7 @@ alarm_if_fail: 1
  insert_job: DWDREFRESH_WEEKLY_MI_SALES   job_type: c 
  box_name: DWDMISMDP
  command: /informatica/dw/infa/infa_shared/scripts/common/execproc.sh warehouse1 ewp usp_weekly_menu_item_sales
- machine: prdetl00
+ machine: prdetl01
  owner: bkpbtch@BKGLOBAL
  permission: gx,wx,mx
  condition: s(DWDDAILY_MI_SALES)
@@ -13059,7 +13118,7 @@ alarm_if_fail: 1
  insert_job: DWDREFRESH_MONTHLY_SM_SALES   job_type: c 
  box_name: DWDMISMDP
  command: /informatica/dw/infa/infa_shared/scripts/common/execproc.sh warehouse1 ewp usp_monthly_service_mode_sales
- machine: prdetl00
+ machine: prdetl01
  owner: bkpbtch@BKGLOBAL
  permission: gx,wx,mx
  condition: s(DWDDAILY_SM_SALES_POLLING_ADJ)
@@ -13072,7 +13131,7 @@ alarm_if_fail: 1
  insert_job: DWDREFRESH_WEEKLY_SM_SALES   job_type: c 
  box_name: DWDMISMDP
  command: /informatica/dw/infa/infa_shared/scripts/common/execproc.sh warehouse1 ewp usp_weekly_service_mode_sales
- machine: prdetl00
+ machine: prdetl01
  owner: bkpbtch@BKGLOBAL
  permission: gx,wx,mx
  condition: s(DWDDAILY_SM_SALES_POLLING_ADJ)
@@ -13085,7 +13144,7 @@ alarm_if_fail: 1
  insert_job: DWDDAILY_DAYPART_DRV   job_type: c 
  box_name: DWDMISMDP
  command: /informatica/dw/infa/infa_shared/scripts/common/start_inf_session.sh bkpbtch inpconn s_m_dw_daily_daypart_drv 1 1
- machine: prdetl00
+ machine: prdetl01
  owner: bkpbtch@BKGLOBAL
  permission: gx,wx,mx
  condition: s(DWDSALES)
@@ -13098,7 +13157,7 @@ alarm_if_fail: 1
  insert_job: DWDREFRESH_MONTHLY_DP_SALES   job_type: c 
  box_name: DWDMISMDP
  command: /informatica/dw/infa/infa_shared/scripts/common/execproc.sh warehouse1 ewp usp_monthly_day_part_sales
- machine: prdetl00
+ machine: prdetl01
  owner: bkpbtch@BKGLOBAL
  permission: gx,wx,mx
  condition: s(DWDDAILY_DAYPART_DRV)
@@ -13111,7 +13170,7 @@ alarm_if_fail: 1
  insert_job: DWDREFRESH_WEEKLY_DP_SALES   job_type: c 
  box_name: DWDMISMDP
  command: /informatica/dw/infa/infa_shared/scripts/common/execproc.sh warehouse1 ewp usp_weekly_day_part_sales
- machine: prdetl00
+ machine: prdetl01
  owner: bkpbtch@BKGLOBAL
  permission: gx,wx,mx
  condition: s(DWDDAILY_DAYPART_DRV)
@@ -13124,7 +13183,7 @@ alarm_if_fail: 1
  insert_job: DWDDAILY_MENU_ITEM_ROLLUP   job_type: c 
  box_name: DWDMISMDP
  command: /informatica/dw/infa/infa_shared/scripts/common/start_inf_session.sh bkpbtch inpconn s_m_dw_daily_restaurants_polled_drv 1 1
- machine: prdetl00
+ machine: prdetl01
  owner: bkpbtch@BKGLOBAL
  permission: gx,wx,mx
  condition: s(DWDSALES)
@@ -13137,7 +13196,7 @@ alarm_if_fail: 1
  insert_job: DWDWEEKLY_MENU_ITEM_ROLLUP   job_type: c 
  box_name: DWDMISMDP
  command: /informatica/dw/infa/infa_shared/scripts/common/start_inf_session.sh bkpbtch inpconn s_m_dw_weekly_restaurant_polled_days_drv 1 1
- machine: prdetl00
+ machine: prdetl01
  owner: bkpbtch@BKGLOBAL
  permission: gx,wx,mx
  condition: s(DWDDAILY_MENU_ITEM_ROLLUP)
@@ -13150,7 +13209,7 @@ alarm_if_fail: 1
  insert_job: DWDMONTHLY_MENU_ITEM_ROLLUP   job_type: c 
  box_name: DWDMISMDP
  command: /informatica/dw/infa/infa_shared/scripts/common/start_inf_session.sh bkpbtch inpconn s_m_dw_monthly_restaurant_polled_days_drv 1 1
- machine: prdetl00
+ machine: prdetl01
  owner: bkpbtch@BKGLOBAL
  permission: gx,wx,mx
  condition: s(DWDWEEKLY_MENU_ITEM_ROLLUP)
@@ -13163,7 +13222,7 @@ alarm_if_fail: 1
  insert_job: DWDDAILY_RESTAURANT_ALLMI   job_type: c 
  box_name: DWDMISMDP
  command: /informatica/dw/infa/infa_shared/scripts/common/execproc.sh warehouse1 ewp usp_daily_rest_allmi_sales
- machine: prdetl00
+ machine: prdetl01
  owner: bkpbtch@BKGLOBAL
  permission: gx,wx,mx
  condition: s(DWDSALES)
@@ -13176,7 +13235,7 @@ alarm_if_fail: 1
  insert_job: DWD_WEEKLY_RESTAURANT_ALLMI_1   job_type: c 
  box_name: DWDMISMDP
  command: /informatica/dw/infa/infa_shared/scripts/common/execproc.sh warehouse1 ewp usp_weekly_rest_allmi_sales
- machine: prdetl00
+ machine: prdetl01
  owner: bkpbtch@BKGLOBAL
  permission: gx,wx,mx
  condition: s(DWDDAILY_RESTAURANT_ALLMI)
@@ -13189,7 +13248,7 @@ alarm_if_fail: 1
  insert_job: DWD_MONTHLY_RESTAURANT_ALLMI_1   job_type: c 
  box_name: DWDMISMDP
  command: /informatica/dw/infa/infa_shared/scripts/common/execproc.sh warehouse1 ewp usp_monthly_rest_allmi_sales
- machine: prdetl00
+ machine: prdetl01
  owner: bkpbtch@BKGLOBAL
  permission: gx,wx,mx
  condition: s(DWDDAILY_RESTAURANT_ALLMI)
@@ -14834,8 +14893,6 @@ start_times: "05:00"
 description: "ASDFFRP"
 term_run_time: 180
 alarm_if_fail: 1
-
-
 
 
 /* ----------------- OSMIADJ ----------------- */ 
@@ -23766,6 +23823,7 @@ alarm_if_fail: 0
  description: "KCMUU22"
  alarm_if_fail: 1
 
+
 /* ----------------- RSM_ESTIMATION_ES_BOX ----------------- */ 
 
 insert_job: RSM_ESTIMATION_ES_BOX   job_type: b 
@@ -23834,6 +23892,22 @@ alarm_if_fail: 0
  owner: bkpbtch@bkglobal
  permission: gx,wx,mx
  description: "Estimation cycle for calculating the missing sales for franchise restaurants in Andorra"
+ alarm_if_fail: 1
+
+
+ /* ----------------- RSM_ESTIMATION_ES_FR ----------------- */ 
+
+ insert_job: RSM_ESTIMATION_ES_FR   job_type: c 
+ box_name: RSM_ESTIMATION_ES_BOX
+ command: auto_r3v45 -C BKAUTOSYS audit 3 job RSM_ESTIMATION_ES_FR
+ machine: bkpcis
+ owner: bkpbtch@BKGLOBAL
+ permission: gx,wx,mx
+ date_conditions: 1
+ run_calendar: 2ND_CALENDAR_DAY
+ exclude_calendar: US_Holiday
+ start_times: "7:00"
+ description: "Estimation cycle for calculating the missing sales for franchise restaurants in France"
  alarm_if_fail: 1
 
 
@@ -24069,6 +24143,19 @@ alarm_if_fail: 0
  permission: gx,wx,mx
  description: "Estimation cycle for calculating the missing sales for franchise restaurants in EFM -South Africa"
  alarm_if_fail: 1
+
+
+ /* ----------------- RSM_ESTIMATION_EMEA_ME_AG ----------------- */ 
+
+ insert_job: RSM_ESTIMATION_EMEA_ME_AG   job_type: c 
+ box_name: RSM_ESTIMATION_EMEA_ME
+ command: auto_r3v45 -C BKAUTOSYS audit 3 job RSM_ESTIMATION_EMEA_ME_AG
+ machine: bkpcis
+ owner: bkpbtch@BKGLOBAL
+ permission: gx,wx,mx
+ description: "Estimation cycle for calculating the missing sales for franchise restaurants in EFM Afhganistan"
+ alarm_if_fail: 1
+ auto_hold: 1
 
 
 /* ----------------- RSM_ESTIMATION_EMEA_CE ----------------- */ 
@@ -24693,6 +24780,18 @@ alarm_if_fail: 0
  permission: gx,wx,mx
  condition: s(RSM_FRAN_SALES_POSTING_EMEA_ME)
  description: "Revenue cycle for franchise sales - South Africa"
+ alarm_if_fail: 1
+
+
+ /* ----------------- RSM_FRAN_REVENUE_EMEA_ME_FR ----------------- */ 
+
+ insert_job: RSM_FRAN_REVENUE_EMEA_ME_FR   job_type: c 
+ box_name: RSM_FRAN_POST_REV_EMEA_ME
+ command: auto_r3v45 -C BKAUTOSYS audit 3 job RSM_FRAN_REVENUE_EMEA_ME_FR
+ machine: bkpcis
+ owner: bkpbtch@bkglobal
+ permission: gx,wx,mx
+ description: "RSM_FRAN_REVENUE_EMEA_ME_FR"
  alarm_if_fail: 1
 
 
@@ -26488,6 +26587,17 @@ alarm_if_fail: 0
  alarm_if_fail: 1
 
 
+ /* ----------------- FSMADPESGL_ES90 ----------------- */ 
+
+ insert_job: FSMADPESGL_ES90   job_type: c 
+ box_name: FSMADPES
+ command: auto_r3v45 -C BKAUTOSYS audit 3 job FSMADPESGL_ES90
+ machine: bkpcis
+ owner: bkpbtch@bkglobal
+ permission: gx,wx,mx
+ alarm_if_fail: 1
+
+
 /* ----------------- FSM1NITESE ----------------- */ 
 
 insert_job: FSM1NITESE   job_type: b 
@@ -27129,7 +27239,7 @@ alarm_if_fail: 1
  insert_job: SLDDAILY_SALES_FCT   job_type: c 
  box_name: SLDSALES_MART
  command: $PMScripts/common/start_inf_session.sh bkpbtch inpconn s_m_sm1_daily_sales_fct 1 1
- machine: prdetl00
+ machine: prdetl01
  owner: bkpbtch@BKGLOBAL
  permission: gx,wx,mx
  condition: s(DWDRESTAURANT_MAIN) & s(DWDSALES)
@@ -27142,7 +27252,7 @@ alarm_if_fail: 1
  insert_job: SLDWEEKLY_SALES_FCT   job_type: c 
  box_name: SLDSALES_MART
  command: /informatica/dw/infa/infa_shared/scripts/common/start_inf_session.sh bkpbtch inpconn s_m_sm1_weekly_sales_fct 1 1
- machine: prdetl00
+ machine: prdetl01
  owner: bkpbtch@BKGLOBAL
  permission: gx,wx,mx
  condition: s(DWDRESTAURANT_MAIN) & s(DWDSALES)
@@ -27155,7 +27265,7 @@ alarm_if_fail: 1
  insert_job: SLDMONTHLY_SALES_FCT   job_type: c 
  box_name: SLDSALES_MART
  command: /informatica/dw/infa/infa_shared/scripts/common/start_inf_session.sh bkpbtch inpconn s_m_sm1_monthly_sales_fct 1 1
- machine: prdetl00
+ machine: prdetl01
  owner: bkpbtch@BKGLOBAL
  permission: gx,wx,mx
  condition: s(DWDRESTAURANT_MAIN) & s(DWDSALES)
@@ -27181,7 +27291,7 @@ alarm_if_fail: 1
  insert_job: SLDCURRENT_TIME_PERIOD   job_type: c 
  box_name: SLDSALES_MART
  command: /informatica/dw/infa/infa_shared/scripts/common/start_inf_session.sh bkpbtch inpconn s_m_sm_current_time_period_lkp 1 1
- machine: prdetl00
+ machine: prdetl01
  owner: bkpbtch@BKGLOBAL
  permission: gx,wx,mx
  condition: s(SLDDAILY_SALES_FCT)
@@ -27653,6 +27763,19 @@ alarm_if_fail: 0
  alarm_if_fail: 1
 
 
+ /* ----------------- FSMZAACT ----------------- */ 
+
+ insert_job: FSMZAACT   job_type: c 
+ box_name: FSMOFAEMEAACT
+ command: auto_r3v45 -C BKAUTOSYS audit 3 job FSMZAACT
+ machine: bkpcis
+ owner: bkpbtch@BKGLOBAL
+ permission: gx,wx,mx
+ description: "Extract the Actuals from SAP to Load to OFA"
+ alarm_if_fail: 1
+ auto_hold: 1
+
+
 /* ----------------- FSMOFANAACT ----------------- */ 
 
 insert_job: FSMOFANAACT   job_type: b 
@@ -28046,6 +28169,19 @@ alarm_if_fail: 0
  permission: gx,wx,mx
  description: "Russia Plan Load OFA to SAP"
  alarm_if_fail: 1
+
+
+ /* ----------------- FSMZAPLN ----------------- */ 
+
+ insert_job: FSMZAPLN   job_type: c 
+ box_name: FSMOFAEMEAPLN
+ command: auto_r3v45 -C BKAUTOSYS audit 3 job FSMZAPLN
+ machine: bkpcis
+ owner: bkpbtch@BKGLOBAL
+ permission: gx,wx,mx
+ description: "Load the Plan from OFA to SAP Version 0"
+ alarm_if_fail: 1
+ auto_hold: 1
 
 
 /* ----------------- AMRMX1 ----------------- */ 
@@ -29064,6 +29200,19 @@ alarm_if_fail: 0
  alarm_if_fail: 1
 
 
+ /* ----------------- FSMZALE1 ----------------- */ 
+
+ insert_job: FSMZALE1   job_type: c 
+ box_name: FSMOFAEMEALE1
+ command: auto_r3v45 -C BKAUTOSYS audit 3 job FSMZALE1
+ machine: bkpcis
+ owner: bkpbtch@BKGLOBAL
+ permission: gx,wx,mx
+ description: "Load the Forecast from OFA to SAP Version LE1"
+ alarm_if_fail: 1
+ auto_hold: 1
+
+
 /* ----------------- FSMOFAEMEALE2 ----------------- */ 
 
 insert_job: FSMOFAEMEALE2   job_type: b 
@@ -29251,6 +29400,19 @@ alarm_if_fail: 0
  permission: gx,wx,mx
  description: "Russia To Load the Forecast from OFA to SAP version LE2"
  alarm_if_fail: 1
+
+
+ /* ----------------- FSMZALE2 ----------------- */ 
+
+ insert_job: FSMZALE2   job_type: c 
+ box_name: FSMOFAEMEALE2
+ command: auto_r3v45 -C BKAUTOSYS audit 3 job FSMZALE2
+ machine: bkpcis
+ owner: bkpbtch@BKGLOBAL
+ permission: gx,wx,mx
+ description: "Load the Forecast from OFA to SAP Version LE2"
+ alarm_if_fail: 1
+ auto_hold: 1
 
 
 /* ----------------- FSMOFAEMEALE3 ----------------- */ 
@@ -29442,6 +29604,19 @@ alarm_if_fail: 0
  alarm_if_fail: 1
 
 
+ /* ----------------- FSMZALE3 ----------------- */ 
+
+ insert_job: FSMZALE3   job_type: c 
+ box_name: FSMOFAEMEALE3
+ command: auto_r3v45 -C BKAUTOSYS audit 3 job FSMZALE3
+ machine: bkpcis
+ owner: bkpbtch@BKGLOBAL
+ permission: gx,wx,mx
+ description: "Load the Forecast from OFA to SAP Version LE3"
+ alarm_if_fail: 1
+ auto_hold: 1
+
+
 /* ----------------- FSMOFAEMEALE4 ----------------- */ 
 
 insert_job: FSMOFAEMEALE4   job_type: b 
@@ -29629,6 +29804,19 @@ alarm_if_fail: 0
  permission: gx,wx,mx
  description: "To Load the Forecast from OFA to SAP version LE4"
  alarm_if_fail: 1
+
+
+ /* ----------------- FSMZALE4 ----------------- */ 
+
+ insert_job: FSMZALE4   job_type: c 
+ box_name: FSMOFAEMEALE4
+ command: auto_r3v45 -C BKAUTOSYS audit 3 job FSMZALE4
+ machine: bkpcis
+ owner: bkpbtch@BKGLOBAL
+ permission: gx,wx,mx
+ description: "Load the Forecast from OFA to SAP Version LE4"
+ alarm_if_fail: 1
+ auto_hold: 1
 
 
 /* ----------------- FSMOFAAPACLE1 ----------------- */ 
@@ -31022,7 +31210,7 @@ insert_job: IMDCAPEXTOOFA   job_type: b
 owner: bkpbtch@BKGLOBAL
 permission: gx,wx,mx
 date_conditions: 1
-days_of_week: mo,tu,we,th,fr
+days_of_week: mo
 start_times: "20:00"
 alarm_if_fail: 0
 
@@ -36902,7 +37090,7 @@ alarm_if_fail: 1
 /* ----------------- 2ND_WORKDAY_JOBS_JIL_IN ----------------- */ 
 
 insert_job: 2ND_WORKDAY_JOBS_JIL_IN   job_type: c 
-command: jil < e\:\AutoSys.BKA\Jil\2ND_WORKDAY\2nd_WORKDAY_JIL_IN.txt > \\ptcapp06\e$\AutoSys.BKA\Jil\2ND_WORKDAY\log.txt
+command: jil < e\:\PROGRAM FILES\CA\UnicenterAutoSysJMR11\tmp\Jil\2ND_WORKDAY\2nd_WORKDAY_JIL_IN.txt > inlog.txt
 machine: ptcapp06
 owner: bkpbtch@BKGLOBAL
 permission: gx,wx,mx
@@ -36912,19 +37100,19 @@ alarm_if_fail: 1
 /* ----------------- 2ND_WORKDAY_JOBS_JIL_OUT ----------------- */ 
 
 insert_job: 2ND_WORKDAY_JOBS_JIL_OUT   job_type: c 
-command: jil < e\:\AutoSys.BKA\Jil\2ND_WORKDAY\2nd_WORKDAY_JIL_OUT.txt > outlog.txt
+command: jil < e\:\PROGRAM FILES\CA\UnicenterAutoSysJMR11\tmp\Jil\2ND_WORKDAY\2nd_WORKDAY_JIL_OUT.txt > outlog.txt
 machine: ptcapp06
 owner: bkpbtch@BKGLOBAL
 permission: gx,wx,mx
-std_out_file: \\ptcapp06\e$\AutoSys.BKA\Jil\2ND_WORKDAY\2nd_WORKDAY_JIL_OUT.log
-std_err_file: \\ptcapp06\e$\AutoSys.BKA\Jil\2ND_WORKDAY\2nd_WORKDAY_JIL_OUT.err
+std_out_file: \\ptcapp06\e$\PROGRAM FILES\CA\UnicenterAutoSysJMR11\tmp\Jil\2ND_WORKDAY\2ND_WORKDAY_JIL_OUT.log
+std_err_file: \\ptcapp06\e$\PROGRAM FILES\CA\UnicenterAutoSysJMR11\tmp\Jil\2ND_WORKDAY\2ND_WORKDAY_JIL_OUT.err
 alarm_if_fail: 0
 
 
 /* ----------------- 1ST_WORKDAY_JOBS_JIL_IN ----------------- */ 
 
 insert_job: 1ST_WORKDAY_JOBS_JIL_IN   job_type: c 
-command: jil < e\:\AutoSys.BKA\Jil\1ST_WORKDAY\1st_WORKDAY_JIL_IN.txt > log.txt
+command: jil < e\:PROGRAM FILES\CA\UnicenterAutoSysJMR11\tmp\Jil\1ST_WORKDAY\1st_WORKDAY_JIL_IN.txt > inlog.txt
 machine: ptcapp06
 owner: bkpbtch@BKGLOBAL
 permission: gx,wx,mx
@@ -36934,7 +37122,7 @@ alarm_if_fail: 0
 /* ----------------- 1ST_WORKDAY_JOBS_JIL_OUT ----------------- */ 
 
 insert_job: 1ST_WORKDAY_JOBS_JIL_OUT   job_type: c 
-command: jil < e\:\AutoSys.BKA\Jil\1ST_WORKDAY\1st_WORKDAY_JIL_OUT.txt > outlog.txt
+command: jil < e\:PROGRAM FILES\CA\UnicenterAutoSysJMR11\tmp\Jil\1ST_WORKDAY\1st_WORKDAY_JIL_OUT.txt > outlog.txt
 machine: ptcapp06
 owner: bkpbtch@BKGLOBAL
 permission: gx,wx,mx
@@ -37152,7 +37340,7 @@ machine: bkpcis
 owner: bkpbtch@BKGLOBAL
 permission: gx,wx,mx
 date_conditions: 1
-days_of_week: tu,we,th,fr,sa
+days_of_week: all
 start_times: "21:20"
 alarm_if_fail: 1
 
@@ -40885,7 +41073,7 @@ permission: gx,wx,mx
 date_conditions: 1
 run_calendar: FKMFRIMATEC
 start_times: "11:00"
-description: "FKMFRIMATEC - Process the flat file for vendor FRIMATEC REFRIGERACIÓN, S.L."
+description: "FKMFRIMATEC - Process the flat file for vendor FRIMATEC REFRIGERACIÃ“N, S.L."
 alarm_if_fail: 1
 
 
@@ -41922,7 +42110,6 @@ alarm_if_fail: 0
  condition: s(QIH_FILE_FOR_POWER_CTR_FTP)
  description: "QIH_QA_INCIDENT_FILE_REN - Rename the bkdata.txt file to NETDATA.."
  alarm_if_fail: 0
-
 
 
 /* ----------------- QIH_THENETWORK_FTP ----------------- */ 
@@ -46840,6 +47027,9 @@ alarm_if_fail: 0
 insert_job: FKWKSM1   job_type: b 
 owner: bkpbtch@BKGLOBAL
 permission: gx,wx,mx
+date_conditions: 1
+days_of_week: we
+start_times: "17:30"
 description: "FKWKSM1"
 alarm_if_fail: 0
 
@@ -46925,6 +47115,9 @@ alarm_if_fail: 0
 insert_job: FKWKSM2   job_type: b 
 owner: bkpbtch@BKGLOBAL
 permission: gx,wx,mx
+date_conditions: 1
+days_of_week: we
+start_times: "18:00"
 description: "FKWKSM2"
 alarm_if_fail: 0
 
@@ -51741,7 +51934,7 @@ alarm_if_fail: 1
 /* ----------------- 3RD_THRU_6TH_WKDY_JIL_IN ----------------- */ 
 
 insert_job: 3RD_THRU_6TH_WKDY_JIL_IN   job_type: c 
-command: jil < e\:\PROGRAM FILES\CA\UnicenterAutoSysJMR11\tmp\Jil\3rd_4TH_WORKDAY\3rd_THRU_6TH_WKDY_JIL_IN.txt > inlog.txt
+command: jil < e\:\PROGRAM FILES\CA\UnicenterAutoSysJMR11\tmp\Jil\3RD_THRU_6TH_WKDY\3RD_THRU_6TH_WKDY_JIL_IN.txt >inlog.txt
 machine: ptcapp06
 owner: bkpbtch@bkglobal
 permission: gx,wx,mx
@@ -51751,7 +51944,7 @@ alarm_if_fail: 0
 /* ----------------- 3RD_THRU_6TH_WKDY_JIL_OUT ----------------- */ 
 
 insert_job: 3RD_THRU_6TH_WKDY_JIL_OUT   job_type: c 
-command: jil < e\:\PROGRAM FILES\CA\UnicenterAutoSysJMR11\tmp\Jil\3rd_4TH_WORKDAY\3RD_THRU_6TH_WKDY_JIL_OUT.txt > outlog.txt
+command: jil < e\:\PROGRAM FILES\CA\UnicenterAutoSysJMR11\tmp\Jil\3RD_THRU_6TH_WKDY\3RD_THRU_6TH_WKDY_JIL_OUT.txt > outlog.txt
 machine: ptcapp06
 owner: bkpbtch@bkglobal
 permission: gx,wx,mx
@@ -52297,7 +52490,7 @@ alarm_if_fail: 1
  insert_job: DWD_TOPLINE_SALES   job_type: c 
  box_name: DWD_FRAN_DATA_COLLECTION
  command: $PMScripts/proj_wh_sales1/Topline_Sales_FTP.sh
- machine: prdetl01
+ machine: prdetl00
  owner: bkpbtch@bkglobal
  permission: gx,wx,mx
  description: "This job is responsible for fetching the topline data files from BK FTP server to ETL server"
@@ -52309,7 +52502,7 @@ alarm_if_fail: 1
  insert_job: DWD_TOPLINE_SALES_MERGE   job_type: c 
  box_name: DWD_FRAN_DATA_COLLECTION
  command: $PMScripts/proj_wh_sales1/Top_Line_Sales_Merge_Script.sh
- machine: prdetl01
+ machine: prdetl00
  owner: bkpbtch@bkglobal
  permission: gx,wx,mx
  condition: s(DWD_TOPLINE_SALES)
@@ -52322,7 +52515,7 @@ alarm_if_fail: 1
  insert_job: DWD_DETAIL_SALES   job_type: c 
  box_name: DWD_FRAN_DATA_COLLECTION
  command: $PMScripts/proj_wh_sales1/Detailed_Sales_Script.sh
- machine: prdetl01
+ machine: prdetl00
  owner: bkpbtch@bkglobal
  permission: gx,wx,mx
  condition: s(DWD_TOPLINE_SALES_MERGE)
@@ -54086,23 +54279,11 @@ alarm_if_fail: 0
 
  insert_job: EDW_DLY_DIM_RESTAURANT   job_type: c 
  box_name: EDW_DLY_DIM
- command: /informatica/dw/infa9/infa_shared/scripts/common/start_inf_session.sh bkpbtch inpconn wf_intk_dim_restaurant 1 1
+ command: /informatica/dw/infa9/infa_shared/scripts/common/start_inf_session.sh bkpbtch inpconn wf_dim_restaurant_load 1 1
  machine: prdetl01
  owner: bkpbtch@bkglobal
  permission: gx,wx,mx
  condition: s(EDW_DLY_DIM_WORKER)
- max_run_alarm: 10
- alarm_if_fail: 1
-
-
- /* ----------------- EDW_DLY_DIM_MENU_ITM ----------------- */ 
-
- insert_job: EDW_DLY_DIM_MENU_ITM   job_type: c 
- box_name: EDW_DLY_DIM
- command: /informatica/dw/infa9/infa_shared/scripts/common/start_inf_session.sh bkpbtch inpconn wf_dim_menu_itm_load 1 1
- machine: prdetl01
- owner: bkpbtch@bkglobal
- permission: gx,wx,mx
  max_run_alarm: 10
  alarm_if_fail: 1
 
@@ -54127,7 +54308,7 @@ permission: gx,wx,mx
 date_conditions: 1
 days_of_week: all
 start_times: "00:45,02:45,04:45,06:45,08:45,10:45,12:45,14:45,16:45,18:45,20:45,22:45"
-condition: s(EDW_DLY_DIM)
+condition: s(EDW_DLY_DIM) & n(EDW_DLY_VALIDATIONS)
 alarm_if_fail: 0
 
 
@@ -54151,6 +54332,7 @@ alarm_if_fail: 0
  machine: prdetl01
  owner: bkpbtch@bkglobal
  permission: gx,wx,mx
+ condition: s(EDW_DLY_FACT_PMIX)
  max_run_alarm: 15
  alarm_if_fail: 1
 
@@ -54219,17 +54401,20 @@ alarm_if_fail: 0
 /* ----------------- EDW_DLY_MONTHLY_REPORT ----------------- */ 
 
 insert_job: EDW_DLY_MONTHLY_REPORT   job_type: c 
-command: /informatica/dw/infa9/infa_shared/scripts/common/start_inf_session.sh bkpbtch inpconn wf_intk_fct_monthly_reported_sales 1 1
+command: /informatica/dw/infa9/infa_shared/scripts/common/start_inf_session.sh bkpbtch inpconn wf_fct_monthly_reported_sales 1 1
 machine: prdetl01
 owner: bkpbtch@bkglobal
 permission: gx,wx,mx
+date_conditions: 1
+days_of_week: all
+start_times: "06:00"
 alarm_if_fail: 1
 
 
 /* ----------------- EDW_HIST_MONTHLY_REPORT ----------------- */ 
 
 insert_job: EDW_HIST_MONTHLY_REPORT   job_type: c 
-command: /informatica/dw/infa9/infa_shared/scripts/common/start_inf_session.sh bkpbtch inpconn wf_intk_fct_monthly_reported_sales_hist 1 1
+command: /informatica/dw/infa9/infa_shared/scripts/common/start_inf_session.sh bkpbtch inpconn wf_fct_monthly_reported_sales_hist 1 1
 machine: prdetl01
 owner: bkpbtch@bkglobal
 permission: gx,wx,mx
@@ -54319,7 +54504,7 @@ owner: bkpbtch@BKGLOBAL
 permission: gx,wx,mx
 date_conditions: 1
 days_of_week: all
-start_times: "12:00"
+start_times: "08:00"
 alarm_if_fail: 0
 
 
@@ -54483,7 +54668,7 @@ owner: bkpbtch@bkglobal
 permission: gx,wx,mx
 date_conditions: 1
 days_of_week: all
-start_mins: 1
+start_mins: 0,15,30,45
 alarm_if_fail: 0
 
 
@@ -54499,6 +54684,18 @@ alarm_if_fail: 0
  alarm_if_fail: 1
 
 
+ /* ----------------- EDW_HRLY_HEARTBEAT_COMPANY ----------------- */ 
+
+ insert_job: EDW_HRLY_HEARTBEAT_COMPANY   job_type: c 
+ box_name: EDW_HEARTBEAT
+ command: /informatica/dw/infa9/infa_shared/scripts/common/start_inf_session.sh bkpbtch inpconn wf_heartbeat_comp 1 1
+ machine: prdetl00
+ owner: bkpbtch@bkglobal
+ permission: gx,wx,mx
+ description: "EDW_HRLY_HEARTBEAT_COMPANY"
+ alarm_if_fail: 1
+
+
 /* ----------------- EDW_TOPLINE_FACT ----------------- */ 
 
 insert_job: EDW_TOPLINE_FACT   job_type: b 
@@ -54506,7 +54703,8 @@ owner: bkpbtch@bkglobal
 permission: gx,wx,mx
 date_conditions: 1
 days_of_week: all
-start_times: "00:30,02:30,04:30,06:30,08:30,10:30,12:30,14:30,16:30,18:30,20:30,22:30"
+start_times: "01:45,03:45,05:45,07:45,09:45,11:45,13:45,15:45,17:45,19:45,21:45,23:45"
+condition: s(EDW_DLY_DIM)
 alarm_if_fail: 0
 
 
@@ -54592,7 +54790,7 @@ owner: bkpbtch@bkglobal
 permission: gx,wx,mx
 date_conditions: 1
 days_of_week: all
-start_times: "17:30"
+start_times: "09:00"
 alarm_if_fail: 1
 
 
@@ -54615,7 +54813,7 @@ owner: bkpbtch@bkglobal
 permission: gx,wx,mx
 date_conditions: 1
 days_of_week: all
-start_times: "08:15"
+start_times: "07:20"
 alarm_if_fail: 1
 
 
@@ -54683,7 +54881,7 @@ owner: bkpbtch@bkglobal
 permission: gx,wx,mx
 date_conditions: 1
 days_of_week: mo,tu,we,th,fr
-start_times: "15:30"
+start_times: "17:00"
 alarm_if_fail: 1
 
 
@@ -54694,7 +54892,7 @@ alarm_if_fail: 1
  machine: bkpcis
  owner: bkpbtch@bkglobal
  permission: gx,wx,mx
- watch_file: /usr/sap/bk_data/bkt/BKC_US10_.INITIAL*
+ watch_file: /usr/sap/bk_data/bkp/BKC_US10_.INITIAL*
  watch_interval: 60
  alarm_if_fail: 1
 
@@ -54718,7 +54916,7 @@ owner: bkpbtch@bkglobal
 permission: gx,wx,mx
 date_conditions: 1
 days_of_week: mo,tu,we,th,fr
-start_times: "15:30"
+start_times: "17:00"
 alarm_if_fail: 1
 
 
@@ -54729,7 +54927,7 @@ alarm_if_fail: 1
  machine: bkpcis
  owner: bkpbtch@bkglobal
  permission: gx,wx,mx
- watch_file: /usr/sap/bk_data/bkt/BKC_US60_.INITIAL*
+ watch_file: /usr/sap/bk_data/bkp/BKC_US60_.INITIAL*
  watch_interval: 60
  alarm_if_fail: 1
 
@@ -54752,8 +54950,8 @@ insert_job: DWM_HYP_FILE_GEN   job_type: b
 owner: bkpbtch@bkglobal
 permission: gx,wx,mx
 date_conditions: 1
-run_calendar: 2ND_CALENDAR_DAY
-start_times: "00:01"
+run_calendar: 2ND_THU_6TH_CALENDAR_DAY
+start_times: "15:00"
 alarm_if_fail: 1
 
 
@@ -54780,4 +54978,784 @@ alarm_if_fail: 1
  alarm_if_fail: 1
 
 
+/* ----------------- EDW_ETSCORECARD ----------------- */ 
 
+insert_job: EDW_ETSCORECARD   job_type: b 
+owner: bkpbtch@bkglobal
+permission: gx,wx,mx
+date_conditions: 1
+days_of_week: all
+start_times: "08:00,12:00"
+condition: s(EDW_TOPLINE_FACT)
+alarm_if_fail: 1
+
+
+ /* ----------------- EDW_DLY_ET_SCORECARD ----------------- */ 
+
+ insert_job: EDW_DLY_ET_SCORECARD   job_type: c 
+ box_name: EDW_ETSCORECARD
+ command: /informatica/dw/infa9/infa_shared/scripts/common/start_inf_session.sh bkpbtch inpconn wf_ets_load 1 1
+ machine: prdetl01
+ owner: bkpbtch@bkglobal
+ permission: gx,wx,mx
+ alarm_if_fail: 1
+
+
+/* ----------------- EDW_DLY_MENU_ITM ----------------- */ 
+
+insert_job: EDW_DLY_MENU_ITM   job_type: b 
+owner: bkpbtch@bkglobal
+permission: gx,wx,mx
+date_conditions: 1
+days_of_week: all
+start_times: "0:00,2:00,4:00,6:00,8:00,10:00,12:00,14:00,16:00,18:00,22:00"
+alarm_if_fail: 0
+
+
+ /* ----------------- EDW_DLY_DIM_MENU_ITM ----------------- */ 
+
+ insert_job: EDW_DLY_DIM_MENU_ITM   job_type: c 
+ box_name: EDW_DLY_MENU_ITM
+ command: /informatica/dw/infa9/infa_shared/scripts/common/start_inf_session.sh bkpbtch inpconn wf_dim_menu_itm_load 1 1
+ machine: prdetl01
+ owner: bkpbtch@bkglobal
+ permission: gx,wx,mx
+ max_run_alarm: 10
+ alarm_if_fail: 1
+
+
+ /* ----------------- EDW_DLY_DIM_MENU_ITM_MDM_LOAD ----------------- */ 
+
+ insert_job: EDW_DLY_DIM_MENU_ITM_MDM_LOAD   job_type: c 
+ box_name: EDW_DLY_MENU_ITM
+ command: /informatica/dw/infa9/infa_shared/scripts/common/start_inf_session.sh bkpbtch inpconn wf_menu_item_ntz_mss_load 1 1
+ machine: prdetl00
+ owner: bkpbtch@bkglobal
+ permission: gx,wx,mx
+ description: "Uploads the Menu Item information from Neteeza to MDM SQL Server"
+ alarm_if_fail: 1
+
+
+/* ----------------- EDW_DLY_MDM_NZ ----------------- */ 
+
+insert_job: EDW_DLY_MDM_NZ   job_type: b 
+owner: bkpbtch@bkglobal
+permission: gx,wx,mx
+date_conditions: 1
+days_of_week: all
+start_times: "1:00,3:00,5:00,7:00,9:00,11:00,13:00,15:00,17:00,19:00,21:00"
+alarm_if_fail: 1
+
+
+ /* ----------------- EDW_DLY_MDM_NZ_PROMOTIONS ----------------- */ 
+
+ insert_job: EDW_DLY_MDM_NZ_PROMOTIONS   job_type: c 
+ box_name: EDW_DLY_MDM_NZ
+ command: /informatica/dw/infa9/infa_shared/scripts/common/start_inf_session.sh bkpbtch inpconn wf_promotions_mss_ntz_load 1 1
+ machine: prdetl00
+ owner: bkpbtch@bkglobal
+ permission: gx,wx,mx
+ description: "Updates the Coupons information from (SQL Server)  to EDW Neteeza for MDM User Interface"
+ alarm_if_fail: 1
+
+
+ /* ----------------- EDW_DLY_MDM_NZ_COUPONS ----------------- */ 
+
+ insert_job: EDW_DLY_MDM_NZ_COUPONS   job_type: c 
+ box_name: EDW_DLY_MDM_NZ
+ command: /informatica/dw/infa9/infa_shared/scripts/common/start_inf_session.sh bkpbtch inpconn wf_coupon_mss_ntz_load 1 1
+ machine: prdetl00
+ owner: bkpbtch@bkglobal
+ permission: gx,wx,mx
+ condition: s(EDW_DLY_MDM_NZ_PROMOTIONS)
+ description: "Updates the Coupons information from (SQL Server)  to EDW Neteeza for MDM User Interface"
+ alarm_if_fail: 1
+
+
+/* ----------------- EDW_DLY_EXCHANGE_RATES ----------------- */ 
+
+insert_job: EDW_DLY_EXCHANGE_RATES   job_type: c 
+command: /informatica/dw/infa9/infa_shared/scripts/common/start_inf_session.sh bkpbtch inpconn wf_exchange_rates_hist 1 1
+machine: prdetl00
+owner: bkpbtch@bkglobal
+permission: gx,wx,mx
+date_conditions: 1
+days_of_week: all
+start_times: "04:00"
+description: "Updates Exchange Rates from SalesMart1 to Neteeza"
+alarm_if_fail: 1
+
+
+/* ----------------- EDW_HIST_TOPLINE_EMEA_LAC_14D ----------------- */ 
+
+insert_job: EDW_HIST_TOPLINE_EMEA_LAC_14D   job_type: c 
+command: /informatica/dw/infa9/infa_shared/scripts/common/start_inf_session.sh bkpbtch inpconn wf_ftp_topline_ff 1 1
+machine: prdetl00
+owner: bkpbtch@bkglobal
+permission: gx,wx,mx
+description: "Topline historical Files RODX files from different Vendor for Daily Franchise Sales. Format 14D for EMEA and Latin America. 14 Format. Source FTP Server (prdftp02)."
+alarm_if_fail: 1
+
+
+/* ----------------- EDW_HIST_TOPLINE_EMEA_LAC_ALT ----------------- */ 
+
+insert_job: EDW_HIST_TOPLINE_EMEA_LAC_ALT   job_type: c 
+command: /informatica/dw/infa9/infa_shared/scripts/common/start_inf_session.sh bkpbtch inpconn wf_ftp_topline_ff_hist_a 1 1
+machine: prdetl00
+owner: bkpbtch@bkglobal
+permission: gx,wx,mx
+description: "Topline historical Files RODX files from different Vendor for Daily Franchise Sales. Format 14D for EMEA and Latin America. Simplified Format (Alternate). Source FTP Server (prdftp02)"
+alarm_if_fail: 1
+
+
+/* ----------------- EDW_ETS_PLAN_BUDGET ----------------- */ 
+
+insert_job: EDW_ETS_PLAN_BUDGET   job_type: c 
+command: /informatica/dw/infa9/infa_shared/scripts/common/start_inf_session.sh bkpbtch inpconn wf_scorecard_load 1 1
+machine: prdetl00
+owner: bkpbtch@bkglobal
+permission: gx,wx,mx
+description: "Monthly Plan and Budget Upload for ET Scorecard with the file provided by Marketing"
+alarm_if_fail: 1
+
+
+/* ----------------- EDW_DLY_VALIDATIONS ----------------- */ 
+
+insert_job: EDW_DLY_VALIDATIONS   job_type: b 
+owner: bkpbtch@bkglobal
+permission: gx,wx,mx
+run_window: "08:00-02:00"
+condition: s(EDW_HOURLY_FACT)
+alarm_if_fail: 0
+
+
+ /* ----------------- EDW_DLY_PMIX_VALIDATIONS ----------------- */ 
+
+ insert_job: EDW_DLY_PMIX_VALIDATIONS   job_type: c 
+ box_name: EDW_DLY_VALIDATIONS
+ command: /informatica/dw/infa9/infa_shared/scripts/common/start_inf_session.sh bkpbtch inpconn wf_pmix_validations 1 1
+ machine: prdetl00
+ owner: bkpbtch@bkglobal
+ permission: gx,wx,mx
+ description: "Process that runs validation rules for Cost, Gross Profit and 4000 level validations"
+ alarm_if_fail: 1
+
+
+ /* ----------------- EDW_DLY_PMIX_VALIDATIONS_REPORT ----------------- */ 
+
+ insert_job: EDW_DLY_PMIX_VALIDATIONS_REPORT   job_type: c 
+ box_name: EDW_DLY_VALIDATIONS
+ command: /informatica/dw/infa9/infa_shared/scripts/common/start_inf_session.sh bkpbtch inpconn wf_m_validation_rule_report 1 1
+ machine: prdetl00
+ owner: bkpbtch@bkglobal
+ permission: gx,wx,mx
+ condition: s(EDW_DLY_PMIX_VALIDATIONS)
+ description: "Email notification on number of errors from EDW_DLY_PMIX_Validations"
+ alarm_if_fail: 1
+
+
+/* ----------------- EDW_DLY_TOPLINE_GERMAN_OUT ----------------- */ 
+
+insert_job: EDW_DLY_TOPLINE_GERMAN_OUT   job_type: c 
+command: /informatica/dw/infa9/infa_shared/scripts/common/start_inf_session.sh bkpbtch inpconn wf_hourly_load_german_out 1 1
+machine: prdetl00
+owner: bkpbtch@bkglobal
+permission: gx,wx,mx
+date_conditions: 1
+days_of_week: all
+start_times: "01:00,03:00,05:00,07:00,09:00,11:00,13:00,15:00,17:00,19:00,21:00,23:00"
+alarm_if_fail: 1
+
+
+/* ----------------- EDW_DLY_PMIX_REST_COUNT ----------------- */ 
+
+insert_job: EDW_DLY_PMIX_REST_COUNT   job_type: c 
+command: /informatica/dw/infa9/infa_shared/scripts/common/start_inf_session.sh bkpbtch inpconn wf_pmix_rest_count 1 1
+machine: prdetl00
+owner: bkpbtch@bkglobal
+permission: gx,wx,mx
+date_conditions: 1
+days_of_week: all
+start_times: "07:30"
+alarm_if_fail: 1
+
+
+/* ----------------- FDD_KEY_ISSUES ----------------- */ 
+
+insert_job: FDD_KEY_ISSUES   job_type: b 
+owner: bkpbtch@bkglobal
+permission: gx,wx,mx
+date_conditions: 1
+run_calendar: 14TH_DAY_THRU_EOM_EXCPT_SUN
+start_times: "09:00"
+description: "Schedule for Key Issues Report"
+alarm_if_fail: 0
+
+
+ /* ----------------- FDD_KEY_ISSUES_ALL_DIVISIONS ----------------- */ 
+
+ insert_job: FDD_KEY_ISSUES_ALL_DIVISIONS   job_type: c 
+ box_name: FDD_KEY_ISSUES
+ command: auto_r3v45 -C BKAUTOSYS audit 3 job FDD_KEY_ISSUES_ALL_DIVISIONS
+ machine: bkpcis
+ owner: bkpbtch@bkglobal
+ permission: gx,wx,mx
+ description: "Key Issues All Divisions"
+ alarm_if_fail: 1
+
+
+ /* ----------------- FDD_KEY_ISSUES_BRAZIL ----------------- */ 
+
+ insert_job: FDD_KEY_ISSUES_BRAZIL   job_type: c 
+ box_name: FDD_KEY_ISSUES
+ command: auto_r3v45 -C BKAUTOSYS audit 3 job FDD_KEY_ISSUES_BRAZIL
+ machine: bkpcis
+ owner: bkpbtch@bkglobal
+ permission: gx,wx,mx
+ date_conditions: 1
+ run_calendar: 14TH_DAY_THRU_EOM_EXCPT_SUN
+ start_times: "09:05"
+ condition: s(FDD_KEY_ISSUES_ALL_DIVISIONS)
+ description: "Key Issues for Brazil"
+ alarm_if_fail: 1
+
+
+ /* ----------------- FDD_KEY_ISSUES_CANADA ----------------- */ 
+
+ insert_job: FDD_KEY_ISSUES_CANADA   job_type: c 
+ box_name: FDD_KEY_ISSUES
+ command: auto_r3v45 -C BKAUTOSYS audit 3 job FDD_KEY_ISSUES_CANADA
+ machine: bkpcis
+ owner: bkpbtch@bkglobal
+ permission: gx,wx,mx
+ date_conditions: 1
+ run_calendar: 14TH_DAY_THRU_EOM_EXCPT_SUN
+ start_times: "09:10"
+ condition: s(FDD_KEY_ISSUES_BRAZIL)
+ description: "Key Issues Report for Canada"
+ alarm_if_fail: 1
+
+
+ /* ----------------- FDD_KEY_ISSUES_CENTAM ----------------- */ 
+
+ insert_job: FDD_KEY_ISSUES_CENTAM   job_type: c 
+ box_name: FDD_KEY_ISSUES
+ command: auto_r3v45 -C BKAUTOSYS audit 3 job FDD_KEY_ISSUES_CENTAM
+ machine: bkpcis
+ owner: bkpbtch@bkglobal
+ permission: gx,wx,mx
+ date_conditions: 1
+ run_calendar: 14TH_DAY_THRU_EOM_EXCPT_SUN
+ start_times: "09:15"
+ condition: s(FDD_KEY_ISSUES_CANADA)
+ description: "Key Issues Report for Central America"
+ alarm_if_fail: 1
+
+
+ /* ----------------- FDD_KEY_ISSUES_CENTRAL ----------------- */ 
+
+ insert_job: FDD_KEY_ISSUES_CENTRAL   job_type: c 
+ box_name: FDD_KEY_ISSUES
+ command: auto_r3v45 -C BKAUTOSYS audit 3 job FDD_KEY_ISSUES_CENTRAL
+ machine: bkpcis
+ owner: bkpbtch@bkglobal
+ permission: gx,wx,mx
+ date_conditions: 1
+ run_calendar: 14TH_DAY_THRU_EOM_EXCPT_SUN
+ start_times: "09:20"
+ condition: s(FDD_KEY_ISSUES_CENTAM)
+ description: "Key Issues Report for Central Division"
+ alarm_if_fail: 1
+
+
+ /* ----------------- FDD_KEY_ISSUES_LATAM ----------------- */ 
+
+ insert_job: FDD_KEY_ISSUES_LATAM   job_type: c 
+ box_name: FDD_KEY_ISSUES
+ command: auto_r3v45 -C BKAUTOSYS audit 3 job FDD_KEY_ISSUES_LATAM
+ machine: bkpcis
+ owner: bkpbtch@bkglobal
+ permission: gx,wx,mx
+ date_conditions: 1
+ run_calendar: 14TH_DAY_THRU_EOM_EXCPT_SUN
+ start_times: "09:25"
+ condition: s(FDD_KEY_ISSUES_CENTRAL)
+ description: "Key Issues for Latin America"
+ alarm_if_fail: 1
+
+
+ /* ----------------- FDD_KEY_ISSUES_MIDWEST ----------------- */ 
+
+ insert_job: FDD_KEY_ISSUES_MIDWEST   job_type: c 
+ box_name: FDD_KEY_ISSUES
+ command: auto_r3v45 -C BKAUTOSYS audit 3 job FDD_KEY_ISSUES_MIDWEST
+ machine: bkpcis
+ owner: bkpbtch@bkglobal
+ permission: gx,wx,mx
+ date_conditions: 1
+ run_calendar: 14TH_DAY_THRU_EOM_EXCPT_SUN
+ start_times: "09:30"
+ condition: s(FDD_KEY_ISSUES_LATAM)
+ description: "Key Issues Report for Midwest Division"
+ alarm_if_fail: 1
+
+
+ /* ----------------- FDD_KEY_ISSUES_NO_DIVISION ----------------- */ 
+
+ insert_job: FDD_KEY_ISSUES_NO_DIVISION   job_type: c 
+ box_name: FDD_KEY_ISSUES
+ command: auto_r3v45 -C BKAUTOSYS audit 3 job FDD_KEY_ISSUES_NO_DIVISION
+ machine: bkpcis
+ owner: bkpbtch@bkglobal
+ permission: gx,wx,mx
+ date_conditions: 1
+ run_calendar: 14TH_DAY_THRU_EOM_EXCPT_SUN
+ start_times: "09:35"
+ condition: s(FDD_KEY_ISSUES_MIDWEST)
+ description: "Key Issues Report for No Division"
+ alarm_if_fail: 1
+
+
+ /* ----------------- FDD_KEY_ISSUES_NORTHEAST ----------------- */ 
+
+ insert_job: FDD_KEY_ISSUES_NORTHEAST   job_type: c 
+ box_name: FDD_KEY_ISSUES
+ command: auto_r3v45 -C BKAUTOSYS audit 3 job FDD_KEY_ISSUES_NORTHEAST
+ machine: bkpcis
+ owner: bkpbtch@bkglobal
+ permission: gx,wx,mx
+ date_conditions: 1
+ run_calendar: 14TH_DAY_THRU_EOM_EXCPT_SUN
+ start_times: "09:40"
+ condition: s(FDD_KEY_ISSUES_NO_DIVISION)
+ description: "Key Issues Report for Northeast Division"
+ alarm_if_fail: 1
+
+
+ /* ----------------- FDD_KEY_ISSUES_SOUTHEAST ----------------- */ 
+
+ insert_job: FDD_KEY_ISSUES_SOUTHEAST   job_type: c 
+ box_name: FDD_KEY_ISSUES
+ command: auto_r3v45 -C BKAUTOSYS audit 3 job FDD_KEY_ISSUES_SOUTHEAST
+ machine: bkpcis
+ owner: bkpbtch@bkglobal
+ permission: gx,wx,mx
+ date_conditions: 1
+ run_calendar: 14TH_DAY_THRU_EOM_EXCPT_SUN
+ start_times: "09:45"
+ condition: s(FDD_KEY_ISSUES_NORTHEAST)
+ description: "Key Issues Report for the Southeast Division"
+ alarm_if_fail: 1
+
+
+ /* ----------------- FDD_KEY_ISSUES_WEST ----------------- */ 
+
+ insert_job: FDD_KEY_ISSUES_WEST   job_type: c 
+ box_name: FDD_KEY_ISSUES
+ command: auto_r3v45 -C BKAUTOSYS audit 3 job FDD_KEY_ISSUES_WEST
+ machine: bkpcis
+ owner: bkpbtch@bkglobal
+ permission: gx,wx,mx
+ date_conditions: 1
+ run_calendar: 14TH_DAY_THRU_EOM_EXCPT_SUN
+ start_times: "09:50"
+ condition: s(FDD_KEY_ISSUES_SOUTHEAST)
+ description: "Key Issues Report for West Division"
+ alarm_if_fail: 1
+
+
+/* ----------------- EDW_DLY_ETS_BO_TRIGGER ----------------- */ 
+
+insert_job: EDW_DLY_ETS_BO_TRIGGER   job_type: c 
+command: /informatica/dw/infa9/infa_shared/scripts/common/start_inf_session.sh bkpbtch inpconn wf_ets_restaurants_count 1 1
+machine: prdetl00
+owner: bkpbtch@bkglobal
+permission: gx,wx,mx
+date_conditions: 1
+days_of_week: all
+start_times: "08:55,12:55"
+condition: s(EDW_ETSCORECARD)
+description: "EDW_DLY_ETS_BO_TRIGGER"
+alarm_if_fail: 1
+
+
+/* ----------------- FVDCURMOSELACCT ----------------- */ 
+
+insert_job: FVDCURMOSELACCT   job_type: b 
+owner: bkpbtch@BKGLOBAL
+permission: gx,wx,mx
+date_conditions: 1
+days_of_week: all
+start_times: "20:00"
+description: "Field Financials - Selected Accounts Daily Job"
+alarm_if_fail: 1
+
+
+ /* ----------------- FSRKCMEDRU_Daily ----------------- */ 
+
+ insert_job: FSRKCMEDRU_Daily   job_type: c 
+ box_name: FVDCURMOSELACCT
+ command: auto_r3v45 -C BKAUTOSYS audit 3 job FSRKCMEDRU
+ machine: bkpcis
+ owner: bkpbtch@bkglobal
+ permission: gx,wx,mx
+ description: "FSRKCMEDRU_Daily"
+ alarm_if_fail: 1
+
+
+ /* ----------------- FSR_FVM_GL39.DAT_Daily ----------------- */ 
+
+ insert_job: FSR_FVM_GL39.DAT_Daily   job_type: c 
+ box_name: FVDCURMOSELACCT
+ command: \\ftp2\rr\HTMLSP~1\rvgl39.bat
+ machine: ptcftp02
+ owner: bkpbtch@bkglobal
+ permission: gx,wx,mx
+ condition: s(FSRKCMEDRU_Daily)
+ description: "FSR_FVM_GL39.DAT_Daily"
+ alarm_if_fail: 1
+
+
+ /* ----------------- FSR_FVM_GL39_MM_copy_Daily ----------------- */ 
+
+ insert_job: FSR_FVM_GL39_MM_copy_Daily   job_type: c 
+ box_name: FVDCURMOSELACCT
+ command: \\ptcftp02\e$\APPS\RR\Reports\doorsmm.bat
+ machine: ptcftp02
+ owner: bkpbtch@bkglobal
+ permission: gx,wx,mx
+ condition: s(FSR_FVM_GL39.DAT_Daily)
+ description: "FSR_FVM_GL39_MM_copy_Daily"
+ alarm_if_fail: 1
+
+
+/* ----------------- FKDE_JPM_US10_CHECKS ----------------- */ 
+
+insert_job: FKDE_JPM_US10_CHECKS   job_type: b 
+owner: bkpbtch@bkglobal
+permission: 
+date_conditions: 1
+days_of_week: mo,tu,we,th,fr
+exclude_calendar: US_Holiday
+start_times: "17:00"
+description: "JP Morgan Check Printing US10"
+alarm_if_fail: 1
+
+
+ /* ----------------- FKDE_JPM_US10_CHECKS_FW ----------------- */ 
+
+ insert_job: FKDE_JPM_US10_CHECKS_FW   job_type: f 
+ box_name: FKDE_JPM_US10_CHECKS
+ machine: bkpcis
+ owner: bkpbtch@bkglobal
+ permission: gx,wx,mx
+ description: "File Watcher"
+ watch_file: /usr/sap/bk_data/bkp/JPM_CHECKS_US10.INITIAL*
+ watch_interval: 60
+ alarm_if_fail: 1
+
+
+ /* ----------------- FKDE_JPM_US10_CHECKS_JOB ----------------- */ 
+
+ insert_job: FKDE_JPM_US10_CHECKS_JOB   job_type: c 
+ box_name: FKDE_JPM_US10_CHECKS
+ command: auto_r3v45 -C BKAUTOSYS audit 3 job FKDE_JPM_US10_CHECKS
+ machine: bkpcis
+ owner: bkpbtch@bkglobal
+ permission: gx,wx,mx
+ condition: s(FKDU_JPM_US10_CHECKS)
+ description: "FTP file and archive/rename"
+ alarm_if_fail: 1
+
+
+ /* ----------------- FKDU_JPM_US10_CHECKS ----------------- */ 
+
+ insert_job: FKDU_JPM_US10_CHECKS   job_type: c 
+ box_name: FKDE_JPM_US10_CHECKS
+ command: auto_r3v45 -C BKAUTOSYS audit 3 job FKDU_JPM_US10_CHECKS
+ machine: bkpcis
+ owner: bkpbtch@bkglobal
+ permission: gx,wx,mx
+ condition: s(FKDE_JPM_US10_CHECKS_FW)
+ description: "Rename File and Encrypt"
+ alarm_if_fail: 1
+
+
+/* ----------------- FKDE_JPM_US60_CHECKS ----------------- */ 
+
+insert_job: FKDE_JPM_US60_CHECKS   job_type: b 
+owner: bkpbtch@bkglobal
+permission: 
+date_conditions: 1
+days_of_week: mo,tu,we,th,fr
+exclude_calendar: US_Holiday
+start_times: "17:00"
+description: "JP Morgan Check Printing US60"
+alarm_if_fail: 1
+
+
+ /* ----------------- FKDE_JPM_US60_CHECKS_FW ----------------- */ 
+
+ insert_job: FKDE_JPM_US60_CHECKS_FW   job_type: f 
+ box_name: FKDE_JPM_US60_CHECKS
+ machine: bkpcis
+ owner: bkpbtch@bkglobal
+ permission: gx,wx,mx
+ description: "File Watcher"
+ watch_file: /usr/sap/bk_data/bkp/JPM_CHECKS_US60.INITIAL*
+ watch_interval: 60
+ alarm_if_fail: 1
+
+
+ /* ----------------- FKDE_JPM_US60_CHECKS_JOB ----------------- */ 
+
+ insert_job: FKDE_JPM_US60_CHECKS_JOB   job_type: c 
+ box_name: FKDE_JPM_US60_CHECKS
+ command: auto_r3v45 -C BKAUTOSYS audit 3 job FKDE_JPM_US60_CHECKS
+ machine: bkpcis
+ owner: bkpbtch@bkglobal
+ permission: gx,wx,mx
+ condition: s(FKDU_JPM_US60_CHECKS)
+ description: "FTP file and archive/rename"
+ alarm_if_fail: 1
+
+
+ /* ----------------- FKDU_JPM_US60_CHECKS ----------------- */ 
+
+ insert_job: FKDU_JPM_US60_CHECKS   job_type: c 
+ box_name: FKDE_JPM_US60_CHECKS
+ command: auto_r3v45 -C BKAUTOSYS audit 3 job FKDU_JPM_US60_CHECKS
+ machine: bkpcis
+ owner: bkpbtch@bkglobal
+ permission: gx,wx,mx
+ condition: s(FKDE_JPM_US60_CHECKS_FW)
+ description: "Rename File and Encrypt"
+ alarm_if_fail: 1
+
+
+/* ----------------- EDW_DLY_RSI_DIM_FEED ----------------- */ 
+
+insert_job: EDW_DLY_RSI_DIM_FEED   job_type: b 
+owner: bkpbtch@bkglobal
+permission: gx,wx,mx
+date_conditions: 1
+days_of_week: all
+start_times: "10:00"
+description: "EDW_DLY_RSI_DIM_FEED"
+alarm_if_fail: 1
+
+
+ /* ----------------- EDW_DLY_RSI_DIM_DAY_PART ----------------- */ 
+
+ insert_job: EDW_DLY_RSI_DIM_DAY_PART   job_type: c 
+ box_name: EDW_DLY_RSI_DIM_FEED
+ command: /informatica/dw/infa9/infa_shared/scripts/common/start_inf_session.sh bkpbtch inpconn wf_nz_to_ff_dim_day_part 1 1
+ machine: prdetl00
+ owner: bkpbtch@bkglobal
+ permission: gx,wx,mx
+ alarm_if_fail: 1
+
+
+ /* ----------------- EDW_DLY_RSI_VALIDATION_RULES ----------------- */ 
+
+ insert_job: EDW_DLY_RSI_VALIDATION_RULES   job_type: c 
+ box_name: EDW_DLY_RSI_DIM_FEED
+ command: /informatica/dw/infa9/infa_shared/scripts/common/start_inf_session.sh bkpbtch inpconn wf_nz_to_ff_validation_rules 1 1
+ machine: prdetl00
+ owner: bkpbtch@bkglobal
+ permission: gx,wx,mx
+ alarm_if_fail: 1
+
+
+ /* ----------------- EDW_DLY_RSI_VALIDATION_FAIL_HIST ----------------- */ 
+
+ insert_job: EDW_DLY_RSI_VALIDATION_FAIL_HIST   job_type: c 
+ box_name: EDW_DLY_RSI_DIM_FEED
+ command: /informatica/dw/infa9/infa_shared/scripts/common/start_inf_session.sh bkpbtch inpconn wf_nz_to_ff_validation_failures_history 1 1
+ machine: prdetl00
+ owner: bkpbtch@bkglobal
+ permission: gx,wx,mx
+ alarm_if_fail: 1
+
+
+ /* ----------------- EDW_DLY_RSI_DIM_SOLD_TYPE ----------------- */ 
+
+ insert_job: EDW_DLY_RSI_DIM_SOLD_TYPE   job_type: c 
+ box_name: EDW_DLY_RSI_DIM_FEED
+ command: /informatica/dw/infa9/infa_shared/scripts/common/start_inf_session.sh bkpbtch inpconn wf_nz_to_ff_dim_sold_type 1 1
+ machine: prdetl00
+ owner: bkpbtch@bkglobal
+ permission: gx,wx,mx
+ alarm_if_fail: 1
+
+
+ /* ----------------- EDW_DLY_RSI_DIM_SERVICE_MODE ----------------- */ 
+
+ insert_job: EDW_DLY_RSI_DIM_SERVICE_MODE   job_type: c 
+ box_name: EDW_DLY_RSI_DIM_FEED
+ command: /informatica/dw/infa9/infa_shared/scripts/common/start_inf_session.sh bkpbtch inpconn wf_nz_to_ff_dim_service_mode 1 1
+ machine: prdetl00
+ owner: bkpbtch@bkglobal
+ permission: gx,wx,mx
+ alarm_if_fail: 1
+
+
+ /* ----------------- EDW_DLY_RSI_DIM_PRICE_TYPE ----------------- */ 
+
+ insert_job: EDW_DLY_RSI_DIM_PRICE_TYPE   job_type: c 
+ box_name: EDW_DLY_RSI_DIM_FEED
+ command: /informatica/dw/infa9/infa_shared/scripts/common/start_inf_session.sh bkpbtch inpconn wf_nz_to_ff_dim_price_type 1 1
+ machine: prdetl00
+ owner: bkpbtch@bkglobal
+ permission: gx,wx,mx
+ alarm_if_fail: 1
+
+
+ /* ----------------- EDW_DLY_RSI_DIM_MENU_ITM ----------------- */ 
+
+ insert_job: EDW_DLY_RSI_DIM_MENU_ITM   job_type: c 
+ box_name: EDW_DLY_RSI_DIM_FEED
+ command: /informatica/dw/infa9/infa_shared/scripts/common/start_inf_session.sh bkpbtch inpconn wf_nz_to_ff_dim_menu_itm 1 1
+ machine: prdetl00
+ owner: bkpbtch@bkglobal
+ permission: gx,wx,mx
+ alarm_if_fail: 1
+
+
+ /* ----------------- EDW_DLY_RSI_DIM_COUPON ----------------- */ 
+
+ insert_job: EDW_DLY_RSI_DIM_COUPON   job_type: c 
+ box_name: EDW_DLY_RSI_DIM_FEED
+ command: /informatica/dw/infa9/infa_shared/scripts/common/start_inf_session.sh bkpbtch inpconn wf_nz_to_ff_dim_coupon 1 1
+ machine: prdetl00
+ owner: bkpbtch@bkglobal
+ permission: gx,wx,mx
+ alarm_if_fail: 1
+
+
+/* ----------------- EDW_ETS_FLASH_FILES_TTS ----------------- */ 
+
+insert_job: EDW_ETS_FLASH_FILES_TTS   job_type: c 
+command: E\:\Warehouse\ET_Scorecard\Flash\ETScorecard-TTS\TTS_batch.bat
+machine: ptcapp11
+owner: bkpbtch@bkglobal
+permission: gx,wx,mx
+date_conditions: 1
+days_of_week: all
+start_times: "8:10"
+description: "EDW_ETS_FLASH_FILES_TTS"
+alarm_if_fail: 1
+
+
+/* ----------------- EDW_ETS_IT_EMAIL ----------------- */ 
+
+insert_job: EDW_ETS_IT_EMAIL   job_type: c 
+command: E\:\Warehouse\ET_Scorecard\Dashboard\Batch_Scripts\IT_alert_email.bat
+machine: ptcapp11
+owner: bkpbtch@bkglobal
+permission: gx,wx,mx
+date_conditions: 1
+days_of_week: all
+start_times: "8:20"
+condition: s(EDW_DLY_ETS_BO_TRIGGER)
+description: "EDW_ ETS_IT_EMAIL"
+alarm_if_fail: 1
+
+
+/* ----------------- EDW_ETS_REPORTS_EMAIL ----------------- */ 
+
+insert_job: EDW_ETS_REPORTS_EMAIL   job_type: c 
+command: E\:\Warehouse\ET_Scorecard\Dashboard\Batch_Scripts\reports_email.bat
+machine: ptcapp11
+owner: bkpbtch@bkglobal
+permission: gx,wx,mx
+date_conditions: 1
+days_of_week: all
+start_times: "9:00"
+condition: s(EDW_DLY_ETS_BO_TRIGGER)
+description: "EDW_ETS_REPORTS_EMAIL"
+alarm_if_fail: 1
+
+
+/* ----------------- EDW_ETS_IT_EMAIL_2NDRUN ----------------- */ 
+
+insert_job: EDW_ETS_IT_EMAIL_2NDRUN   job_type: c 
+command: E\:\Warehouse\ET_Scorecard\Dashboard\Batch_Scripts\IT_alert_email_second_run.bat
+machine: ptcapp11
+owner: bkpbtch@bkglobal
+permission: gx,wx,mx
+date_conditions: 1
+days_of_week: all
+start_times: "12:30"
+condition: s(EDW_DLY_ETS_BO_TRIGGER)
+description: "EDW_ ETS_IT_EMAIL_2NDRUN"
+alarm_if_fail: 1
+
+
+/* ----------------- EDW_ETS_REPORTS_EMAIL_2NDRUN ----------------- */ 
+
+insert_job: EDW_ETS_REPORTS_EMAIL_2NDRUN   job_type: c 
+command: E\:\Warehouse\ET_Scorecard\Dashboard\Batch_Scripts\reports_email_second_run.bat
+machine: ptcapp11
+owner: bkpbtch@bkglobal
+permission: gx,wx,mx
+date_conditions: 1
+days_of_week: all
+start_times: "13:00"
+condition: s(EDW_DLY_ETS_BO_TRIGGER)
+description: "EDW_ETS_REPORTS_EMAIL_2NDRUN"
+alarm_if_fail: 1
+
+
+/* ----------------- 1ST_SPECIAL_GL_PROCESS_DAYS_1ST_THRU_3RD ----------------- */ 
+
+insert_job: 1ST_SPECIAL_GL_PROCESS_DAYS_1ST_THRU_3RD   job_type: b 
+owner: bkpbtch@bkglobal
+permission: gx,wx,mx
+description: "Box contains command jobs for Special GL processes"
+alarm_if_fail: 1
+
+
+ /* ----------------- SPECIAL_GL_PROCESS_DAY1 ----------------- */ 
+
+ insert_job: SPECIAL_GL_PROCESS_DAY1   job_type: c 
+ box_name: 1ST_SPECIAL_GL_PROCESS_DAYS_1ST_THRU_3RD
+ command: E\:\Scripts\GLProcess\GLProcessOnWorkingDay.bat 1
+ machine: ptcapp06
+ owner: bkpbtch@bkglobal
+ permission: gx,wx,mx
+ date_conditions: 1
+ run_calendar: US_1ST_WORK_DAY
+ start_times: "8:00"
+ description: "Send Jobs to box One"
+ alarm_if_fail: 1
+
+
+ /* ----------------- SPECIAL_GL_PROCESS_DAY2 ----------------- */ 
+
+ insert_job: SPECIAL_GL_PROCESS_DAY2   job_type: c 
+ box_name: 1ST_SPECIAL_GL_PROCESS_DAYS_1ST_THRU_3RD
+ command: E\:\Scripts\GLProcess\GLProcessOnWorkingDay.bat 2
+ machine: ptcapp06
+ owner: bkpbtch@bkglobal
+ permission: gx,wx,mx
+ date_conditions: 1
+ run_calendar: US_2ND_WORK_DAY
+ start_times: "8:00"
+ description: "Send Jobs to box Two"
+ alarm_if_fail: 1
+
+
+ /* ----------------- SPECIAL_GL_PROCESS_DAY3_6 ----------------- */ 
+
+ insert_job: SPECIAL_GL_PROCESS_DAY3_6   job_type: c 
+ box_name: 1ST_SPECIAL_GL_PROCESS_DAYS_1ST_THRU_3RD
+ command: E\:\Scripts\GLProcess\GLProcessOnWorkingDay.bat 3
+ machine: ptcapp06
+ owner: bkgm013@bkglobal
+ permission: gx,wx,mx
+ date_conditions: 1
+ run_calendar: US_3RD_WORK_DAY
+ start_times: "8:00"
+ description: "Send Jobs to box Three"
+ alarm_if_fail: 1
