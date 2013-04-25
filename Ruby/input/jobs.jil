@@ -55657,7 +55657,7 @@ permission: gx,wx,mx
 date_conditions: 1
 days_of_week: all
 start_times: "8:20"
-condition: s(EDW_DLY_ETS_BO_TRIGGER)
+condition: s(EDW_ETSCORECARD)
 description: "EDW_ ETS_IT_EMAIL"
 alarm_if_fail: 1
 
@@ -55687,7 +55687,7 @@ permission: gx,wx,mx
 date_conditions: 1
 days_of_week: all
 start_times: "12:30"
-condition: s(EDW_DLY_ETS_BO_TRIGGER)
+condition: s(EDW_ETSCORECARD)
 description: "EDW_ ETS_IT_EMAIL_2NDRUN"
 alarm_if_fail: 1
 
@@ -55752,7 +55752,7 @@ alarm_if_fail: 1
  box_name: 1ST_SPECIAL_GL_PROCESS_DAYS_1ST_THRU_3RD
  command: E\:\Scripts\GLProcess\GLProcessOnWorkingDay.bat 3
  machine: ptcapp06
- owner: bkgm013@bkglobal
+ owner: bkpbtch@bkglobal
  permission: gx,wx,mx
  date_conditions: 1
  run_calendar: US_3RD_WORK_DAY
